@@ -1,0 +1,45 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: block;
+}
+
+.navbar > nav > ul > li{
+    display: inline-block;
+    padding: 5px;
+}
+
+.subnav__item{
+    position: relative;
+}
+.subnav{
+    position: absolute;
+    padding: 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+.subnav.active{
+    opacity: 1;
+}
+.subnav .subnav__child{
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+.subnav .subnav__child:nth-last-child(1){
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.subnav .subnav__child:hover > a{
+    text-decoration: none;
+}
+.subnav .subnav__child:hover{
+    background: #eee;
+    transition: background .3s ease;
+}

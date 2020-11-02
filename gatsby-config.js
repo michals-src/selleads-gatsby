@@ -6,5 +6,30 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/src/pages/homepage`,
+    //     name: `homepage`
+    //   }
+    // },
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@sections": "src/sections",
+          "@pages": "src/pages",
+          "@images": "src/images",
+          "@styles": "src/styles",
+        },
+        extensions: [
+          "js", 'css'
+        ],
+      }
+    }
+  ],
 }

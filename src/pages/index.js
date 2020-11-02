@@ -1,5 +1,27 @@
-import React from "react"
+/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
+import styles from '../styles/Home.module.css'
+import '../styles/globals.css';
+import '../styles/navigation.css';
+import '../styles/cards.css';
+
+import { Hero, Services, Analytics, Optimalization } from '@sections/homepage';
+
 
 export default function Home() {
-  return <div>Hello world!</div>
+
+  const p = Array(9).fill('');
+  const h = Array(5).fill(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']);
+
+  return (
+    <div>
+
+
+      <Hero />
+      <Services />
+      <Analytics />
+      <Optimalization />
+   
+    </div>
+  )
 }
