@@ -5,16 +5,17 @@ import teamImage from '../../assets/images/icons8-team-yTwXpLO5HAA-unsplash.jpg'
 
 const Column = styled.div`
     background: #e9ceb0 url(${teamImage}) center no-repeat;
-    height: 100%;
+    height: 65vh;
     background-size: cover;
     border-radius: 10px;
     box-shadow: 0 10px 25px #a5753c59;
 `
 
 const ColumnTitle = styled.h5`
-    max-width: 60%;
+    max-width: 50%;
     margin-left: auto;
-    text-align: right;
+    margin-right: auto;
+    text-align: center;
     color: #fff;
 `
 
@@ -43,19 +44,21 @@ const NumericContent = styled.div`
 function Section3() {
     return (
         <>
-            <div className="container mt8 mb5">
-                <div className="g-x">
+            <div className="container mt4 mb5">
+                <div className="g-x _mb8">
                     <div className="medium-8 px1">
-                        <Column className="fx iflex-end p1">
-                            <ColumnTitle>Amazon to największa na świecie platforma sprzedażowa. </ColumnTitle>
-                        </Column>
-                    </div>
-                    <div className="medium-4 p1 px1">
-                        <div className="fy ccenter p1">
-                            <p>W USA odpowiada za 45% sprzedaży dokonanych w Internecie!!!. Ponad 100 milionów ludzi na ŚWIECIE posiada konto Prime (jest ich więcej niż osób bez Prime). Statystycznie jeden użytkownik ze statusem Prime wydaje ponad 1000$ rocznie. Amazon otworzył rynki w 6 europejskich krajach: Niemczech, Wielkiej Brytanii, Francji, Włoszech, Hiszpanii oraz Holandii. Dzięki takiej infrastrukturze sprzedając na platformie jesteśmy w stanie dotrzeć, aż do 28 krajów leżących w Europie.</p>
+                        <div className="_p6">
+                            <h6 className="_mb5 pr8">
+                                W USA odpowiada za 45% sprzedaży dokonanych w Internecie !
+                            </h6>
+                            <p>Ponad 100 milionów ludzi na ŚWIECIE posiada konto Prime, jest ich więcej niż osób bez Prime. Statystycznie jeden użytkownik ze statusem Prime wydaje ponad 1000$ rocznie. Amazon otworzył rynki w 6 europejskich krajach: Niemczech, Wielkiej Brytanii, Francji, Włoszech, Hiszpanii oraz Holandii. Dzięki takiej infrastrukturze sprzedając na platformie jesteśmy w stanie dotrzeć, aż do 28 krajów leżących w Europie.</p>
                         </div>
                     </div>
                 </div>
+
+                <Column className="fx iflex-end py2">
+                    <ColumnTitle>Amazon to największa na świecie platforma sprzedażowa. </ColumnTitle>
+                </Column>
 
                 <div className="my8">
                     <div className="mb3">

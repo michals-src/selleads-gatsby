@@ -8,16 +8,20 @@ import Element from '../../components/Element'
 
 import heroImage from '../../assets/images/U2BI3GMnSSE-unsplash.jpg';
 
-
-const HeroImage = styled.div`
-  width: 100%;
-  height: 65vh;
-  border-radius: 5px;
-  overflow: hidden;
-
-  & > img {
-    transform: scale(0.5) translate(-84%, -77%);
-  }
+const HeroWrapper = styled.div`
+  max-width: 2100px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+`
+const HeroBackground = styled.div`
+  background: url(${heroImage});
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 3px 10px #0000005e;
 `
 
 
@@ -56,29 +60,19 @@ export default function Hero() {
 
       </Container>
 
-      <div className="_container my5">
-      
-      <Element _py8 my3>
-        
-        <div className="g-x">
-          
-          <div className="medium-5">
-              <h1>Rozwiń swoje skrzydła</h1>
-              <Element _mt8>
-                <h6>Mały krok dla Ciebie, ale ogromny dla Twojego biznesu</h6>
-              </Element>
-          </div>
-          <div className="medium-6 offset-medium-1">
-              <HeroImage>
-                <img src={heroImage} />
-              </HeroImage>
-          </div>
-          
-        </div>
+    
+    <HeroWrapper>
+      <HeroBackground>
+        <Container>
 
-      </Element>
+        <h1>Rozwiń swoje skrzydła</h1>
+        <Element _mt8>
+          <h6>Mały krok dla Ciebie, ale ogromny dla Twojego biznesu</h6>
+        </Element>
 
-      </div>
+        </Container>
+      </HeroBackground>
+    </HeroWrapper>
 
     </>
   )

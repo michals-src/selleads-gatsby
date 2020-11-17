@@ -132,7 +132,10 @@ function Section2() {
             <Wrapper>
                 <div className="g-y">
                     <div className="small-5">
-                        <p>A może już działasz na Amazonie, ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p>
+                        <div className="_mb5">
+                            <h6>A może już działasz na Amazonie</h6>
+                        </div>
+                        <p>ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p>
                     </div>
                 </div>
                 <ListBlockWrapper>

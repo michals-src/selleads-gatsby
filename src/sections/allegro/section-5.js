@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function Section3() {
+function Section5() {
     return (
         <>
             <div className="container my6">
@@ -11,4 +11,4 @@ function Section3() {
     )
 }
 
-export default Section3
+export default Section5

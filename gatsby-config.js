@@ -23,7 +23,7 @@ module.exports = {
           "@components": "src/components",
           "@sections": "src/sections",
           "@pages": "src/pages",
-          "@images": "src/images",
+          "@images": "src/assets/images",
           "@styles": "src/styles",
         },
         extensions: [
