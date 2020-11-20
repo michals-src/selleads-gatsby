@@ -70,3 +70,9 @@
         color: #77c7a5 !important;
         transition: color .3s ease;
     }
+
+footer .navbar > nav > ul > li a{
+    padding: 0 15px;
+    height: auto;
+    font-weight: 400;;
+}

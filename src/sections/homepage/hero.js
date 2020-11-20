@@ -8,9 +8,9 @@ import Navbar from './../navbar'
 import heroImage from '../../assets/images/U2BI3GMnSSE-unsplash.jpg';
 
 const HeroWrapper = styled.div`
-  max-width: 2100px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
   color: #fff;
 `
 const HeroBackground = styled.div`
@@ -21,6 +21,7 @@ const HeroBackground = styled.div`
   align-items: center;
   text-align: center;
   text-shadow: 0 3px 10px #0000005e;
+  border-radius: 20px;
 `
 
 

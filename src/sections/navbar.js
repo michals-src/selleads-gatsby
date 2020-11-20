@@ -37,7 +37,7 @@ function Navbar() {
                                         <li className="subnav__child"><Link href="allegro">Allegro</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link href="amazon">O nas</Link></li>
+                                <li><Link href="about">O nas</Link></li>
                                 <li><Link href="amazon">Kontakt</Link></li>
                             </ul>
                             </nav>

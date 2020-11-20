@@ -6,7 +6,7 @@ import '../styles/navigation.css';
 import '../styles/cards.css';
 
 import { Hero, Services, Analytics, Optimalization } from '@sections/homepage';
-
+import Footer from '@sections/footer';
 
 export default function Home() {
 
@@ -21,7 +21,9 @@ export default function Home() {
       <Services />
       <Analytics />
       <Optimalization />
-   
+
+      <Footer />
+
     </div>
   )
 }
