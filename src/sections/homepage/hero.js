@@ -1,10 +1,9 @@
 import React , { useState } from "react";
 import styled from 'styled-components';
 
-import { Link } from 'gatsby'
-
 import Container from '../../components/Container'
 import Element from '../../components/Element'
+import Navbar from './../navbar'
 
 import heroImage from '../../assets/images/U2BI3GMnSSE-unsplash.jpg';
 
@@ -27,38 +26,10 @@ const HeroBackground = styled.div`
 
 export default function Hero() {
 
-  const [subnav, setSubnav] = useState(false);
-
   return (
     <>
 
-      <Container>
-
-      <div className="navigation">
-        <div className="logoType">
-          <h5>Selleads</h5>
-        </div>
-        <div className="navbar">
-          <nav>
-            <ul className="nav">
-              <li>
-                <Link href="/">Strona główna</Link>
-              </li>
-              <li className="subnav__item">
-                <div className="subnav__parent" onClick={() => setSubnav(!subnav)}>Oferta</div>
-                <ul className={`subnav ${(subnav) ? `active` : ``}`}>
-                  <li className="subnav__child"><Link href="amazon">Amazon</Link></li>
-                  <li className="subnav__child"><Link href="allegro">Allegro</Link></li>
-                </ul>
-              </li>
-              <li>O nas</li>
-              <li>Kontakt</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      </Container>
+    <Navbar />
 
     
     <HeroWrapper>

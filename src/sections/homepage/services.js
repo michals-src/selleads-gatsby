@@ -8,6 +8,9 @@ import styled from 'styled-components';
 import background_dashed from '../../assets/images/background_dashed.svg';
 import efe_kurnaz_RnCPiXixooY_unsplash from '@images/efe-kurnaz-RnCPiXixooY-unsplash.jpg';
 
+import glenn_carstens_peters_npxXWgQ33ZQ_unsplash from '@images/loic-furhoff-qeIaMQP_xQE-unsplash.jpg';
+import headway_5QgIuuBxKwM_unsplash from '@images/bench-accounting-ziwuqMZNRvs-unsplash.jpg';
+
 const Wrapper = styled.div`
   max-width: 2100px;
   margin:0 auto;
@@ -32,14 +35,19 @@ const Cards = styled.div``
 
 const CardWrapper = styled.div`
   color: #fff;
+  text-shadow: 0 5px 10px rgba(0,0,0,0.4);
   background: url(${efe_kurnaz_RnCPiXixooY_unsplash});
   text-align: center;
+  background-size: cover;
 
   &.one{
-    background-position: 28% 7%;
+    background: url(${glenn_carstens_peters_npxXWgQ33ZQ_unsplash}) right no-repeat;
+    background-size: cover;
+    
   }
   &.two{
-    background-position: 82% 41%;
+    background: url(${headway_5QgIuuBxKwM_unsplash}) center no-repeat;
+    background-size: cover;
   }
 `
 

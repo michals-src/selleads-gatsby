@@ -5,31 +5,54 @@
 
 .navbar{
     display: block;
+    text-align: right;
 }
 
 .navbar > nav > ul > li{
     display: inline-block;
-    padding: 5px;
+    font-weight: 500;
 }
+    .navbar > nav > ul > li a{
+        padding: 5px 25px;
+        height: 40px;
+    }
+    .navbar > nav > ul > li:hover a{
+        color: #77c7a5;
+        text-decoration: none;
+    }
+        .navbar > nav > ul > li:hover .subnav a{
+            color: var(--color-primary);
+            text-decoration: none;
+            height: auto;
+        }
 
 .subnav__item{
     position: relative;
+    cursor: pointer;
 }
+    .subnav__item:hover{
+        color: #77c7a5;
+    }
+    .subnav__item:hover .subnav{
+        opacity: 1;
+    }
 .subnav{
     position: absolute;
     padding: 0;
-    border: 1px solid #444;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
     border-radius: 5px;
     top: 100%;
     left: 0;
     opacity: 0;
     transition: opacity .15s ease;
+    background: #fff;
+    z-index: 999;
 }
 .subnav.active{
     opacity: 1;
 }
 .subnav .subnav__child{
-    padding: 10px 15px;
+    padding: 20px 55px;
     border-bottom: 1px solid #eee;
 }
 .subnav .subnav__child:nth-last-child(1){
@@ -40,6 +63,10 @@
     text-decoration: none;
 }
 .subnav .subnav__child:hover{
-    background: #eee;
-    transition: background .3s ease;
+    color: #77c7a5;
+    transition: color .3s ease;
 }
+    .subnav .subnav__child:hover a{
+        color: #77c7a5 !important;
+        transition: color .3s ease;
+    }
