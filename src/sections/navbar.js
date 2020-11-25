@@ -33,12 +33,12 @@ function Navbar() {
                                 <li className="subnav__item" onMouseLeave={() => setSubnav(!subnav)}>
                                     <a href="#" className="subnav__parent" onMouseEnter={() => setSubnav(!subnav)}>Oferta</a>
                                     <ul className={`subnav`}>
-                                        <li className="subnav__child"><Link href="amazon">Amazon</Link></li>
-                                        <li className="subnav__child"><Link href="allegro">Allegro</Link></li>
+                                        <li className="subnav__child"><Link href="/amazon">Amazon</Link></li>
+                                        <li className="subnav__child"><Link href="/allegro">Allegro</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link href="about">O nas</Link></li>
-                                <li><Link href="amazon">Kontakt</Link></li>
+                                <li><Link href="/about">O nas</Link></li>
+                                <li><Link href="/contact">Kontakt</Link></li>
                             </ul>
                             </nav>
                     </div>
