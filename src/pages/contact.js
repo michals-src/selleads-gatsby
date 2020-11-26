@@ -8,11 +8,18 @@ import '@styles/cards.css';
 import Navbar from '@sections/navbar'
 import Footer from '@sections/footer'
 
+import background from '@images/contact_background.jpg';
+
+const PageWrapper = styled.div`
+    background: url(${background}) center no-repeat;
+`
+
 const FormWrapper = styled.div`
     padding: 30px 40px;
     /*border: 1px solid #a3e2d9;*/
     border-radius: 5px;
     box-shadow: 0 15px 25px rgb(163 226 217 / 31%);
+    background: #fff;
 `
 
 const InputGroup = styled.div`
@@ -55,6 +62,7 @@ const Textarea = styled.textarea`
 const Figure = styled.div`
     padding: 85px 50px;
     text-align: center;
+    background: #fff;
 
     &.special{
         box-shadow: 0 10px 25px rgb(163 226 217 / 40%);
@@ -69,7 +77,7 @@ export default function contact() {
     return (
         <>
             <Navbar />
-
+            
                 <div className="container">
                     <div className="g-x fx icenter py4">
                         <div className="small-12 text-center pb2">
@@ -91,7 +99,7 @@ export default function contact() {
                         </div>
                     </div>
                 </div>
-
+                <PageWrapper>
                 <div className="container py4 px4">
                     <div className="g-x fx icenter">
                         <div className="offset-medium-1 medium-5 small-12 pr2 text-right">
@@ -124,6 +132,7 @@ export default function contact() {
                         </div>
                     </div>
                 </div>
+                </PageWrapper>
             <Footer />
         </>
     )
