@@ -181,19 +181,19 @@ export default function Contact() {
                                     <input type="hidden" name="form-name" value="contact" />
                                     <InputGroup>
                                         <Label for="contact_name">Twoje imię</Label>
-                                        <InputText type="text" id="contact_name" onChange={onContactFormChange} value={FormDetails.contact_name}  />
+                                        <InputText type="text" id="contact_name" name="contact_name" onChange={onContactFormChange} value={FormDetails.contact_name}  />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_email">Adres e-mail</Label>
-                                        <InputText type="email" id="contact_email" onChange={onContactFormChange} value={FormDetails.contact_email} />
+                                        <InputText type="email" id="contact_email" name="contact_email" onChange={onContactFormChange} value={FormDetails.contact_email} />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_subject">Temat</Label>
-                                        <InputText type="text" id="contact_subject" onChange={onContactFormChange} value={FormDetails.contact_subject} />
+                                        <InputText type="text" id="contact_subject" name="contact_subject" onChange={onContactFormChange} value={FormDetails.contact_subject} />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_message">Wiadomość</Label>
-                                        <Textarea id="contact_message" onChange={onContactFormChange} value={FormDetails.contact_message} />
+                                        <Textarea id="contact_message" name="contact_message" onChange={onContactFormChange} value={FormDetails.contact_message} />
                                     </InputGroup>
                                     <button type="submit" className="button warning">Wyślij wiadomość</button>
                                 </form>
