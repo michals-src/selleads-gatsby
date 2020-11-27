@@ -175,7 +175,7 @@ export default function Contact() {
                                     <input type="hidden" name="form-name" value="contact" />
                                     <InputGroup>
                                         <Label for="contact_name">Twoje imię</Label>
-                                        <InputText type="text" id="contact_name" onChange={onContactFormChange} value={FormDetails.contact_email}  />
+                                        <InputText type="text" id="contact_name" onChange={onContactFormChange} value={FormDetails.contact_name}  />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_email">Adres e-mail</Label>
