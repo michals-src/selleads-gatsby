@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Helmet } from "react-helmet"
 
 import '@styles/globals.css';
 import '@styles/navigation.css';
@@ -127,6 +128,11 @@ export default function Contact() {
 
     return (
         <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Selleads - Kontakt</title>
+        </Helmet>
+
             <Navbar />
             
                 <div className="container">

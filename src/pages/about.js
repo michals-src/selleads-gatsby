@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
-import styled from 'styled-components';
+import { Helmet } from "react-helmet"
 
 import '@styles/globals.css';
 import '@styles/navigation.css';
@@ -16,6 +16,11 @@ export default function Home() {
 
   return (
     <div>
+
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Selleads - O nas</title>
+      </Helmet>
 
       <Navbar />
 
