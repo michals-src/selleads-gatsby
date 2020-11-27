@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import '@styles/globals.css';
@@ -73,7 +73,58 @@ const Textcolor = styled.p`
     color: #91cec5;
 `
 
-export default function contact() {
+const MsgSuccess = styled.div`
+    background: #91cec53d;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #91cec54f;
+    border: 1px solid #c5d8ea;
+    color: #197366;
+`
+
+const MsgError = styled.div`
+    background: #ffebe7;
+    border: 1px solid #f1d5d5;
+    color: #c34343;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #ff00001a;
+`
+
+export default function Contact() {
+
+    const [FormDetails, setFormDetails] = useState({
+        "name" : "",
+        "email" : "",
+        "subject" : "",
+        "content" : ""
+    });
+
+    const [FormMsg, setFormMsg] = useState("");
+
+    const onContactFormChange = (e) => {
+        setFormDetails({
+            ...FormDetails,
+            [e.target.id]: e.target.value
+        })
+    };
+
+    const handleContact = (e) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", FormDetails })
+            })
+            .then(() => setFormMsg("success"))
+            .catch(error => setFormMsg("error"));
+
+        e.preventDefault();
+    };
+
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     return (
         <>
             <Navbar />
@@ -109,22 +160,34 @@ export default function contact() {
                         </div>
                         <div className="offset-medium-1 medium-5 small-12">
                             <FormWrapper>
-                                <form>
+                                
+                                { FormMsg === "success" && 
+                                <MsgSuccess className="my2 _py6 px1">
+                                    <p>Pomyślnie wysłano widomość. Dziękujęmy za kontakt.</p>
+                                </MsgSuccess> }
+                                
+                                { FormMsg === "error" && 
+                                <MsgError className="my2 _py6 px1">
+                                    <p>Oops, coś poszło nie tak. Sprawdź czy wszystkie pola są poprawnie uzupełnione.</p>
+                                </MsgError> }
+                                
+                                <form onSubmit={handleContact} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                                    <input type="hidden" name="form-name" value="contact" />
                                     <InputGroup>
                                         <Label for="contact_name">Twoje imię</Label>
-                                        <InputText type="text" id="contact_name" />
+                                        <InputText type="text" id="contact_name" onChange={onContactFormChange} value={FormDetails.contact_email}  />
                                     </InputGroup>
                                     <InputGroup>
-                                        <Label for="contact_name">Adres e-mail</Label>
-                                        <InputText type="email" id="contact_name" />
+                                        <Label for="contact_email">Adres e-mail</Label>
+                                        <InputText type="email" id="contact_email" onChange={onContactFormChange} value={FormDetails.contact_email} />
                                     </InputGroup>
                                     <InputGroup>
-                                        <Label for="contact_name">Temat</Label>
-                                        <InputText type="text" id="contact_name" />
+                                        <Label for="contact_subject">Temat</Label>
+                                        <InputText type="text" id="contact_subject" onChange={onContactFormChange} value={FormDetails.contact_subject} />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_message">Wiadomość</Label>
-                                        <Textarea id="contact_message" />
+                                        <Textarea id="contact_message" onChange={onContactFormChange} value={FormDetails.contact_message} />
                                     </InputGroup>
                                     <button type="submit" className="button warning">Wyślij wiadomość</button>
                                 </form>
