@@ -111,7 +111,7 @@ export default function Contact() {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", FormDetails })
+            body: encode({ "form-name": "contact", ...FormDetails })
             })
             .then(() => setFormMsg("success"))
             .catch(error => setFormMsg("error"));
