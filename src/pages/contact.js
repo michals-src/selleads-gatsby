@@ -93,10 +93,10 @@ const MsgError = styled.div`
 export default function Contact() {
 
     const [FormDetails, setFormDetails] = useState({
-        "name" : "",
-        "email" : "",
-        "subject" : "",
-        "content" : ""
+        "contact_name" : "",
+        "contact_email" : "",
+        "contact_subject" : "",
+        "contact_message" : ""
     });
 
     const [FormMsg, setFormMsg] = useState("");
@@ -104,7 +104,7 @@ export default function Contact() {
     const onContactFormChange = (e) => {
         setFormDetails({
             ...FormDetails,
-            [e.target.id]: e.target.value
+            [e.target.name]: e.target.value
         })
     };
 
