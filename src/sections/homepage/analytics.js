@@ -25,17 +25,17 @@ const tabs = () => {
 
     //Allegro
     {
-      "title" : "Nagłówek",
-      "content" : "Reprehenderit duis irure consequat elit sint occaecat ipsum id minim sit.",
+      "title" : "Widoczność obowiązkowa.",
+      "content" : "Poza doskonałym kanałem sprzedaży jakim jest Allegro, daje Ci ono możliwość pokazania Twoich ofert klientom. Sama widoczność Twoich ofert podświadomie zapada w pamięć potencjalnym kupującym, a ich więź z Twoją marką się zawęża. Dobrze przygotowana oferta potrafi zamknąć sprzedaż już na tym etapie. Może wspólnie spróbujemy ją przygotować?",
       "size": "medium-6"
     },
     {
-      "title" : "Nagłówek",
-      "content" : "..."
+      "title" : "Potencjał jest w Polsce",
+      "content" : "W 2020 roku liczba użytkowników wyniosła blisko17,58 mln osób,to wzrost prawie o 960,6 tys. użytkowników w porównaniu z ubiegłym rokiem.",
     },
     {
-      "title" : "Nagłówek",
-      "content" : "...",
+      "title" : " Smart! nabiera rozpędu.",
+      "content" : "Sprzedawcy, którzy udostępnili Allegro Smart! w swoich ofertach, odnotowali wzrost liczby transakcji o 37 proc. Platforma Allegro chce w tym roku zainwestować głównie w rozwój Allegro Smart! i usprawnienie dostaw. Na ten cel ma zostać przeznaczone większość z kwoty 1 mld zł zaplanowanych na inwestycje w 2020 roku."
     },
   ];
 }

@@ -35,6 +35,8 @@ function Navbar() {
                                     <ul className={`subnav`}>
                                         <li className="subnav__child"><Link href="/amazon">Amazon</Link></li>
                                         <li className="subnav__child"><Link href="/allegro">Allegro</Link></li>
+                                        <li className="subnav__child"><Link href="/email">Email marketing</Link></li>
+                                        <li className="subnav__child"><Link href="/copywriting">Copywriting</Link></li>
                                     </ul>
                                 </li>
                                 <li><Link href="/about">O nas</Link></li>

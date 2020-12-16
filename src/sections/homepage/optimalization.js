@@ -355,8 +355,8 @@ export default function Optimalization() {
 
               </div>
               <div className="medium-6 offset-medium-2">
-                <p className="xlead _mb4">Popraw swoją widoczność</p>
-                <p>Oddając nam swoje produkt pod opiekę możesz liczyć na wzrost sprzedaży, poprawimy jego zasięgi w Twoich kategoriach.</p>
+                <p className="xlead _mb4">Popraw swoją widoczność.</p>
+                <p>Wyświetlaj się częściej, więcej i trafniej. Uszyjmy Twoje reklamy, na miarę Twoich klientów. Przygotujmy lejek sprzedażowy, który zbierze najbardziej lojalnych i zainteresowanych Twoim produktem kupujących.</p>
               </div>
             </div>
           </div>
@@ -394,8 +394,8 @@ export default function Optimalization() {
         <div>
           <div className="g-x fx icenter">
             <div className="small-7">
-                <p className="xlead _mb4">Zdobądź siłę przebicia</p>
-                <p>Wyświetlaj się na samych szczytach wyszukiwarek, Twoje produkty lub marka będą widoczna na pierwszych miejscach listy wyszukiwarek.</p>
+                <p className="xlead _mb4">Zdobądź siłę przebicia.</p>
+                <p>Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, a algorytm wraz z upływem czasu zacznie pozycjonować Twoją ofertę coraz wyżej. Aż dojdzie do samej góry. </p>
             </div>
             <div className="small-4 offset-small-1">
               <BrowsingAnimation>

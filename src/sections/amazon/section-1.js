@@ -107,8 +107,8 @@ const PathWrapper = styled.div`
 function Section1() {
     return (
         <>
-            <div className="container my6">
-                <div className="pt2 mt2">
+            <div className="container mt3 mb6">
+                <div className="pt2 mt1">
                     <div className="g-x fx icenter">
                         <div className="medium-6 text-center">
                             <h4>Sprzedajesz i myślisz, aby otworzyć dodatkowy kanał sprzedaży? </h4>

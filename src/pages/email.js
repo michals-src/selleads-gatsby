@@ -7,9 +7,9 @@ import '@styles/navigation.css';
 import '@styles/cards.css';
 
 import Navbar from '@sections/navbar'
-import Footer from '@sections/footer';
+import Footer from '@sections/footer'
 
-import { Section1, Section2, Section3 } from '@sections/allegro';
+import { Section1 } from '@sections/email';
 
 
 export default function Home() {
@@ -19,17 +19,14 @@ export default function Home() {
 
       <Helmet>
           <meta charSet="utf-8" />
-          <title>Selleads - Oferta Allegro</title>
+          <title>Selleads - Oferta Email marketing</title>
       </Helmet>
       
       <Navbar />
 
-      <Section1 />
-      <Section2 />
-      <Section3 />
+        <Section1 />
 
-      <Footer/>
-
+      <Footer />
    
     </div>
   )

@@ -367,12 +367,18 @@ p.xlead{
     }
   .button._error{
     border: 1px solid var(--color-error);
-    color: var(--color-error);
+    color: var(--color-error) !important;
   }
+      .button._error a{
+        color: var(--color-error) !important;
+      }
     .button._error:hover{
       border-color: #ffab94;
       color: #ffab94;
     }
+      .button._error:hover a{
+        color: #ffab94;
+      }
   .button._success{
     border: 1px solid var(--color-success);
     color: var(--color-success);

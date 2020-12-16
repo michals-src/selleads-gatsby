@@ -61,9 +61,10 @@ const Textarea = styled.textarea`
     }
 `
 const Figure = styled.div`
-    padding: 85px 50px;
+    padding: 35px 50px;
     text-align: center;
     background: #fff;
+    font-size: 21px;
 
     &.special{
         box-shadow: 0 10px 25px rgb(163 226 217 / 40%);
@@ -88,6 +89,11 @@ const MsgError = styled.div`
     color: #c34343;
     border-radius: 10px;
     box-shadow: 0 5px 15px #ff00001a;
+`
+
+const CenterWrapper = styled.div`
+    margin: 0 auto;
+    max-width: 450px;
 `
 
 export default function Contact() {
@@ -136,32 +142,26 @@ export default function Contact() {
             <Navbar />
             
                 <div className="container">
-                    <div className="g-x fx icenter py4">
-                        <div className="small-12 text-center pb2">
-                            <p className="xlead">Bądźmy w kontakcie</p>
+                    <div className="py4">
+                        <div className="text-center">
+                            <p className="xlead">Jesteśmy w kontakcie.</p>
                         </div>
-                        <div className="medium-6 small-6">
-                            <Figure className="special">
-                                <h6 className="mb1 lead">Godziny pracy</h6>
-                                <p>Pon - Pią od 8:00 do 16:00</p>
-                                <p>Sob od 10:00 do 16:00</p>
-                            </Figure>
-                        </div>
-                        <div className="medium-6 small-6">
-                            <Figure>
-                                <h6 className="mb1 lead">Kontakt</h6>
-                                <p>+48 864 531 961</p>
-                                <p>adres_email@selleads.com</p>
-                            </Figure>
-                        </div>
+                        <CenterWrapper>
+                            <div>
+                                <Figure>
+                                    <p>+48 864 531 961</p>
+                                    <p>adres_email@selleads.com</p>
+                                </Figure>
+                            </div>
+                        </CenterWrapper>
                     </div>
                 </div>
                 <PageWrapper>
                 <div className="container py4 px4">
                     <div className="g-x fx icenter">
                         <div className="offset-medium-1 medium-5 small-12 pr2 text-right">
-                            <p className="_mb1">Masz jakieś pytania ?</p>
-                            <h5 className="mb2 xlead">Napisz do nas</h5>
+                            <p className="_mb1">Masz jakieś pytania?</p>
+                            <h5 className="mb2 xlead">Napisz do nas !</h5>
                             <p className="lead">Jeżeli potrzebujesz dowiedzieć się więcej lub chcesz się z nami skonsultować, jedną z opcji kontaku jaką oferujemy jest napisanie do nas wiadomości e-mail formularzem znajdującym się obok.</p>
                         </div>
                         <div className="offset-medium-1 medium-5 small-12">
@@ -186,10 +186,6 @@ export default function Contact() {
                                     <InputGroup>
                                         <Label for="contact_email">Adres e-mail</Label>
                                         <InputText type="email" id="contact_email" name="contact_email" onChange={onContactFormChange} value={FormDetails.contact_email} />
-                                    </InputGroup>
-                                    <InputGroup>
-                                        <Label for="contact_subject">Temat</Label>
-                                        <InputText type="text" id="contact_subject" name="contact_subject" onChange={onContactFormChange} value={FormDetails.contact_subject} />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_message">Wiadomość</Label>

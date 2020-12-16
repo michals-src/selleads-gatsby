@@ -52,8 +52,9 @@
     opacity: 1;
 }
 .subnav .subnav__child{
-    padding: 20px 55px;
+    padding: 15px 35px;
     border-bottom: 1px solid #eee;
+    text-align: center;
 }
 .subnav .subnav__child:nth-last-child(1){
     border-bottom: none;

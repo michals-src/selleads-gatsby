@@ -39,6 +39,7 @@ const CardWrapper = styled.div`
   background: url(${efe_kurnaz_RnCPiXixooY_unsplash});
   text-align: center;
   background-size: cover;
+  text-decoration: none;
 
   &.one{
     background: url(${glenn_carstens_peters_npxXWgQ33ZQ_unsplash}) right no-repeat;
@@ -49,6 +50,7 @@ const CardWrapper = styled.div`
     background: url(${headway_5QgIuuBxKwM_unsplash}) center no-repeat;
     background-size: cover;
   }
+
 `
 
 export default function services() {
@@ -65,28 +67,34 @@ export default function services() {
 
             <Element pt2 pb1>
               <div className="__center">
-                <p className="lead">Pomożemy tobie na tych serwisach</p>
+                <p className="lead">Pomożemy Ci na tych platformach.</p>
               </div>
             </Element>
             <div className="g-x">
               <div className="small-10">
 
-                <Cards>
-                  <div className="g-x">
-                    <div className="small-6 _pr2">
-                      <CardWrapper className="py8 one">
-                        <h3 className="_mb2">Allegro</h3>
-                        <p className="px3">Pozwól się rozpoznać milionom ludzi przez naszą opiekę nad produktem</p>
-                      </CardWrapper>
+                
+                  <Cards>
+                    <div className="g-x">
+                      <div className="small-6 _pr2">
+                        <Link to="/allegro">
+                          <CardWrapper className="py8 one">
+                            <h3 className="_mb2">Allegro</h3>
+                            <p className="px3">Pozwól się rozpoznać milionom ludzi przez naszą opiekę nad produktem</p>
+                          </CardWrapper>
+                        </Link>
+                      </div>
+                      <div className="small-6 _pl2">
+                        <Link to="/allegro">
+                          <CardWrapper className="py8 two">
+                            <h3 className="_mb2">Amazon</h3>
+                            <p className="px3">Doskonałe miejsce do budowania swojej marki produktowej</p>
+                          </CardWrapper>
+                        </Link>
+                      </div>
                     </div>
-                    <div className="small-6 _pl2">
-                      <CardWrapper className="py8 two">
-                        <h3 className="_mb2">Amazon</h3>
-                        <p className="px3">Doskonałe miejsce do budowania swojej marki produktowej</p>
-                      </CardWrapper>
-                    </div>
-                  </div>
-                </Cards>
+                  </Cards>
+                
 
               </div>
             </div>

@@ -183,73 +183,113 @@ function Section1() {
                     <div className="medium-6 pr2">
                         <SpaceItem className="fx cspace-between py1 pr1">
                             <h5 className="text-right">Dotrzyj do milionow potencjalnych klientów!</h5>
-                            
+                       
+                            <div className="g-x" >
+                                {/* <div className="medium-1" style={{ position: 'relative' }}>
+                                    <PatOneSvg><img src={pathOne} /></PatOneSvg>
+                                </div> */}
+                                <div className="medium-12">
+                                    <div className="g-y">
+                                        {/* <div className="medium-5 mt2 pb4">
+                                            <div className="g-x">
+                                                <div className="medium-1">
+                                                    <PathOne />
+                                                </div>
+                                                <div className="medium-11">
+                                                    <h6 className="_mb5">Copywriting i kreowanie najlepszych ofert w Twojej kategorii.</h6>
+                                                    <p>
+                                                        Zastanawiałeś się kiedyś, czym różnią się tysiące innych ofert od tej jednej, która zostawia z tyłu większość konkurentów?
+                                                        Pokażemy Ci jak pisać oferty, które zainspirują Twoich klientów, a każdemu kto trafi na Twój produkt, serce zacznie bić szybciej.
+                                                        Culpa magna dolor deserunt ut qui id. Eu ut minim adipisicing consectetur amet aute culpa nisi consectetur nulla in pariatur veniam. Ex ipsum fugiat eiusmod cillum do aliqua sint voluptate minim labore fugiat adipisicing elit sit. Fugiat aliquip consectetur et tempor irure ea irure. Dolor sit incididunt officia consectetur ut duis.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> */}
+
+                                        <div className="medium-12 mt2 pb4">
+                                            <div className="g-x">
+                                                <div className="medium-1">
+                                                    <PathOne />
+                                                </div>
+                                                <div className="medium-11">
+                                                    <h6 className="_mb5">Allegro Ads.</h6>
+                                                    <p>
+                                                        Zaopiekujemy się Twoją kampanią reklamową, tak aby nie przepalała budżetu, a jednocześnie docierała do jak największej liczby osób, którzy mogą być zainteresowani Twoim produktem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="medium-12 mb2">
+                                            <div className="g-x" style={{position: 'relative'}}>
+                                                <div className="medium-12">
+                                                    <div className="g-x">
+                                                        <div className="medium-1">
+                                                            <PathTwo />
+                                                            <PathTwoKnee />
+                                                        </div>
+                                                        <div className="medium-11">
+                                                            <h6 className="_mb5">Kompleksowa obsługa platformy.</h6>
+                                                            <p>
+                                                                Chcesz sprzedawać swoje produkty na Allegro, ale nie masz na to czasu? Zatrudnienie pracownika wiąże się z dużymi kosztami? Zleć to nam! Zajmiemy się obsługą Twojego konta i cyklicznym zwiększaniem sprzedaży, a Tobie pozostanie tylko realizowanie zamówień, które zaczną spływać faaalaaami.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* <div className="medium-12 mb2">
+                                            <div className="g-x" style={{position: 'relative'}}>
+                                                <div className="medium-5">
+                                                    <div className="g-x">
+                                                        <div className="medium-1">
+                                                            <PathTwo />
+                                                            <PathTwoKnee />
+                                                        </div>
+                                                        <div className="medium-11">
+                                                            <h6 className="_mb5">Allegro Ads</h6>
+                                                            <p>
+                                                                Zaopiekujemy się Twoją kampanią reklamową, tak aby nie przepalała budżetu, a jednocześnie docierała do jak największej liczby osób, którzy mogą być zainteresowani Twoim produktem.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="medium-7" style={{ position: 'relative' }}>
+                                                    <PathThree>
+                                                        <PathThreeKnee>
+                                                            <PathThreeVertical/>
+                                                        </PathThreeKnee>
+                                                    </PathThree>
+                                                </div>
+                                                
+                                            </div>
+                                        </div> */}
+                                    </div>
+                                </div>
+                            </div> {/*g-x */}
+
                         </SpaceItem>
+
+
+
+
                     </div>
                     <UnformedCircleSvg className="medium-6 px2 py1">
                         <img width="100%" height="800px" src={pexels_image_1} />
                     </UnformedCircleSvg>
                 </div>
-                <div className="g-x" style={{marginTop: '-300px'}}>
-                    {/* <div className="medium-1" style={{ position: 'relative' }}>
-                        <PatOneSvg><img src={pathOne} /></PatOneSvg>
-                    </div> */}
-                    <div className="medium-12">
-                        <div className="g-y">
-                            <div className="medium-5 mt2 pb4">
-                                <div className="g-x">
-                                    <div className="medium-1">
-                                        <PathOne />
-                                    </div>
-                                    <div className="medium-11">
-                                        <h6 className="_mb5">Copywriting i kreowanie najlepszych ofert w Twojej kategorii.</h6>
-                                        <p>
-                                            Zastanawiałeś się kiedyś, czym różnią się tysiące innych ofert od tej jednej, która zostawia z tyłu większość konkurentów?
-                                            Pokażemy Ci jak pisać oferty, które zainspirują Twoich klientów, a każdemu kto trafi na Twój produkt, serce zacznie bić szybciej.
-                                            Culpa magna dolor deserunt ut qui id. Eu ut minim adipisicing consectetur amet aute culpa nisi consectetur nulla in pariatur veniam. Ex ipsum fugiat eiusmod cillum do aliqua sint voluptate minim labore fugiat adipisicing elit sit. Fugiat aliquip consectetur et tempor irure ea irure. Dolor sit incididunt officia consectetur ut duis.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="medium-12 mb2">
-                                <div className="g-x" style={{position: 'relative'}}>
-                                    <div className="medium-5">
-                                        <div className="g-x">
-                                            <div className="medium-1">
-                                                <PathTwo />
-                                                <PathTwoKnee />
-                                            </div>
-                                            <div className="medium-11">
-                                                <h6 className="_mb5">Allegro Ads</h6>
-                                                <p>
-                                                    Zaopiekujemy się Twoją kampanią reklamową, tak aby nie przepalała budżetu, a jednocześnie docierała do jak największej liczby osób, którzy mogą być zainteresowani Twoim produktem.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div className="medium-7" style={{ position: 'relative' }}>
-                                        <PathThree>
-                                            <PathThreeKnee>
-                                                <PathThreeVertical/>
-                                            </PathThreeKnee>
-                                        </PathThree>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="g-y _mt4">
+                {/* <div className="g-y _mt4">
                     <div className="medium-6 offset-medium-6">
                         <h6 className="_mb5">Kompleksowa obsługa platformy</h6>
                         <p>
                             Chcesz sprzedawać swoje produkty na Allegro, ale nie masz na to czasu? Zatrudnienie pracownika wiąże się z dużymi kosztami? Zleć to nam! Zajmiemy się obsługą Twojego konta i cyklicznym zwiększaniem sprzedaży, a Tobie pozostanie tylko realizowanie zamówień, które zaczną spływać faaalaaami.
                         </p>
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </>

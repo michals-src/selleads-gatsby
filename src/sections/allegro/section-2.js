@@ -67,7 +67,7 @@ function Section2() {
                 </div>
                 <div>
                     <Width500Wrapper>
-                        <LeadLarge>Pokażmy Twój produkt ludziom, <div>którzy go szukają</div></LeadLarge>
+                        <LeadLarge>Pokażmy Twój produkt ludziom, <div>którzy go szukają.</div></LeadLarge>
                         <button className="button _warning _mt4">Milion wystarczy ?</button>
                     </Width500Wrapper>
                 </div>
@@ -78,7 +78,7 @@ function Section2() {
                 <div className="medium-5">
                     <h6>
                         <TitleUnderline className="_mb4">My działamy, a Ty monitorujesz</TitleUnderline>
-                        rozwój swojej firmy
+                        rozwój swojej firmy.
                     </h6>
                     <p className="_my6">
                         Cotygodniowe raporty przedstawione w sposób zrozumiały dla każdego. CTR? CPC? Przestań zaprzątać sobie głowę specjalistycznymi wskaźnikami. Jasno przedstawimy Ci znaczenia każdego z nich, oraz to co oznacza dla Ciebie – a Ty zajmij się prowadzeniem swojej firmy.
