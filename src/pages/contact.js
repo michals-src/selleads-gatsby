@@ -157,14 +157,14 @@ export default function Contact() {
                     </div>
                 </div>
                 <PageWrapper>
-                <div className="container py4 px4">
+                <div className="container py4 px2">
                     <div className="g-x fx icenter">
-                        <div className="offset-medium-1 medium-5 small-12 pr2 text-right">
+                        <div className="offset-large-1 large-5 medium-12 small-12 pr2 ">
                             <p className="_mb1">Masz jakieś pytania?</p>
                             <h5 className="mb2 xlead">Napisz do nas !</h5>
                             <p className="lead">Jeżeli potrzebujesz dowiedzieć się więcej lub chcesz się z nami skonsultować, jedną z opcji kontaku jaką oferujemy jest napisanie do nas wiadomości e-mail formularzem znajdującym się obok.</p>
                         </div>
-                        <div className="offset-medium-1 medium-5 small-12">
+                        <div className="offset-large-1 large-5 medium-12 small-12 mt1">
                             <FormWrapper>
                                 
                                 { FormMsg === "success" && 

@@ -25,6 +25,13 @@ const TitleUnderline = styled.span`
 const MediaText__Wrapper = styled.div`
     display: flex;
     align-items: center;
+
+    @media (max-width: 986px){
+        & {
+            flex-direction: column;
+            padding: 0 15px;
+        }
+    }
 `
 const MediaText__Content = styled.div`
     position: relative;
@@ -60,6 +67,14 @@ const MediaText__Content = styled.div`
         z-index: -1;
         transform: translateX(100%);
     }
+
+    @media (max-width: 986px){
+        & {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
 `
 
 const MediaText__Object = styled.div`
@@ -79,6 +94,25 @@ const MediaText__Object = styled.div`
         margin-left: auto;
         margin-right: -25px;
     }
+
+    @media (max-width: 1100px){
+        & {
+            margin-left: -65px;
+        }
+    }
+
+    @media (max-width: 986px){
+        & {
+            width: 100%;
+            order: 0 !important;
+            margin: 0 auto -30px auto;
+        }
+
+        .reverse > &,
+        & > picture{
+            margin: 0 auto -30px auto;
+        }
+    }
 `
 
 const PexelsFauxelsImage = styled.picture`
@@ -87,6 +121,18 @@ const PexelsFauxelsImage = styled.picture`
 
     & > img{
         width: 100%;
+    }
+
+    @media (max-width: 986px){
+        & {
+            width: 300px;
+        }
+    }
+
+    @media (max-width: 768px){
+        & {
+            width: 180px;
+        }
     }
 `
 
@@ -102,17 +148,19 @@ function Section3() {
                     </PexelsFauxelsImage>
                 </MediaText__Object>
                 <MediaText__Content>
-                    <div className="py8 px6">
+                    <div className="py8:large px6:large py4 px2">
                         <div className="g-x">
                         
-                            <h6>
-                                Wskazówki za które musisz zapłacić? 
-                                <TitleUnderline>Na pewno nie u nas!</TitleUnderline>
-                            </h6>
+                            <div className="small-12">
+                                <h6>
+                                    Wskazówki za które musisz zapłacić ? 
+                                    <TitleUnderline>Na pewno nie u nas!</TitleUnderline>
+                                </h6>
 
-                            <p className="_my6">
-                                Jeśli pracując zauważymy jakąkolwiek szansę dla Twojej firmy, możesz być pewny/a że skonsultujemy ją z Tobą, sugerując nasze rozwiązania – KOMPLETNIE ZA DARMO. Jeśli zdecydowałeś/aś się z nami współpracować, naszym celem jest wzrost Twojej firmy (nie tylko na płaszczyźnie, za którą płacisz).
-                            </p>
+                                <p className="_my6">
+                                    Jeśli pracując zauważymy jakąkolwiek szansę dla Twojej firmy, możesz być pewny/a że skonsultujemy ją z Tobą, sugerując nasze rozwiązania – KOMPLETNIE ZA DARMO. Jeśli zdecydowałeś/aś się z nami współpracować, naszym celem jest wzrost Twojej firmy (nie tylko na płaszczyźnie, za którą płacisz).
+                                </p>
+                            </div>
 
                         </div>
                     </div>

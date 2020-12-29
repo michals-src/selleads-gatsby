@@ -32,14 +32,14 @@ const SVGWrapper = styled.div`
 function Section1() {
     return (
         <>
-            <div className="container my1">
+            <div className="container mt3 mb1">
                 <div className="g-x my3 fx icenter">
-                    <div className="medium-6">
+                    <div className="medium-6 small-12 mb0:medium mb1">
                         <SVGWrapper>
                             <img src={undraw_email_capture} />
                         </SVGWrapper>
                     </div>
-                    <div className="offset-medium-1 medium-5">
+                    <div className="offset-medium-1 medium-5 small-12">
                         <h6>
                             <TitleUnderline className="_mb4">Email marketing</TitleUnderline>
                         </h6>

@@ -11,9 +11,6 @@ import Footer from '@sections/footer';
 
 export default function Home() {
 
-  const p = Array(9).fill('');
-  const h = Array(5).fill(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']);
-
   return (
     <div>
 

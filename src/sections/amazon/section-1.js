@@ -102,6 +102,13 @@ const PathThree2 = styled.div`
 const PathWrapper = styled.div`
     margin-top: -45px;
 
+
+    @media (max-width: 768px){
+        & {
+            opacity: 0;
+            height: 100px;
+        }
+    }
 `
 
 function Section1() {
@@ -110,10 +117,10 @@ function Section1() {
             <div className="container mt3 mb6">
                 <div className="pt2 mt1">
                     <div className="g-x fx icenter">
-                        <div className="medium-6 text-center">
-                            <h4>Sprzedajesz i myślisz, aby otworzyć dodatkowy kanał sprzedaży? </h4>
+                        <div className="medium-6 small-8 text-center">
+                            <h4>Sprzedajesz i myślisz, aby otworzyć dodatkowy kanał sprzedaży ?</h4>
                         </div>
-                        <div className="medium-4 offset-medium-2">
+                        <div className="medium-4 small-3 offset-medium-2 offset-small-1">
                             <SVGWrapper>
                                 <img src={undraw_Process_re} />
                             </SVGWrapper>
@@ -137,15 +144,15 @@ function Section1() {
                     </div>
                  </PathWrapper>
 
-                <div className="">
+                <div>
                     <div className="g-x fx icenter">
-                        <div className="medium-4">
+                        <div className="medium-4 small-3">
                             <SVGWrapper>
                                 <img src={undraw_lightbulb_moment} />
                             </SVGWrapper>
                         </div>
-                        <div className="offset-medium-2 medium-6 text-center">
-                            <h4>Masz pomysł na genialny produkt, a nie wiesz jak zacząć?</h4>
+                        <div className="offset-medium-2 offset-small-1 medium-6 small-8 text-center">
+                            <h4>Masz pomysł na genialny produkt, a nie wiesz jak zacząć ?</h4>
                         </div>
                     </div>
                 </div>

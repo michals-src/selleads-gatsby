@@ -6,7 +6,8 @@ import '@styles/globals.css';
 import '@styles/navigation.css';
 import '@styles/cards.css';
 
-import Navbar from './../sections/navbar'
+import Navbar from '@sections/navbar'
+import Footer from '@sections/footer';
 
 import { Section1, Section2, Section3 } from '@sections/amazon';
 
@@ -26,6 +27,8 @@ export default function Home() {
       <Section1 />
       <Section2 />
       <Section3 />
+
+      <Footer />
    
     </div>
   )

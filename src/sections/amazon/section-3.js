@@ -46,7 +46,7 @@ function Section3() {
         <>
             <div className="container mt4 mb5">
                 <div className="g-x _mb8">
-                    <div className="medium-8 px1">
+                    <div className="large-8 medium-12 small-12 px1">
                         <div className="_p6">
                             <h6 className="_mb5 pr8">
                                 W USA odpowiada za 45% sprzedaży dokonanych w Internecie !
@@ -60,11 +60,11 @@ function Section3() {
                     <ColumnTitle>Amazon to największa na świecie platforma sprzedażowa. </ColumnTitle>
                 </Column>
 
-                <div className="my8">
+                <div className="mt8 mb1">
                     <div className="mb3">
                         <HeadLine className="text-center">
                             <h5>
-                                Jeżeli jeszcze nie słyszałeś/aś o Amazonie oto kilka faktów, które powinny pomóc w podjęciu decyzji
+                                Jeżeli jeszcze nie słyszałeś/aś o Amazonie oto kilka faktów, które powinny pomóc w podjęciu decyzji.
                             </h5>
                         </HeadLine>
                     </div>

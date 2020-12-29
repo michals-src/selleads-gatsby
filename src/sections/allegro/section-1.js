@@ -18,6 +18,20 @@ const UnformedCircleSvg = styled.div`
     & > img {
         border-radius: 20px;
     }
+
+    @media (max-width: 768px){
+        & > img {
+            max-height: 500px;
+        }
+    }
+`
+
+const PathWrapper = styled.div`
+    @media (max-width: 986px){
+        & {
+            display: none;
+        }
+    }
 `
 
 const PatOneSvg = styled.div`
@@ -177,14 +191,14 @@ const PathThreeVertical = styled.div`
 function Section1() {
     return (
         <>
-            <div className="_container mt2 mb6">
+            <div className="_container mt4 mb6 p1">
 
                 <div className="g-x">
-                    <div className="medium-6 pr2">
+                    <div className="medium-6 pr2:medium">
                         <SpaceItem className="fx cspace-between py1 pr1">
-                            <h5 className="text-right">Dotrzyj do milionow potencjalnych klientów!</h5>
+                            <h5 className="text-right:medium text-center">Dotrzyj do milionow potencjalnych klientów!</h5>
                        
-                            <div className="g-x" >
+                            <div className="g-x">
                                 {/* <div className="medium-1" style={{ position: 'relative' }}>
                                     <PatOneSvg><img src={pathOne} /></PatOneSvg>
                                 </div> */}
@@ -208,9 +222,9 @@ function Section1() {
 
                                         <div className="medium-12 mt2 pb4">
                                             <div className="g-x">
-                                                <div className="medium-1">
+                                                <PathWrapper className="medium-1">
                                                     <PathOne />
-                                                </div>
+                                                </PathWrapper>
                                                 <div className="medium-11">
                                                     <h6 className="_mb5">Allegro Ads.</h6>
                                                     <p>
@@ -224,10 +238,10 @@ function Section1() {
                                             <div className="g-x" style={{position: 'relative'}}>
                                                 <div className="medium-12">
                                                     <div className="g-x">
-                                                        <div className="medium-1">
+                                                        <PathWrapper className="medium-1">
                                                             <PathTwo />
                                                             <PathTwoKnee />
-                                                        </div>
+                                                        </PathWrapper>
                                                         <div className="medium-11">
                                                             <h6 className="_mb5">Kompleksowa obsługa platformy.</h6>
                                                             <p>

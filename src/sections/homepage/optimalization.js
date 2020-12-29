@@ -281,7 +281,7 @@ export default function Optimalization() {
         <div className="g-x">
           <div className="small-12">
             <div className="g-x fx icenter">
-              <div className="medium-4">
+              <div className="medium-4 small-12">
                 
                 <WebCards>
                   
@@ -371,7 +371,7 @@ export default function Optimalization() {
             <p className=" _mb8">Kreowane naszym doświadczeniem oraz potrzebami użytkowników</p>
           </Container>
         </SolutionsAlphaHero>
-        <Container>
+        {/* <Container>
           <div className="g-x fx icenter mt3 ">
             <div className="medium-6">
               <div className="g-x fx icenter">
@@ -385,7 +385,7 @@ export default function Optimalization() {
               <p>Przegladając naszą ofertę możesz zobaczyć wiele innych naszych opcji rozwoju dla Twojej firmy. Allegro bądź Amazon, jeżeli, któraś z platform przykuła Twoją uwagę w celu rozwinięcia twojej kampanii przejrzyj naszą ofertę dla wybranego serwisu i zapoznaj się ze szczegółami naszych działań, które wprowadzą Ciebie i twóją firmę na szczyt.</p>
             </div>
           </div>
-        </Container>
+        </Container> */}
       </SolutionsWrapperAlpha>
 
   <Container>
@@ -393,11 +393,11 @@ export default function Optimalization() {
 
         <div>
           <div className="g-x fx icenter">
-            <div className="small-7">
+            <div className="mediuum-7 small-12 mb2">
                 <p className="xlead _mb4">Zdobądź siłę przebicia.</p>
                 <p>Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, a algorytm wraz z upływem czasu zacznie pozycjonować Twoją ofertę coraz wyżej. Aż dojdzie do samej góry. </p>
             </div>
-            <div className="small-4 offset-small-1">
+            <div className="medium-4 small-12 offset-medium-1">
               <BrowsingAnimation>
                 <BrowsingInput>
                   <BrowsingInputText />

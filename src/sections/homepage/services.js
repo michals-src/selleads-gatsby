@@ -25,13 +25,30 @@ const BackgroundWrapper = styled.div`
     max-width: 1800px;
     left: 0;
     right: 0;
+    overflow: hidden;
 `
 
 const Picture = styled.img`
     width: 100%;
+    display: block;
+    margin-left: 50px;
 `
 
-const Cards = styled.div``
+const CardsWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1180px;
+`
+
+const Cards = styled.div`
+  & a {
+    text-decoration: none;
+    transition: transform .35s ease-in-out;
+  }
+
+  & a:hover{
+    transform: scale(0.95);
+  }
+`
 
 const CardWrapper = styled.div`
   color: #fff;
@@ -63,42 +80,36 @@ export default function services() {
         </picture>
       </BackgroundWrapper>
 
-      <div className="container py0">
-
-            <Element pt2 pb1>
+      <div className="py0 px3">
+        <CardsWrapper>
+            <Element mt3 mb2 px2>
               <div className="__center">
                 <p className="lead">Pomożemy Ci na tych platformach.</p>
               </div>
             </Element>
-            <div className="g-x">
-              <div className="small-10">
 
-                
                   <Cards>
                     <div className="g-x">
-                      <div className="small-6 _pr2">
+                      <div className="medium-6 small-12 _px2 _py1">
                         <Link to="/allegro">
                           <CardWrapper className="py8 one">
                             <h3 className="_mb2">Allegro</h3>
-                            <p className="px3">Pozwól się rozpoznać milionom ludzi przez naszą opiekę nad produktem</p>
+                            <p className="px3">Pozwól się rozpoznać milionom ludzi przez naszą opiekę nad produktem.</p>
                           </CardWrapper>
                         </Link>
                       </div>
-                      <div className="small-6 _pl2">
-                        <Link to="/allegro">
+                      <div className="medium-6 small-12 _px2 _py1">
+                        <Link to="/amazon">
                           <CardWrapper className="py8 two">
                             <h3 className="_mb2">Amazon</h3>
-                            <p className="px3">Doskonałe miejsce do budowania swojej marki produktowej</p>
+                            <p className="px3">Doskonałe miejsce do budowania swojej marki produktowej.</p>
                           </CardWrapper>
                         </Link>
                       </div>
                     </div>
                   </Cards>
-                
 
-              </div>
-            </div>
-
+        </CardsWrapper>
       </div>
       </Wrapper>
     </>

@@ -34,12 +34,12 @@ function Section4() {
         <>
             <div className="container my6">
                 <div className="g-x my5 fx icenter">
-                    <div className="medium-6">
+                    <div className="medium-6 small-12">
                         <SVGWrapper>
                             <img src={undraw_email_capture} />
                         </SVGWrapper>
                     </div>
-                    <div className="offset-medium-1 medium-5">
+                    <div className="offset-medium-1 medium-5 small-12">
                         <h6>
                             <TitleUnderline className="_mb4">Email marketing</TitleUnderline>
                         </h6>

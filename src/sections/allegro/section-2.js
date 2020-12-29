@@ -59,7 +59,7 @@ function Section2() {
     return (
         <>
         <StonesBackground>
-            <div className="container mt6 mb3">
+            <div className="container mt6">
                 <div className="my2">
                     <ImageWrapper>
                         <img src={undraw_stand_out_1oag} />
@@ -75,7 +75,7 @@ function Section2() {
         </StonesBackground>
         <div className="container">
             <div className="g-x my5">
-                <div className="medium-5">
+                <div className="medium-5 small-12">
                     <h6>
                         <TitleUnderline className="_mb4">My działamy, a Ty monitorujesz</TitleUnderline>
                         rozwój swojej firmy.
@@ -84,7 +84,7 @@ function Section2() {
                         Cotygodniowe raporty przedstawione w sposób zrozumiały dla każdego. CTR? CPC? Przestań zaprzątać sobie głowę specjalistycznymi wskaźnikami. Jasno przedstawimy Ci znaczenia każdego z nich, oraz to co oznacza dla Ciebie – a Ty zajmij się prowadzeniem swojej firmy.
                     </p>
                 </div>
-                <div className="offset-medium-1 medium-6">
+                <div className="offset-medium-1 medium-6 small-12 mt0:medium mt1">
                     <UndrawDataPointsSvg>
                         <img src={undraw_Data_points} />
                     </UndrawDataPointsSvg>

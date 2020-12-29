@@ -16,8 +16,7 @@ function Footer() {
                                 <nav>
                                     <ul className="nav">
                                         <li><Link href="/">Polityka prywatności</Link> </li>
-                                        <li><Link href="/">Ciasteczka</Link> </li>
-                                        <li><Link href="/">Kontakt</Link> </li>
+                                        <li><Link href="/contact">Kontakt</Link> </li>
                                     </ul>
                                 </nav>
                             </div>

@@ -9,6 +9,12 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     min-height: 500px;
+
+    @media (max-width: 986px){
+        & {
+            display: block;
+        }
+    }
 `
 
 const ListBlockWrapper = styled.div`
@@ -24,6 +30,17 @@ const ListBlockWrapper = styled.div`
     flex-flow: row wrap;
     align-conent: space-between;
     box-shadow: 0 5px 15px #00000030;
+
+    @media (max-width: 986px){
+        & {
+            position: relative;
+            right: auto;
+            top: 0;
+            bottom: auto;
+            margin-top: 50px;
+            width: 100%;
+        }
+    }
 `
 
 const ListBlockItem = styled.div`
@@ -131,11 +148,11 @@ function Section2() {
         <div className="_container">
             <Wrapper>
                 <div className="g-y">
-                    <div className="small-5">
+                    <div className="large-5 small-12">
                         <div className="_mb5">
-                            <h6>A może już działasz na Amazonie</h6>
+                            <h6>A może już działasz na Amazonie ?</h6>
                         </div>
-                        <p>ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p>
+                        <p>Ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p>
                     </div>
                 </div>
                 <ListBlockWrapper>

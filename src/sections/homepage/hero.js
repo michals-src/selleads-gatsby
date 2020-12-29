@@ -12,6 +12,7 @@ const HeroWrapper = styled.div`
   margin: 0 auto;
   padding: 0 30px 30px 30px;
   color: #fff;
+  margin-top:80px;
 `
 const HeroBackground = styled.div`
   background: url(${heroImage});
