@@ -148,7 +148,7 @@ function Section3() {
                     </PexelsFauxelsImage>
                 </MediaText__Object>
                 <MediaText__Content>
-                    <div className="py8:large px6:large py4 px2">
+                    <div className="py8:large px6:large py4 px4">
                         <div className="g-x">
                         
                             <div className="small-12">
