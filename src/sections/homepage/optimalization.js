@@ -393,7 +393,7 @@ export default function Optimalization() {
 
         <div>
           <div className="g-x fx icenter">
-            <div className="mediuum-7 small-12 mb2">
+            <div className="medium-7 small-12 mb2">
                 <p className="xlead _mb4">Zdobądź siłę przebicia.</p>
                 <p>Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, a algorytm wraz z upływem czasu zacznie pozycjonować Twoją ofertę coraz wyżej. Aż dojdzie do samej góry. </p>
             </div>
