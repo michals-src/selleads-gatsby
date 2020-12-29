@@ -2,9 +2,6 @@ import React , { useState } from "react";
 import styled from "styled-components";
 import { Link } from 'gatsby';
 
-
-import Selleads from "@images/selleads.svg";
-
 function Navbar() {
 
     const [navAria, setNavAria] = useState(false);
