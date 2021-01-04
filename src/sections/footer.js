@@ -15,7 +15,7 @@ function Footer() {
                             <div className="navbar">
                                 <nav>
                                     <ul className="nav">
-                                        <li><Link href="/">Polityka prywatności</Link> </li>
+                                        <li><Link href="/polityka-prywatnosci">Polityka prywatności</Link> </li>
                                         <li><Link href="/contact">Kontakt</Link> </li>
                                     </ul>
                                 </nav>
