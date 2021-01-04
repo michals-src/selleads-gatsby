@@ -1,4 +1,4 @@
-import React , { useState } from "react";
+import React , { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from 'gatsby';
 
@@ -7,11 +7,31 @@ function Navbar() {
     const [navAria, setNavAria] = useState(false);
     const [snAria, setSmAria] = useState(false);
 
-    const snAriaHandle = (e) => {
-        e.preventDefault();
+    const snAriaHandle = (snAriaState) => {
+
+        if( typeof snAriaState === "boolean" ){
+            setSmAria(snAriaState);
+            return snAria;
+        }
 
         setSmAria(!snAria);
+        return snAria;
     }
+
+    useEffect(() => {
+
+        let bodyClass = document.body.classList;
+        const bodyClassTag = 'sc-mobile-globalnav';
+
+        return Object.values(bodyClass).indexOf(bodyClassTag) != -1
+                ? bodyClass.remove( bodyClassTag )
+                : bodyClass.add( bodyClassTag );
+
+    }, [navAria]);
+
+    useEffect(() => {
+        document.body.classList.remove('sc-mobile-globalnav');
+    }, []);
 
     return (
         <>
@@ -37,8 +57,8 @@ function Navbar() {
                     <li className="sc-gn-list-item">
                         <Link href="/">Strona główna</Link>
                     </li>
-                    <li className="sc-gn-list-item sc-gn-list-item-sn" onMouseLeave={snAriaHandle} data-aria={snAria}>
-                        <a href="#" className="sc-gn-sn-main" onMouseEnter={snAriaHandle} onClick={snAriaHandle}>  Oferta</a>
+                    <li className="sc-gn-list-item sc-gn-list-item-sn" onMouseLeave={() => { snAriaHandle(false) } } data-aria={snAria}>
+                        <a href="#" className="sc-gn-sn-main" onMouseEnter={() => { snAriaHandle(true) } } onClick={ () => { snAriaHandle('toggle') } }>Oferta</a>
                         <ul className="sc-gn-sn-list">
                             <li className="sc-gn-list-item sc-gn-sn-item">
                                 <Link href="/amazon">

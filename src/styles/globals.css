@@ -24,6 +24,10 @@ body{
   color: var(--color-primary);
 }
 
+  body.sc-mobile-globalnav{
+    overflow: hidden;
+  }
+
 * {
   box-sizing: border-box;
 }

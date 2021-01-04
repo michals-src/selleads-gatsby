@@ -188,9 +188,11 @@ footer .navbar > nav > ul > li a{
         background-color: #fff;
         z-index: 999;
         opacity: 0;
+        visibility: hidden;
     }
     #sc-globalnav .sc-gn-list-item-sn[data-aria="true"]  .sc-gn-sn-list{
         opacity: 1;
+        visibility: visible;
     }
         #sc-globalnav .sc-gn-sn-item{
             width: 100%;
@@ -215,7 +217,7 @@ footer .navbar > nav > ul > li a{
         transition: background .3s ease-in-out, height .45s ease-in-out;
         z-index: 9999;
         height: 60px;
-        overflow-y: hidden;
+        overflow-x: hidden;
     }
         #sc-globalnav[data-aria="true"]{
             position: fixed;
@@ -266,7 +268,7 @@ footer .navbar > nav > ul > li a{
                 height: 0;
                 transition: height .5s ease;
             }
-                #sc-globalnav .sc-gn-list-item-sn[data-aria="true"] .sc-gn-sn-list{
+                #sc-globalnav .sc-gn-list-item-sn[data-aria="true"]  .sc-gn-sn-list{
                     height: 100%;
                 }
 
