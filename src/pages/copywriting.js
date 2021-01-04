@@ -95,7 +95,7 @@ export default function Home() {
             <div className="large-3 medium-12 mt1">
             <BlockWrapper1>
               <p className="mb1">Średnia konwersja dobrze zoptymalizowanego sklepu internetowego to około 2-3%. Czyli na 1000 odwiedzających Twoją witrynę, około 30 osób powinno dokonać zakupu. A co jeśli zmianą sposobu prezentowania oferty dałoby się to podwoić?</p>
-              <div className="button primary text-center"><Link to="/kontakt">Sprawdźmy, jak możemy udoskonalić Twoje oferty.</Link></div>
+              <div className="button primary text-center"><Link to="/contact">Sprawdźmy, jak możemy udoskonalić Twoje oferty.</Link></div>
               </BlockWrapper1>
             </div>
           </div>{/*g-x*/}
