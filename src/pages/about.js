@@ -28,10 +28,10 @@ export default function Home() {
                 <div className="g-x fx icenter">
                     <div className="medium-5 small-12">
                         <p className="xlead mb1">Poznaj nas</p>
-                        <p>Jesteśmy, aby pomóc w rozwoju twojego biznesu w siezi. 
-                        Specjalizujemy się w serwisach aukcyjnych Amazon oraz Allegro zdobywając świat. 
-                        W oparciu o nasze doświadczeniu pomożemy tobie od A do Z rozwinąć twoją markę. 
-                        
+                        <p>Jesteśmy, aby pomóc w rozwoju twojego biznesu w sieci. 
+                          Specjalizujemy się w serwisach aukcyjnych Amazon oraz Allegro zdobywając świat. 
+                          W oparciu o nasze doświadczeniu pomożemy tobie od A do Z rozwinąć twoją markę. 
+                          Jesteśmy młodym zespołem, który na bieżąco śledzi trendy i potrzeby użytkowników, aby pomóc Ci w wybiciu Twojej marki.
                         </p>
                     </div>
                     <div className="medium-6 small-12 offset-medium-1">
