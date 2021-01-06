@@ -5,7 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Selleads`,
+    siteUrl: `https://www.selleads.pl`,
+    description: `Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, a algorytm wraz z upływem czasu zacznie pozycjonować Twoją ofertę coraz wyżej. Aż dojdzie do samej góry.`,
+  },
   plugins: [
     // {
     //   resolve: 'gatsby-source-filesystem',
@@ -15,6 +19,15 @@ module.exports = {
     //   }
     // },
     'gatsby-plugin-styled-components',
+    `gatsby-plugin-sharp`, 
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -30,6 +43,18 @@ module.exports = {
           "js", 'css'
         ],
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Selleads wings for your business',
+        short_name: 'Selleads',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: 'src/assets/images/selleads.png',
+      }
+    },
   ],
 }

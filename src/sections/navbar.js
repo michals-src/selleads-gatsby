@@ -1,8 +1,23 @@
 import React , { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-image"
+
+
 
 function Navbar() {
+
+    const data = useStaticQuery(graphql`
+    query MyQuery {
+        file(relativePath: {eq: "selleads.png"}) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `);
 
     const [navAria, setNavAria] = useState(false);
     const [snAria, setSmAria] = useState(false);
@@ -44,14 +59,18 @@ function Navbar() {
                     <div className="sc-gn-tapmenu-item"><span></span></div>
                 </div>
                 <div className="sc-gn-selleads">
-                    <h5>Selleads</h5>
+                    <Link href="/">
+                        <Img 
+                            fluid={data.file.childImageSharp.fluid} />
+                    </Link>
                 </div>
             </div>
             <ul className="sc-gn-list">
                 <li className="sc-gn-list-item sc-gn-selleads">
-                    <Link href="/"><h5>
-                        Selleads
-                    </h5></Link>
+                    <Link href="/">
+                        <Img 
+                            fluid={data.file.childImageSharp.fluid} />
+                    </Link>
                 </li>
                 <ul className="sc-gn-list-items">
                     <li className="sc-gn-list-item">

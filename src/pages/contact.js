@@ -162,7 +162,7 @@ export default function Contact() {
                         <div className="offset-large-1 large-5 medium-12 small-12 pr2 ">
                             <p className="_mb1">Masz jakieś pytania?</p>
                             <h5 className="mb2 xlead">Napisz do nas !</h5>
-                            <p className="lead">Jeżeli potrzebujesz dowiedzieć się więcej lub chcesz się z nami skonsultować, jedną z opcji kontaku jaką oferujemy jest napisanie do nas wiadomości e-mail formularzem znajdującym się obok.</p>
+                            <p className="lead">Jeśli chcesz dowiedzieć się czegoś więcej, po prostu do nas napisz :) Chętnie przygotujemy indywidualną ofertę i plan działania dla każdego klienta osobno, a na wasze pytania odpowiemy maksymalnie w ciągu 24 godzin. To co, zaczynamy?</p>
                         </div>
                         <div className="offset-large-1 large-5 medium-12 small-12 mt1">
                             <FormWrapper>

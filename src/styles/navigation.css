@@ -140,6 +140,10 @@ footer .navbar > nav > ul > li a{
         left: 50%;
         transform: translateX(-50%);
     }
+        #sc-globalnav .sc-gn-header .sc-gn-selleads a{
+            width: 40px;
+            cursor: pointer;
+        }
 
 #sc-globalnav .sc-gn-list,
 #sc-globalnav .sc-gn-list-items{
@@ -154,6 +158,10 @@ footer .navbar > nav > ul > li a{
     margin: 0 auto;
     height: 48px;
 }
+    #sc-globalnav .sc-gn-list .sc-gn-selleads a{
+        width: 40px;
+        cursor: pointer;
+    }
 
 #sc-globalnav .sc-gn-list-items{
     margin-left: auto;
