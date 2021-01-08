@@ -32,9 +32,15 @@ const HeroText = styled.div`
   z-index:1;
 `
 const HeroTextPicture = styled.div`
-  max-width: 800px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 768px){
+    & {
+      max-width: 300px;
+    }
+  }
 `
 
 
@@ -42,6 +48,7 @@ const HeroTextPicture = styled.div`
 const Carousel_wrapper = styled.ul`
   position: relative;
   max-width: 1180px;
+  height: 80px;
   margin: 0 auto;
   text-align: center;
 `
@@ -68,6 +75,15 @@ const Carousel_content = styled.div`
   .out & {
     transform: translateY(-100%);
     opacity: 0;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5, 
+  & h6{
+    font-weight: 400;
   }
 `
 
@@ -97,16 +113,16 @@ export default function Hero() {
   `);
 
   const carousel_content = [
-    'Tekst 1',
-    'Tekst 2',
-    'Tekst 3',
-    'Tekst 4',
+    'Esse aute officia magna duis ',
+    'adipisicing officia occaecat',
+    'ullamco sunt cupidatat',
+    'ullamco sunt cupidatat reprehenderit.',
   ];
 
   const timeInterval = 3500;
   const hero_text_carousel = ( n = 0 ) => {
 
-    if( typeof window === "undefined" || !document.window){
+    if( typeof window == "undefined" || !window.document){
       return;
     }
 
@@ -132,8 +148,8 @@ export default function Hero() {
   hero_text_carousel();
 
   useEffect(() => {
-    let item = 0;
-    
+    let item = 1;
+    hero_text_carousel( 0 );
     const interval = setInterval(() => {
       if( item > (carousel_content.length - 1) ){
         item = 0;
@@ -165,7 +181,7 @@ export default function Hero() {
                 carousel_content.map((e) => {
                   return (<Carousel_item className="carousel-item">
                     <Carousel_content className="carousel-item-content">
-                      <h3>{e}</h3>
+                      <h4>{e}</h4>
                     </Carousel_content>
                   </Carousel_item>)
                 })
