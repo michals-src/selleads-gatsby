@@ -106,6 +106,10 @@ export default function Hero() {
   const timeInterval = 3500;
   const hero_text_carousel = ( n = 0 ) => {
 
+    if( typeof window === "undefined" || !document.window){
+      return;
+    }
+
     const carousel_wrapper = document.getElementById('carousel-text');
     const carousel_items = document.getElementsByClassName('carousel-item');
 
