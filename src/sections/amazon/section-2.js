@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'gatsby';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -149,10 +150,14 @@ function Section2() {
             <Wrapper>
                 <div className="g-y">
                     <div className="large-5 small-12">
-                        <div className="_mb5">
-                            <h6>A może już działasz na Amazonie ?</h6>
+                        <div className="_mb4">
+                            <h1>Nasza oferta</h1>
                         </div>
-                        <p>Ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p>
+                        <p>Wybrałeś coś dla siebie?</p>
+                        <div className="_mt6">
+                            <Link to="/contact"><button className="button warning">Napisz do nas</button></Link>
+                        </div>
+                        {/* <p>Ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p> */}
                     </div>
                 </div>
                 <ListBlockWrapper>
@@ -163,7 +168,6 @@ function Section2() {
                     <ListBlockItem><Icon name="bullseye" /><p>Optymalizację listingu <label>Rzucimy okiem na ofertę i sprawimy, że będzie atrakcyjna i nie przejdzie niezauważona</label></p></ListBlockItem>
                     <ListBlockItem><Icon name="cloudUpload" />Przeprowadzenie skutecznego product launch'u</ListBlockItem>
                     <ListBlockItem><Icon name="diagram" />Stworzenie, prowadzenie i optymalizacja kampanii PPC</ListBlockItem>
-                    <ListBlockItem><Icon name="personLines" />Konsultacje (pytaj o wszystko, nie ma głupich pytań)</ListBlockItem>
                 </ListBlockWrapper>
             </Wrapper>
         </div>

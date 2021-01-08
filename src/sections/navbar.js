@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from "gatsby-image"
 
-
+import selleads from '@images/selleads.png';
 
 function Navbar() {
 
@@ -60,16 +60,14 @@ function Navbar() {
                 </div>
                 <div className="sc-gn-selleads">
                     <Link href="/">
-                        <Img 
-                            fluid={data.file.childImageSharp.fluid} />
+                        <img src={selleads} alt="selleads - wings for your business" />
                     </Link>
                 </div>
             </div>
             <ul className="sc-gn-list">
                 <li className="sc-gn-list-item sc-gn-selleads">
                     <Link href="/">
-                        <Img 
-                            fluid={data.file.childImageSharp.fluid} />
+                        <img src={selleads} alt="selleads - wings for your business" />
                     </Link>
                 </li>
                 <ul className="sc-gn-list-items">
@@ -82,7 +80,7 @@ function Navbar() {
                             <li className="sc-gn-list-item sc-gn-sn-item">
                                 <Link href="/amazon">
                                     <p className="sc-gn-sn-item-title">Amazon</p>
-                                    <p className="sc-gn-sn-item-label">Otrzymaj porady i pomoc w osiągnieciu Twouch celów</p>
+                                    <p className="sc-gn-sn-item-label">Podbij zagraniczne rynki</p>
                                 </Link>
                             </li>
                             <li className="sc-gn-list-item sc-gn-sn-item">

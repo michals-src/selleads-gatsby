@@ -48,6 +48,19 @@ const Cards = styled.div`
   & a:hover{
     transform: scale(0.95);
   }
+
+  & .cards-item:nth-child(1){
+    padding-right: 15px;
+  }
+  & .cards-item:nth-child(2){
+    padding-left: 15px;
+  }
+
+  @media (max-width: 768px){
+    & .cards-item{
+      padding: 15px;
+    }
+  }
 `
 
 const CardWrapper = styled.div`
@@ -82,15 +95,9 @@ export default function services() {
 
       <div className="py0 px3">
         <CardsWrapper>
-            <Element mt3 mb2 px2>
-              <div className="__center">
-                <p className="lead">Pomożemy Ci na tych platformach.</p>
-              </div>
-            </Element>
-
                   <Cards>
                     <div className="g-x">
-                      <div className="medium-6 small-12 _px2 _py1">
+                      <div className="medium-6 small-12 cards-item">
                         <Link to="/allegro">
                           <CardWrapper className="py8 one">
                             <h3 className="_mb2">Allegro</h3>
@@ -98,7 +105,7 @@ export default function services() {
                           </CardWrapper>
                         </Link>
                       </div>
-                      <div className="medium-6 small-12 _px2 _py1">
+                      <div className="medium-6 small-12 cards-item">
                         <Link to="/amazon">
                           <CardWrapper className="py8 two">
                             <h3 className="_mb2">Amazon</h3>
