@@ -3,7 +3,11 @@ import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from "gatsby-image"
 
-import selleads from '@images/selleads.png';
+import selleads from '@images/selleads.svg';
+
+const Selleads = styled.div`
+    font-size: 28px;
+`
 
 function Navbar() {
 
@@ -59,16 +63,20 @@ function Navbar() {
                     <div className="sc-gn-tapmenu-item"><span></span></div>
                 </div>
                 <div className="sc-gn-selleads">
-                    <Link href="/">
-                        <img src={selleads} alt="selleads - wings for your business" />
-                    </Link>
+                    <Selleads>
+                        <Link href="/">
+                            <img src={selleads} alt="selleads - wings for your business" />
+                        </Link>
+                    </Selleads>
                 </div>
             </div>
             <ul className="sc-gn-list">
                 <li className="sc-gn-list-item sc-gn-selleads">
-                    <Link href="/">
-                        <img src={selleads} alt="selleads - wings for your business" />
-                    </Link>
+                    <Selleads>
+                        <Link href="/">
+                            <img src={selleads} alt="selleads - wings for your business" />
+                        </Link>
+                    </Selleads>
                 </li>
                 <ul className="sc-gn-list-items">
                     <li className="sc-gn-list-item">

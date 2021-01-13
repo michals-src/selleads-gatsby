@@ -1,10 +1,12 @@
-import React , { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled from 'styled-components';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from "gatsby-image"
 
 import Element from '../../components/Element'
 import Navbar from './../navbar'
+
+import selleadsHero from '@images/selleads--hero.svg';
 
 
 const HeroWrapper = styled.div`
@@ -14,12 +16,24 @@ const HeroWrapper = styled.div`
   color: #fff;
   margin: 90px auto 0 auto;
   height: auto;
+
+  @media (max-width: 767px){
+    & {
+      padding: 0 5px;
+    }
+  }
 `
 const HeroBackground = styled.div`
   width: 100%;
 
   & img {
     border-radius:10px;
+  }
+
+  @media (max-width: 767px){
+    & .gatsby-image-wrapper {
+      height: calc(65vh);
+    }
   }
 `
 const HeroText = styled.div`
@@ -36,7 +50,7 @@ const HeroTextPicture = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 768px){
+  @media (max-width: 767px){
     & {
       max-width: 300px;
     }
@@ -67,6 +81,7 @@ const Carousel_content = styled.div`
   transform: translateY(100%);
   -ms-transform: translateY(100%);
   opacity: 0;
+  padding: 0 25px;
 
   .in & {
     transform: translateY(0%);
@@ -84,6 +99,7 @@ const Carousel_content = styled.div`
   & h5, 
   & h6{
     font-weight: 400;
+    font-family: 'Fraunces', 'Bentham', serif;
   }
 `
 
@@ -113,10 +129,12 @@ export default function Hero() {
   `);
 
   const carousel_content = [
-    'Esse aute officia magna duis ',
-    'adipisicing officia occaecat',
-    'ullamco sunt cupidatat',
-    'ullamco sunt cupidatat reprehenderit.',
+    'Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty',
+    'Przygotowujemy oferty szyte na miarę Twoich klientów',
+    'Pomożemy Twojej firmie wyjść na arenę międzynarodową',
+    'Sprawimy, że Twoi klienci zostaną z Tobą na dłużej',
+    'Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy',
+    'Zajmiemy się budowaniem bazy lojalnych klientów'
   ];
 
   const timeInterval = 3500;
@@ -148,8 +166,9 @@ export default function Hero() {
   hero_text_carousel();
 
   useEffect(() => {
-    let item = 1;
     hero_text_carousel( 0 );
+
+    let item = 1;
     const interval = setInterval(() => {
       if( item > (carousel_content.length - 1) ){
         item = 0;
@@ -172,7 +191,8 @@ export default function Hero() {
         <HeroText>
 
           <HeroTextPicture>
-            <Img fluid={data.full.childImageSharp.fluid} />
+            {/* <Img fluid={data.full.childImageSharp.fluid} /> */}
+            <img src={selleadsHero} alt="Selleads - Wings for your business" />
           </HeroTextPicture>
           <Element _mt4>
             <Carousel_wrapper id="carousel-text">
@@ -181,7 +201,7 @@ export default function Hero() {
                 carousel_content.map((e) => {
                   return (<Carousel_item className="carousel-item">
                     <Carousel_content className="carousel-item-content">
-                      <h4>{e}</h4>
+                      <h5>{e}</h5>
                     </Carousel_content>
                   </Carousel_item>)
                 })

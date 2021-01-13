@@ -2,9 +2,10 @@
 import React from 'react';
 import { Helmet } from "react-helmet"
 
-import '../styles/globals.css';
-import '../styles/navigation.css';
-import '../styles/cards.css';
+// import '../styles/globals.css';
+import '@styles/globals.css';
+import '@styles/navigation.css';
+import '@styles/cards.css';
 
 import { Hero, Services, Analytics, Optimalization } from '@sections/homepage';
 import Footer from '@sections/footer';

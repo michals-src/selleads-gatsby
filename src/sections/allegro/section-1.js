@@ -14,12 +14,17 @@ const SpaceItem = styled.div`
 const UnformedCircleSvg = styled.div`
     background: url(${unformed_circle}) bottom center no-repeat;
     background-size: contain;
+    padding: 25px 50px;
 
     & > img {
         border-radius: 20px;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 767px){
+        &{
+            padding: 5px;
+        }
+        
         & > img {
             max-height: 500px;
         }
@@ -290,7 +295,7 @@ function Section1() {
 
 
                     </div>
-                    <UnformedCircleSvg className="medium-6 px2 py1">
+                    <UnformedCircleSvg className="medium-6">
                         <img width="100%" height="800px" src={pexels_image_1} />
                     </UnformedCircleSvg>
                 </div>

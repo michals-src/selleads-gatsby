@@ -355,7 +355,7 @@ export default function Optimalization() {
 
               </div>
               <div className="medium-6 offset-medium-2">
-                <p className="xlead _mb4">Popraw swoją widoczność.</p>
+                <h6 className="_mb4">Popraw swoją widoczność.</h6>
                 <p>Wyświetlaj się częściej, więcej i trafniej. Uszyjmy Twoje reklamy, na miarę Twoich klientów. Przygotujmy lejek sprzedażowy, który zbierze najbardziej lojalnych i zainteresowanych Twoim produktem kupujących.</p>
               </div>
             </div>
@@ -367,7 +367,7 @@ export default function Optimalization() {
       <SolutionsWrapperAlpha>
         <SolutionsAlphaHero>
           <Container>
-            <p className="xlead _mb1">Rozwiązania, które wdrożymy dla Twojej firmy</p>
+            <h4 className="_mb2 _mx4">Rozwiązania, które wdrożymy dla Twojej firmy</h4>
             <p className=" _mb8">Kreowane naszym doświadczeniem oraz potrzebami użytkowników</p>
           </Container>
         </SolutionsAlphaHero>
@@ -394,7 +394,7 @@ export default function Optimalization() {
         <div>
           <div className="g-x fx icenter">
             <div className="medium-7 small-12 mb2">
-                <p className="xlead _mb4">Zdobądź siłę przebicia.</p>
+                <h6 className="_mb4">Zdobądź siłę przebicia.</h6>
                 <p>Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, a algorytm wraz z upływem czasu zacznie pozycjonować Twoją ofertę coraz wyżej. Aż dojdzie do samej góry. </p>
             </div>
             <div className="medium-4 small-12 offset-medium-1">

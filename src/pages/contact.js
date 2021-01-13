@@ -150,7 +150,7 @@ export default function Contact() {
                             <div>
                                 <Figure>
                                     <p>+48 864 531 961</p>
-                                    <p>adres_email@selleads.com</p>
+                                    <p>kontakt@selleads.pl</p>
                                 </Figure>
                             </div>
                         </CenterWrapper>

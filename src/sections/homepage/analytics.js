@@ -53,7 +53,7 @@ const Tabs = () => {
         
         <div className={`${tab.size ? tab.size : `medium-3`} _px8 mb2`}>
           <div className="_mb6">
-            <p className="lead">{tab.title}</p>
+            <h6>{tab.title}</h6>
           </div>
           <p>{tab.content}</p>
         </div>
