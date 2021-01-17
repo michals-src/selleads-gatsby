@@ -367,8 +367,8 @@ export default function Optimalization() {
       <SolutionsWrapperAlpha>
         <SolutionsAlphaHero>
           <Container>
-            <h4 className="_mb2 _mx4">Rozwiązania, które wdrożymy dla Twojej firmy</h4>
-            <p className=" _mb8">Kreowane naszym doświadczeniem oraz potrzebami użytkowników</p>
+            <h4 className="_mb2 _mx4">Rozwiązania, które wdrożymy dla Twojej firmy.</h4>
+            <p className=" _mb8">Kreowane naszym doświadczeniem oraz potrzebami użytkowników.</p>
           </Container>
         </SolutionsAlphaHero>
         {/* <Container>
