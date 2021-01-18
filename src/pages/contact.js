@@ -170,7 +170,7 @@ export default function Contact() {
                         <CenterWrapper>
                             <div>
                                 <Figure>
-                                    <p>+48 864 531 961</p>
+                                    <p>+48 515 601 252</p>
                                     <p>office.selleads@gmail.com</p>
                                 </Figure>
                             </div>
