@@ -94,6 +94,7 @@ footer .navbar > nav > ul > li a{
     box-sizing: content-box;
     display: none;
 }
+
     #sc-globalnav .sc-gn-tapmenu{
         width: 20px;
         height: 20px;
@@ -139,11 +140,15 @@ footer .navbar > nav > ul > li a{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
     }
         #sc-globalnav .sc-gn-header .sc-gn-selleads a{
-            width: 40px;
+            width: 150px;
             cursor: pointer;
         }
+            #sc-globalnav .sc-gn-header .sc-gn-selleads a >img{
+                width: 100%;
+            }
 
 #sc-globalnav .sc-gn-list,
 #sc-globalnav .sc-gn-list-items{
@@ -154,22 +159,25 @@ footer .navbar > nav > ul > li a{
 
 #sc-globalnav .sc-gn-list{
     max-width: 1300px;
-    padding: 45px 15px; 
+    padding: 15px;
     margin: 0 auto;
-    height: 48px;
+    height: 80px;
 }
     #sc-globalnav .sc-gn-list .sc-gn-selleads a{
-        width: 40px;
+        width: 200px;
         cursor: pointer;
     }
+         #sc-globalnav .sc-gn-list .sc-gn-selleads a > img{
+             width: 100%;
+         }
 
 #sc-globalnav .sc-gn-list-items{
     margin-left: auto;
 }
 
 #sc-globalnav .sc-gn-list-item{
-    padding: 0 12px;
-    height: 40px;
+    padding: 20px 12px;
+    height: auto;
     font-weight: 500;
     position: relative;
 }
@@ -225,12 +233,13 @@ footer .navbar > nav > ul > li a{
         transition: background .3s ease-in-out, height .45s ease-in-out;
         z-index: 9999;
         height: 60px;
-        overflow-x: hidden;
+        overflow-y: hidden;
     }
         #sc-globalnav[data-aria="true"]{
             position: fixed;
             height: 100%;
             background: #fff;
+            overflow-y: auto;
         }
     #sc-globalnav .sc-gn-header{
         display: flex;

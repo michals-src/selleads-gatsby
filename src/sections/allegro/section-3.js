@@ -153,12 +153,12 @@ function Section3() {
                         
                             <div className="small-12">
                                 <h6>
-                                    Wskazówki za które musisz zapłacić ? 
+                                    Wskazówki za które musisz zapłacić? 
                                     <TitleUnderline>Na pewno nie u nas!</TitleUnderline>
                                 </h6>
 
                                 <p className="_my6">
-                                    Jeśli pracując zauważymy jakąkolwiek szansę dla Twojej firmy, możesz być pewny/a że skonsultujemy ją z Tobą, sugerując nasze rozwiązania – KOMPLETNIE ZA DARMO. Jeśli zdecydowałeś/aś się z nami współpracować, naszym celem jest wzrost Twojej firmy (nie tylko na płaszczyźnie, za którą płacisz).
+                                    Jeśli pracując zauważymy jakąkolwiek szansę dla Twojej firmy, możesz być pewny/a że skonsultujemy ją z Tobą, sugerując nasze rozwiązania – KOMPLETNIE ZA DARMO. Jeśli zdecydowałeś/aś się z nami współpracować, naszym celem jest wzrost Twojej firmy, nie tylko na płaszczyźnie, za którą płacisz.
                                 </p>
                             </div>
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import undraw_lightbulb_moment from '@images/undraw_lightbulb_moment_evxr.svg';
 import undraw_Process_re from '@images/undraw_Process_re_gws7.svg';
+import undraw_Working_oh83 from '@images/undraw_Working_oh83.svg';
 
 
 const SVGWrapper = styled.div`
@@ -20,6 +21,11 @@ const PathOne = styled.div`
     height: 125px;
     background: #000;
     margin-left: auto;
+
+    .reverse & {
+        margin-right: auto;
+        margin-left: 0;
+    }
 
     &::before{
         content: '';
@@ -45,6 +51,20 @@ const PathOne = styled.div`
         border-bottom: 2px solid #000;
         background: #fff;
         border-radius: 0 0 0 50%;
+    }
+    
+    .reverse & {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .reverse &::after{
+        border-left: 2px solid #fff;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        left: -26px;
+        right: auto;
+        border-radius: 0 0 50% 0;
     }
 
 `
@@ -97,6 +117,19 @@ const PathThree2 = styled.div`
         border-radius: 0  50% 0 0;
     }
 
+    .reverse & {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .reverse &::after{
+        border-right: 2px solid #fff;
+        border-left: 2px solid #000;
+        right: -26px;
+        left: auto;
+        border-radius: 50% 0 0 0;
+    }
+
 `
 
 const PathWrapper = styled.div`
@@ -118,7 +151,7 @@ function Section1() {
                 <div className="pt2 mt1">
                     <div className="g-x fx icenter">
                         <div className="medium-6 small-8 text-center">
-                            <h4>Sprzedajesz i myślisz, aby otworzyć dodatkowy kanał sprzedaży ?</h4>
+                            <h4>Sprzedajesz i myślisz, aby otworzyć dodatkowy kanał sprzedaży?</h4>
                         </div>
                         <div className="medium-4 small-3 offset-medium-2 offset-small-1">
                             <SVGWrapper>
@@ -152,10 +185,41 @@ function Section1() {
                             </SVGWrapper>
                         </div>
                         <div className="offset-medium-2 offset-small-1 medium-6 small-8 text-center">
-                            <h4>Masz pomysł na genialny produkt, a nie wiesz jak zacząć ?</h4>
+                            <h4>Masz pomysł na genialny produkt, a nie wiesz jak zacząć?</h4>
                         </div>
                     </div>
                 </div>
+
+                <PathWrapper className="reverse">
+                    <div className="g-x">
+                        <div className="medium-3 text-center">
+                            <PathThree2></PathThree2>
+                        </div>
+                        <div className="medium-6 text-center">
+                            <PathTwoWrapper>
+                                <PathTwo></PathTwo>
+                            </PathTwoWrapper>
+                        </div>
+                        <div className="medium-3 text-center">
+                            <PathOne></PathOne>
+                        </div>
+                    </div>
+                 </PathWrapper>
+
+                <div>
+                    <div className="g-x fx icenter">
+                        <div className=" medium-6 small-8 text-center">
+                            <h4>A może już działasz na Amazonie?</h4>
+                        </div>
+                        <div className="medium-4 small-3 offset-medium-2 offset-small-1">
+                            <SVGWrapper>
+                                <img src={undraw_Working_oh83} />
+                            </SVGWrapper>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </>
     )

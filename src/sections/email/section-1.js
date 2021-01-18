@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'gatsby';
 import styled from 'styled-components';
 import undraw_email_capture from '@images/undraw_email_capture_x8kv.svg';
 
@@ -46,6 +47,7 @@ function Section1() {
                         <p className="_my6">
                             Emaile szyte na miarę Twoich klientów niczym włoski garnitur? Wyobraź sobie, że każdy mail wysłany przez Twoją firmę nie jest usuwany, lecz otwierany i czytany od A do Z, a Twoi klienci pragną dzielić się z Tobą swoimi pomysłami i przemyśleniami, polecając Twoje produkty znajomym. I tak w nieskończoność. A wszystko automatycznie. 
                         </p>
+                        <Link to="/contact"><button className="button _warning">Napisz do nas</button></Link>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ function Footer() {
                 <div className="container">
                     <div className="py3">
                         <div className="g-x">
-                            <div className="small-4">Wszelkie prawa zastrzeżone. Selleads &copy; 2020</div>
+                            <div className="small-4">Wszelkie prawa zastrzeżone. Selleads &copy; 2021</div>
                             <div className="small-8 text-right">
                                 
                             <div className="navbar">
