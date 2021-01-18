@@ -41,7 +41,7 @@ function Section4() {
                     </div>
                     <div className="offset-medium-1 medium-5 small-12">
                         <h6>
-                            <TitleUnderline className="_mb4">Email marketing</TitleUnderline>
+                            <TitleUnderline className="_mb4">Email marketing.</TitleUnderline>
                         </h6>
                         <p className="_my6">
                             Emaile szyte na miarę Twoich klientów niczym włoski garnitur? Wyobraź sobie, że każdy mail wysłany przez Twoją firmę nie jest usuwany, lecz otwierany i czytany od A do Z, a Twoi klienci pragną dzielić się z Tobą swoimi pomysłami i przemyśleniami, polecając Twoje produkty znajomym. I tak w nieskończoność. A wszystko automatycznie. 

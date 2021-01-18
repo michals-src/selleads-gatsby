@@ -37,16 +37,50 @@ const Picture = styled.img`
 const CardsWrapper = styled.div`
   margin: 0 auto;
   max-width: 1180px;
+  padding: 0 15px;
+  border-radius: 5px;
+
+  @media (max-width: 767px){
+    &{
+      padding: 10px;
+    }
+  }
 `
 
 const Cards = styled.div`
   & a {
     text-decoration: none;
-    transition: transform .35s ease-in-out;
+    transition: transform .35s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: 0 20px 15px rgba(0,0,0,.1);
+    transform: scale(1);
   }
 
-  & a:hover{
+  & a:hover,
+  & a:focus,
+  & a:active{
     transform: scale(0.95);
+    box-shadow: 0 20px 15px rgba(0,0,0,.015);
+  }
+
+  & .cards-item:nth-child(1){
+    padding-right: 15px;
+  }
+  & .cards-item:nth-child(2){
+    padding-left: 15px;
+  }
+
+  @media (max-width: 767px){
+    & {
+      padding: 15px;
+    }
+
+    & .cards-item:nth-child(1){
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+    & .cards-item:nth-child(2){
+      padding-left: 0;
+    }
   }
 `
 
@@ -57,6 +91,8 @@ const CardWrapper = styled.div`
   text-align: center;
   background-size: cover;
   text-decoration: none;
+  padding: 200px 0;
+  border-radius: 5px;
 
   &.one{
     background: url(${glenn_carstens_peters_npxXWgQ33ZQ_unsplash}) right no-repeat;
@@ -66,6 +102,12 @@ const CardWrapper = styled.div`
   &.two{
     background: url(${headway_5QgIuuBxKwM_unsplash}) center no-repeat;
     background-size: cover;
+  }
+
+  @media (max-width: 767px){
+    & {
+      padding: 75px 0;
+    }
   }
 
 `
@@ -80,27 +122,21 @@ export default function services() {
         </picture>
       </BackgroundWrapper>
 
-      <div className="py0 px3">
+      
         <CardsWrapper>
-            <Element mt3 mb2 px2>
-              <div className="__center">
-                <p className="lead">Pomożemy Ci na tych platformach.</p>
-              </div>
-            </Element>
-
                   <Cards>
                     <div className="g-x">
-                      <div className="medium-6 small-12 _px2 _py1">
+                      <div className="medium-6 small-12 cards-item">
                         <Link to="/allegro">
-                          <CardWrapper className="py8 one">
+                          <CardWrapper className="one">
                             <h3 className="_mb2">Allegro</h3>
                             <p className="px3">Pozwól się rozpoznać milionom ludzi przez naszą opiekę nad produktem.</p>
                           </CardWrapper>
                         </Link>
                       </div>
-                      <div className="medium-6 small-12 _px2 _py1">
+                      <div className="medium-6 small-12 cards-item">
                         <Link to="/amazon">
-                          <CardWrapper className="py8 two">
+                          <CardWrapper className="two">
                             <h3 className="_mb2">Amazon</h3>
                             <p className="px3">Doskonałe miejsce do budowania swojej marki produktowej.</p>
                           </CardWrapper>
@@ -110,7 +146,7 @@ export default function services() {
                   </Cards>
 
         </CardsWrapper>
-      </div>
+      
       </Wrapper>
     </>
   )

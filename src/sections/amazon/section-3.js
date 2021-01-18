@@ -49,7 +49,7 @@ function Section3() {
                     <div className="large-8 medium-12 small-12 px1">
                         <div className="_p6">
                             <h6 className="_mb5 pr8">
-                                W USA odpowiada za 45% sprzedaży dokonanych w Internecie !
+                                W USA odpowiada za 45% sprzedaży dokonanych w Internecie!
                             </h6>
                             <p>Ponad 100 milionów ludzi na ŚWIECIE posiada konto Prime, jest ich więcej niż osób bez Prime. Statystycznie jeden użytkownik ze statusem Prime wydaje ponad 1000$ rocznie. Amazon otworzył rynki w 6 europejskich krajach: Niemczech, Wielkiej Brytanii, Francji, Włoszech, Hiszpanii oraz Holandii. Dzięki takiej infrastrukturze sprzedając na platformie jesteśmy w stanie dotrzeć, aż do 28 krajów leżących w Europie.</p>
                         </div>
@@ -73,35 +73,35 @@ function Section3() {
                         <div className="medium-6 _p6 fx icenter">
                             <Number>1</Number>
                             <NumericContent className="_px8">
-                                <p>Konwersja na Amazonie jest prawie 10x wyższa niż w zwykłym sklepie internetowym</p>
+                                <p>Konwersja na Amazonie jest prawie 10x wyższa niż w zwykłym sklepie internetowym.</p>
                             </NumericContent>
                         </div>
                         
                         <div className="medium-6 _p6 fx icenter">
                             <Number>2</Number>
                             <NumericContent className="_px8">
-                                <p>Co sekundę sprzedaje się 306 produktów</p>
+                                <p>Co sekundę sprzedaje się 306 produktów.</p>
                             </NumericContent>
                         </div>
                         
                         <div className="medium-6 _p6 fx icenter">
                             <Number>3</Number>
                             <NumericContent className="_px8">
-                                <p>89% kupujących wybiera Amazon ponad inne platformy sprzedażowe</p>
+                                <p>89% kupujących wybiera Amazon ponad inne platformy sprzedażowe.</p>
                             </NumericContent>
                         </div>
                         
                         <div className="medium-6 _p6 fx icenter">
                             <Number>4</Number>
                             <NumericContent className="_px8">
-                                <p>Amazon to doskonałe miejsce do budowania swojej marki produktowej</p>
+                                <p>Amazon to doskonałe miejsce do budowania swojej marki produktowej.</p>
                             </NumericContent>
                         </div>
                         
                         <div className="medium-6 _p6 fx icenter">
                             <Number>5</Number>
                             <NumericContent className="_px8">
-                                <p>W modelu FBA cała logistyka jest prowadzona z komputera, a Tobie pozostaje się cieszyć z wyników</p>
+                                <p>W modelu FBA cała logistyka jest prowadzona z komputera, a Tobie pozostaje się cieszyć z wyników.</p>
                             </NumericContent>
                         </div>
 

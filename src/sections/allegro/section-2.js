@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {Link} from 'gatsby';
 
 import undraw_stand_out_1oag from '../../assets/images/undraw_stand_out_1oag.svg';
 import stones_background from '@images/stones-background.png';
@@ -68,7 +69,7 @@ function Section2() {
                 <div>
                     <Width500Wrapper>
                         <LeadLarge>Pokażmy Twój produkt ludziom, <div>którzy go szukają.</div></LeadLarge>
-                        <button className="button _warning _mt4">Milion wystarczy ?</button>
+                        <Link to="/contact"><button className="button _warning _mt4">Milion wystarczy?</button></Link>
                     </Width500Wrapper>
                 </div>
             </div>

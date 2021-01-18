@@ -37,6 +37,11 @@ const Label = styled.label`
     width: 100%:
 `
 
+const LabelAfter = styled.div`
+    font-size: 12px;
+    color: red;
+`
+
 const InputText = styled.input`
     border-radius: 5px;
     border: 1px solid #91cec5;
@@ -46,6 +51,11 @@ const InputText = styled.input`
 
     &:focus{
         box-shadow: 0 0 8px rgb(163 226 217 / 80%);
+    }
+
+    &.invalid-control{
+        border-color: #d01010;
+        box-shadow-color: #d01010;
     }
 `
 
@@ -58,6 +68,10 @@ const Textarea = styled.textarea`
 
     &:focus{
         box-shadow: 0 0 8px rgb(163 226 217 / 80%);
+    }
+
+    &.invalid-control{
+        border-color: #d01010
     }
 `
 const Figure = styled.div`
@@ -101,11 +115,11 @@ export default function Contact() {
     const [FormDetails, setFormDetails] = useState({
         "contact_name" : "",
         "contact_email" : "",
-        "contact_subject" : "",
         "contact_message" : ""
     });
 
     const [FormMsg, setFormMsg] = useState("");
+    const [Err, setErr] = useState("");
 
     const onContactFormChange = (e) => {
         setFormDetails({
@@ -115,6 +129,12 @@ export default function Contact() {
     };
 
     const handleContact = (e) => {
+        
+        e.preventDefault();
+        let err = Object.values(FormDetails).indexOf("");
+        console.log(err);
+        if( err !== -1 ) return setFormMsg('error-control');
+
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -123,7 +143,6 @@ export default function Contact() {
             .then(() => setFormMsg("success"))
             .catch(error => setFormMsg("error"));
 
-        e.preventDefault();
     };
 
     const encode = (data) => {
@@ -131,6 +150,8 @@ export default function Contact() {
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
             .join("&");
     }
+
+    const controlClass = FormMsg == "error-control" ? "invalid-control" : "";
 
     return (
         <>
@@ -149,8 +170,8 @@ export default function Contact() {
                         <CenterWrapper>
                             <div>
                                 <Figure>
-                                    <p>+48 864 531 961</p>
-                                    <p>adres_email@selleads.com</p>
+                                    <p>+48 515 601 252</p>
+                                    <p>office.selleads@gmail.com</p>
                                 </Figure>
                             </div>
                         </CenterWrapper>
@@ -161,7 +182,7 @@ export default function Contact() {
                     <div className="g-x fx icenter">
                         <div className="offset-large-1 large-5 medium-12 small-12 pr2 ">
                             <p className="_mb1">Masz jakieś pytania?</p>
-                            <h5 className="mb2 xlead">Napisz do nas !</h5>
+                            <h5 className="mb2 xlead">Napisz do nas!</h5>
                             <p className="lead">Jeśli chcesz dowiedzieć się czegoś więcej, po prostu do nas napisz :) Chętnie przygotujemy indywidualną ofertę i plan działania dla każdego klienta osobno, a na wasze pytania odpowiemy maksymalnie w ciągu 24 godzin. To co, zaczynamy?</p>
                         </div>
                         <div className="offset-large-1 large-5 medium-12 small-12 mt1">
@@ -181,15 +202,18 @@ export default function Contact() {
                                     <input type="hidden" name="form-name" value="contact" />
                                     <InputGroup>
                                         <Label for="contact_name">Twoje imię</Label>
-                                        <InputText type="text" id="contact_name" name="contact_name" onChange={onContactFormChange} value={FormDetails.contact_name}  />
+                                        <InputText type="text" id="contact_name" name="contact_name" className={controlClass} onChange={onContactFormChange} value={FormDetails.contact_name}  />
+                                        { (FormMsg === "error-control" && FormDetails["contact_name"] === "") && <LabelAfter><p>To pole nie może być puste.</p></LabelAfter> }
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_email">Adres e-mail</Label>
-                                        <InputText type="email" id="contact_email" name="contact_email" onChange={onContactFormChange} value={FormDetails.contact_email} />
+                                        <InputText type="email" id="contact_email" name="contact_email" className={controlClass} onChange={onContactFormChange} value={FormDetails.contact_email} />
+                                        {(FormMsg === "error-control" && FormDetails["contact_email"] === "") && <LabelAfter><p>To pole nie może być puste.</p></LabelAfter> }
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_message">Wiadomość</Label>
-                                        <Textarea id="contact_message" name="contact_message" onChange={onContactFormChange} value={FormDetails.contact_message} />
+                                        <Textarea id="contact_message" name="contact_message" className={controlClass} onChange={onContactFormChange} value={FormDetails.contact_message} />
+                                        { (FormMsg === "error-control" && FormDetails["contact_message"] === "")&& <LabelAfter><p>To pole nie może być puste.</p></LabelAfter> }
                                     </InputGroup>
                                     <button type="submit" className="button warning">Wyślij wiadomość</button>
                                 </form>
