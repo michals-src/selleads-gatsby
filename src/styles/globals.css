@@ -242,9 +242,9 @@ p.xlead{
     max-width: 530px;
   }
   ._container{
-    max-width: 500px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -265,8 +265,8 @@ p.xlead{
   }
   ._container{
     max-width: 980px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

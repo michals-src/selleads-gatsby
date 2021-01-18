@@ -129,12 +129,12 @@ export default function Hero() {
   `);
 
   const carousel_content = [
-    'Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty',
-    'Przygotowujemy oferty szyte na miarę Twoich klientów',
-    'Pomożemy Twojej firmie wyjść na arenę międzynarodową',
-    'Sprawimy, że Twoi klienci zostaną z Tobą na dłużej',
-    'Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy',
-    'Zajmiemy się budowaniem bazy lojalnych klientów'
+    'Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty.',
+    'Przygotowujemy oferty szyte na miarę Twoich klientów.',
+    'Pomożemy Twojej firmie wyjść na arenę międzynarodową.',
+    'Sprawimy, że Twoi klienci zostaną z Tobą na dłużej.',
+    'Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy.',
+    'Zajmiemy się budowaniem bazy lojalnych klientów.'
   ];
 
   const timeInterval = 3500;

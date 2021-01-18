@@ -28,7 +28,7 @@ const tabs = () => {
     //Allegro
     {
       "title" : "Potencjał jest w Polsce.",
-      "content" : "W 2020 roku liczba użytkowników wyniosła blisko17,58 mln osób,to wzrost prawie o 960,6 tys. użytkowników w porównaniu z ubiegłym rokiem.",
+      "content" : "W 2020 roku liczba użytkowników wyniosła blisko 17,58 mln osób, to wzrost prawie o 960,6 tys. użytkowników w porównaniu z ubiegłym rokiem.",
       "size": "medium-10 small-12"
     },
     {
@@ -72,7 +72,7 @@ export default function Analytics() {
       
       <Element >
             <div>
-              <div className="px2 pb2 pt4">
+              <div className="px1 pb2 pt4">
                 <div className="g-x">
                 
                   <Tabs />

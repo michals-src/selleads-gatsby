@@ -155,7 +155,7 @@ function Section2() {
                         </div>
                         <p>Wybrałeś coś dla siebie?</p>
                         <div className="_mt6">
-                            <Link to="/contact"><button className="button warning">Napisz do nas</button></Link>
+                            <Link to="/contact"><button className="button _warning">Napisz do nas</button></Link>
                         </div>
                         {/* <p>Ale potrzebujesz porady i odrobiny pomocy, bo zależy Ci na Twoim sukcesie i sukcesie Twojej firmy. W każdej z tych wymienionych oraz wielu innych przypadkach, jesteśmy w stanie Ci pomóc w osiągnięciu postawionych przez Ciebie celów. </p> */}
                     </div>
