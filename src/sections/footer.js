@@ -1,10 +1,20 @@
 import React from 'react'
-
+import styled from 'styled-components';
 import { Link } from 'gatsby'
+
+import CookieConsent from "react-cookie-consent";
 
 function Footer() {
     return (
         <div>
+            <CookieConsent
+                location="bottom"
+                buttonText="Rozumiem"
+                cookieName="selleads-cookies"
+                >
+                    Nasz strona internetowa wykorzystuje do prawidłowego działania pliki cookies. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje.
+            </CookieConsent>
+
             <footer>
                 <div className="container">
                     <div className="py3">
