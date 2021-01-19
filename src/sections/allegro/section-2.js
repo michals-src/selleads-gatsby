@@ -69,7 +69,7 @@ function Section2() {
                 <div>
                     <Width500Wrapper>
                         <LeadLarge>Pokażmy Twój produkt ludziom, <div>którzy go szukają.</div></LeadLarge>
-                        <Link to="/contact"><button className="button _warning _mt4">Milion wystarczy?</button></Link>
+                        <Link to="/contact"><button className="button warning _mt4">Milion wystarczy?</button></Link>
                     </Width500Wrapper>
                 </div>
             </div>

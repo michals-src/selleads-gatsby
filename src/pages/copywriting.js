@@ -14,13 +14,13 @@ import Footer from '@sections/footer'
 
 import { Section1 } from '@sections/email';
 
-const HeadText = styled.h4`
+const HeadText = styled.h3`
   width: auto;
-  margin: 0 auto;
+  margin: 0.5rem auto 1.5rem auto;
   display: table;
   position: relative;
   text-align: center;
-  margin-bottom: 1rem;
+  font-weight: 700;
 `
 
 const BlockWrapper1 = styled.div`
@@ -61,7 +61,7 @@ export default function Home() {
 
                 <div className="large-6 medium-9 mb2">
                       <div className="_mb5">
-                        <p className="lead"> Opisy, nagłówki, kluczowe korzyści dla klienta.</p>
+                        <h5> Opisy, nagłówki, kluczowe korzyści dla klienta.</h5>
                       </div>
                       <p>
                         Oferty produktowe opowiadają historie. Jedne są pociągające, inne nudne jak flaki z olejem. Ludzie z reguły wolą kupować niż czuć, że ktoś im coś sprzedaje. Wspólnie stworzymy oferty, które będą powodowały szybsze bicie serca u każdego kto ją przeczyta.
@@ -79,7 +79,7 @@ export default function Home() {
 
                 <div className="large-6 medium-9">
                 <div className="_mb5">
-                  <p className="lead">Inwestujemy w marketing, pozycjonowanie czy płatne współprace.</p>
+                  <h5>Inwestujemy w marketing, pozycjonowanie czy płatne współprace.</h5>
                 </div>
 <p> To dobrze, bo w obecnych czasach bez inwestowania w reklamę trudno pokazać się światu. Ale czy zadbaliśmy, aby nasza oferta była naprawdę atrakcyjna? Ile warte są kliknięcia, które nie powodują zamknięcia transakcji?</p>
                 </div>
