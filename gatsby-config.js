@@ -61,7 +61,7 @@ module.exports = {
       options: {
         googleAnalytics: {
           trackingId: "G-KSP5R6GWZB", // leave empty if you want to disable the tracker
-          cookieName: "gatsby-gdpr-google-analytics", // here can you change the cookie name
+          cookieName: "selleads-cookies-google-analytics", // here can you change the cookie name
           anonymize: true, // default
         },
         googleTagManager: {

@@ -10,7 +10,7 @@ function Footer() {
             <CookieConsent
                 location="bottom"
                 buttonText="Rozumiem"
-                cookieName="selleads-cookies"
+                cookieName="selleads-cookies-google-analytics"
                 >
                     Nasz strona internetowa wykorzystuje do prawidłowego działania pliki cookies. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje.
             </CookieConsent>
