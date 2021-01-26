@@ -7,7 +7,7 @@ import '@styles/globals.css';
 import '@styles/navigation.css';
 import '@styles/cards.css';
 
-import { Hero, Services, Analytics, Optimalization } from '@sections/homepage';
+import { Hero, Services, Analytics, Optimalization, Rekomendacje } from '@sections/homepage';
 import Footer from '@sections/footer';
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
 
       <Hero />
       <Services />
+      <Rekomendacje />
       <Analytics />
       <Optimalization />
 
