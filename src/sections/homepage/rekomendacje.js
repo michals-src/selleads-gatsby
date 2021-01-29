@@ -65,7 +65,7 @@ const elements = () => {
         "size": "large-4 medium-12",
         "author": "Aleks",
         "label": "CEO",
-        "company": "",
+        "company": "Adamell",
         },
         {
         "content" : "Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.",
