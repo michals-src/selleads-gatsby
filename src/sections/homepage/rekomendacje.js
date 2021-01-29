@@ -1,24 +1,31 @@
 import React from "react"
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-image"
+
 
 import Container from '../../components/Container'
 
 import map_image from '../../assets/images/undraw_connected_world_wuay.svg';
 
 const Wrapper = styled.div`
-    background-color: #eef9f5;
+    background-color: rgb(238 249 245 / 32%);
     color: #517366;
     padding-top: 40px;
     padding-bottom: 100px;
     margin-top: -50px;
 `
 
-const Element = styled.div`
-    background-color: #fff;
+const OpinionContent = styled.div`
     color: #000;
-    border-radius: 5px;
-    padding: 45px;
-    border: 1px solid rgb(14 144 94 / 22%);
+    padding: 25px 0;
+`
+
+const OpinionDetails = styled.div`
+    padding: 25px 0;
+`
+const OpinionAuthor = styled.h6`
+    margin: 5px 0 8px 0;
 `
 
 const Marks = styled.div`
@@ -30,42 +37,75 @@ const Marks = styled.div`
 `
 
 const Mark = styled.div`
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
     color: #a4b5af;
+
+    & > .gatsby-image-wrapper{
+        width: 130px;
+    }
+`
+
+const OpinionWrapper = styled.div`
 `
 
 const elements = () => {
   return [
         {
         "content" : "Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.",
-        "size": "large-4 medium-12"
+        "author": "Klaudia Korzeniecka",
+        "label": "Sales Manager",
+        "company": "SlowDeco",
         },
         {
         "content" : "Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)",
-        "size": "large-4 medium-12"
+        "size": "large-4 medium-12",
+        "author": "Aleks",
+        "label": "CEO",
+        "company": "",
         },
         {
         "content" : "Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.",
-        "size": "large-4 medium-12"
+        "size": "large-4 medium-12",
+        "label": "Owner",
+        "author": "Kacper Konopko Owner",
+        "company": "Katana Clan",
         },
     ]
 }
 
 const Tabs = () => {
   return (
-    elements().map((tab) => {
+    elements().map((tab, x) => {
+
+        let colorOpacity = ((x+1)/elements().length) * 100;
 
       return (
-        
-        <div className={`${tab.size ? tab.size : `medium-3`} _p3`}>
-            <Element>
-                <p>{tab.content}</p>
-            </Element>
+        <div
+            style={{
+                'background-color': 'rgb(214 239 231 / ' + colorOpacity + '%)'
+            }}
+        >
+            <div className="container">
+                <div className="g-x">
+                    <div className={`medium-8 small-12`}>
+                        <OpinionContent>
+                            <p>{tab.content}</p>
+                        </OpinionContent>
+                    </div>
+                    <div className={`medium-3 offset-medium-1 small-12`}>
+                        <OpinionDetails>
+                            <p>{tab.label}</p>
+                            <OpinionAuthor>{tab.author}</OpinionAuthor>
+                            <p className="lead">{tab.company}</p>
+                        </OpinionDetails>
+                    </div>
+                </div>
+            </div>
         </div>
-
       );
 
     })
@@ -73,6 +113,55 @@ const Tabs = () => {
 }
 
 export default function Rekomendacje() {
+
+    const data = useStaticQuery(graphql`
+        query {
+            adamell: 
+                file(relativePath: {eq: "adamell.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 130) {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            },
+            charmings: 
+                file(relativePath: {eq: "charmings.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 130) {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            },
+            katanaClan: 
+                file(relativePath: {eq: "katana_clan.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 130) {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            },
+            slowdeco: 
+                file(relativePath: {eq: "slowdeco.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 130) {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            },
+            solier: 
+                file(relativePath: {eq: "solier.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 130) {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        
+        }
+    `);
+
+
+
   return (
     <>
     
@@ -82,40 +171,35 @@ export default function Rekomendacje() {
             <div className="mt3 mb1 _p3">
                 <h5>Rekomendacje</h5>
             </div>
-
-            <div>
-                <div className="g-x">
-                
-                <Tabs />
-
-                </div>
-            </div>
-
         </div>
+
+        <Tabs />
+
       </Wrapper>
-      <div className="container py0">
-            <p className="mt2 lead text-center" style={{
+
+    <div className="container py0">
+            <h4 className="mt2 lead text-center" style={{
                 color: "#a4b5af"
-            }}>Zaufali nam</p>
+            }}>Zaufali nam:</h4>
             <Marks>
 
-                <Mark>
-                    <h6>SlowDeco</h6>
-                </Mark>
                 <Mark>
                     <h6>Flumi</h6>
                 </Mark>
                 <Mark>
-                    <h6>Solier</h6>
+                    <Img fluid={data.adamell.childImageSharp.fluid} />
                 </Mark>
                 <Mark>
-                    <h6>KatanaClan</h6>
+                    <Img fluid={data.charmings.childImageSharp.fluid} />
                 </Mark>
                 <Mark>
-                    <h6>Adamell</h6>
+                    <Img fluid={data.katanaClan.childImageSharp.fluid} />
                 </Mark>
                 <Mark>
-                    <h6>Charmings</h6>
+                    <Img fluid={data.slowdeco.childImageSharp.fluid} />
+                </Mark>
+                <Mark>
+                    <Img fluid={data.solier.childImageSharp.fluid} />
                 </Mark>
 
             </Marks>
