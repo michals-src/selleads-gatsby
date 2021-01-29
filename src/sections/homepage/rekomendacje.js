@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     background-color: rgb(238 249 245 / 32%);
     color: #517366;
     padding-top: 40px;
-    padding-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: -50px;
 `
 
