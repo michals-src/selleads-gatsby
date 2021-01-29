@@ -71,7 +71,7 @@ const elements = () => {
         "content" : "Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.",
         "size": "large-4 medium-12",
         "label": "Owner",
-        "author": "Kacper Konopko Owner",
+        "author": "Kacper Konopko",
         "company": "Katana Clan",
         },
     ]
@@ -182,10 +182,7 @@ export default function Rekomendacje() {
                 color: "#a4b5af"
             }}>Zaufali nam:</h4>
             <Marks>
-
-                <Mark>
-                    <h6>Flumi</h6>
-                </Mark>
+            
                 <Mark>
                     <Img fluid={data.adamell.childImageSharp.fluid} />
                 </Mark>
