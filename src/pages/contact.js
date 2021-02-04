@@ -115,6 +115,7 @@ export default function Contact() {
     const [FormDetails, setFormDetails] = useState({
         "contact_name" : "",
         "contact_email" : "",
+        "contact_phone" : "",
         "contact_message" : ""
     });
 
@@ -131,8 +132,12 @@ export default function Contact() {
     const handleContact = (e) => {
         
         e.preventDefault();
+
+        if(FormDetails['contact_phone'] == "" ){
+            FormDetails['contact_phone'] = "Nie wpisano";
+        }
+
         let err = Object.values(FormDetails).indexOf("");
-        console.log(err);
         if( err !== -1 ) return setFormMsg('error-control');
 
         fetch("/", {
@@ -142,6 +147,10 @@ export default function Contact() {
             })
             .then(() => setFormMsg("success"))
             .catch(error => setFormMsg("error"));
+        
+        if(FormDetails['contact_phone'] == "Nie wpisano" ){
+            FormDetails['contact_phone'] = "";
+        }
 
     };
 
@@ -210,6 +219,10 @@ export default function Contact() {
                                         <Label for="contact_email">Adres e-mail</Label>
                                         <InputText type="email" id="contact_email" name="contact_email" className={controlClass} onChange={onContactFormChange} value={FormDetails.contact_email} />
                                         {(FormMsg === "error-control" && FormDetails["contact_email"] === "") && <LabelAfter><p>To pole nie może być puste.</p></LabelAfter> }
+                                    </InputGroup>
+                                    <InputGroup>
+                                        <Label for="contact_phone">Numer telefonu (opcjonalnie)</Label>
+                                        <InputText type="tel" id="contact_phone" name="contact_phone" onChange={onContactFormChange} value={FormDetails.contact_phone} />
                                     </InputGroup>
                                     <InputGroup>
                                         <Label for="contact_message">Wiadomość</Label>

@@ -88,6 +88,7 @@ const Tabs = () => {
             style={{
                 'background-color': 'rgb(214 239 231 / ' + colorOpacity + '%)'
             }}
+            key={x}
         >
             <div className="container">
                 <div className="g-x">
