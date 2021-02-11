@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'gatsby'
-import { useLocation } from "@reach/router" // this helps tracking the location
-import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies'
-
 import CookieConsent from "react-cookie-consent";
 
 function Footer() {
@@ -13,10 +10,8 @@ function Footer() {
                 location="bottom"
                 buttonText="Rozumiem"
                 cookieName="selleads-cookies-ga"
-                onAccept={() => {
-                    initializeAndTrack(useLocation)
-                }}
-                >
+                expires={365}
+            >
                     Nasz strona internetowa wykorzystuje do prawidłowego działania pliki cookies. Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne informacje.
             </CookieConsent>
 
