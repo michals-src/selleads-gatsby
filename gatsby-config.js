@@ -57,16 +57,15 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-gdpr-cookies`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        googleAnalytics: {
-          trackingId: "G-KSP5R6GWZB", // leave empty if you want to disable the tracker
-          cookieName: "selleads-cookies-ga", // here can you change the cookie name
-          anonymize: true, // default
-        },
-        // defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
+        trackingId: "G-KSP5R6GWZB",
+        head: true,
+        //cookieDomain: "selleads.pl",
       },
     },
+
+
+
   ],
 }
