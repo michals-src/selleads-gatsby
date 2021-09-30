@@ -9,6 +9,8 @@ import Navbar from './../navbar'
 import selleadsHero from '@images/selleads--hero.svg';
 
 
+import {AnimatePresence, motion} from "framer-motion"
+
 const HeroWrapper = styled.div`
   max-width: 1800px;
   position: relative;
@@ -103,6 +105,62 @@ const Carousel_content = styled.div`
   }
 `
 
+const Atext = ({ text }) => {
+
+  let vText = text.split(" ");
+  let vWords = [];
+
+  for (const [, item] of vText.entries()) {
+    vWords.push(item.split(""));
+  }
+
+  vWords.map((item) => {
+    return item.push("\u00A0");
+  });
+
+  const item = {
+    initial: {
+      opacity: 0,
+      y: "100%"
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.1, 0.05, 0.6, 0.95],
+        duration: 0.3
+      }
+    }
+  }
+
+  return (
+    <>
+    <h1 className="text-8xl font-bold">
+      {
+          vWords.map((words, index) => {
+            return (
+              <span key={index} className="inline-block whitespace-nowrap mb-5">
+                {
+                  vWords[index].flat().map((letter, ind) => {
+                    return (
+                      <span className="inline-block">
+                        <motion.span  className="inline-block" key={ind} variants={item} >
+                          {letter}
+                        </motion.span>
+                      </span>
+                    )
+                  })
+                }
+              </span>
+            )
+          })  
+      }
+    </h1>
+    </>
+  );
+
+}
+
 
 export default function Hero() {
 
@@ -180,10 +238,33 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const banner = {
+    animate: {
+      transition: {
+        delayChildren: 0.25,
+        staggerChildren: 0.025,
+      },
+    },
+  };
+
+
   return (
     <>
 
     <Navbar />
+
+
+
+    <AnimatePresence>
+    <div className="container mx-auto my-32 px-4">
+          <motion.div variants={banner} initial="initial" animate="animate">
+          <Atext text={"Tworzymy copywriting produktów"} />
+    </motion.div>
+    </div>
+    </AnimatePresence>
+
+
+
     <HeroWrapper>
         <HeroBackground>
           <Img fluid={data.hero.childImageSharp.fluid} />

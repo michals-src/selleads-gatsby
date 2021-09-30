@@ -18,6 +18,7 @@ module.exports = {
     //     name: `homepage`
     //   }
     // },
+    'gatsby-plugin-postcss',
     'gatsby-plugin-styled-components',
     `gatsby-plugin-sharp`, 
     `gatsby-transformer-sharp`,

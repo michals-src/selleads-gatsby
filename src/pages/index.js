@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet"
 
+import '@styles/global.css';
 // import '../styles/globals.css';
 import '@styles/globals.css';
 import '@styles/navigation.css';
