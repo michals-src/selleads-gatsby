@@ -21,7 +21,7 @@ body{
   background: #fff;
   font-family: 'Fraunces', 'Bentham', serif;
   padding: 0;
-  color: var(--color-primary);
+  color: #000;
 }
 
   body.sc-mobile-globalnav{
