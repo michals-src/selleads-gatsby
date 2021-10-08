@@ -78,13 +78,13 @@ footer .navbar > nav > ul > li a{
     font-weight: 400;;
 }
 
-#sc-globalnav{
+/* #sc-globalnav{
     position: absolute;
     width: 100%;
     height: 75px;
     top: 0;
     left: 0;
-}
+} */
 
 #sc-globalnav .sc-gn-header{
     display: flex;
@@ -158,9 +158,7 @@ footer .navbar > nav > ul > li a{
 }
 
 #sc-globalnav .sc-gn-list{
-    max-width: 1300px;
     padding: 15px;
-    margin: 0 auto;
     height: 80px;
 }
     #sc-globalnav .sc-gn-list .sc-gn-selleads a{

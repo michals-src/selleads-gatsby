@@ -2,77 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from "gatsby-image"
 
-import Element from '../../components/Element'
 import Navbar from './../navbar'
 
 import {AnimatePresence, motion, useMotionValue, useTransform, useElementScroll} from "framer-motion"
 
-
-
-import undraw_visual_data_re_mxxo from '../../assets/images/undraw_visual_data_re_mxxo.svg';
-
-const Atext = ({ text }) => {
-
-  let vText = text.split(" ");
-  let vWords = [];
-
-  for (const [, item] of vText.entries()) {
-    vWords.push(item.split(""));
-  }
-
-  vWords.map((item) => {
-    return item.push("\u00A0");
-  });
-
-  const item = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        ease: [0.1, -0.05, 0.6, 0.95],
-        duration: 0.65
-      }
-    }
-  }
-
-  return (
-    <>
-    <h1 className="text-5xl font-bold">
-      {
-          vWords.map((words, index) => {
-            return (
-              <span key={index} className="inline-block whitespace-nowrap mb-5">
-                {
-                  vWords[index].flat().map((letter, ind) => {
-                    return (
-                      <span className="inline-block">
-                        <motion.span  className="inline-block" key={ind} variants={item} >
-                          {letter}
-                        </motion.span>
-                      </span>
-                    )
-                  })
-                }
-              </span>
-            )
-          })  
-      }
-    </h1>
-    </>
-  );
-
-}
-
-const carousel_content = [
-  'Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty.',
-  'Przygotowujemy oferty szyte na miarę Twoich klientów.',
-  'Pomożemy Twojej firmie wyjść na arenę międzynarodową.',
-  'Sprawimy, że Twoi klienci zostaną z Tobą na dłużej.',
-  'Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy.',
-  'Zajmiemy się budowaniem bazy lojalnych klientów.'
-];
+import Hero_leftSide from './hero/LeftSide';
+import Hero_MiddleSide from './hero/MiddleSide';
+import Hero_RightSide from './hero/RightSide';
 
 const Flying_Icons = [
   {
@@ -164,14 +100,18 @@ const FlyingIcons = () => {
 
 export default function Hero() {
 
-  const banner = {
-    animate: {
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.045,
-      },
-    },
-  };
+  const data = useStaticQuery(graphql`
+  query {
+    unsplash_blake_wisz: 
+        file(relativePath: {eq: "blake-wisz-Xn5FbEM9564.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }   
+  }
+`);
 
   const fIcons = {
     animate: {
@@ -189,130 +129,107 @@ export default function Hero() {
   const ref = useRef();
   const { scrollYProgress } = useElementScroll(ref)
   
+  const heroMiddleRef = useRef(null);
+
+  const carousel_content = [
+    'Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty.',
+    'Przygotowujemy oferty szyte na miarę Twoich klientów.',
+    'Pomożemy Twojej firmie wyjść na arenę międzynarodową.',
+    'Sprawimy, że Twoi klienci zostaną z Tobą na dłużej.',
+    'Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy.',
+    'Zajmiemy się budowaniem bazy lojalnych klientów.'
+  ];
+
   return (
-    <>
-
-    <Navbar />
-
-    
+    <>   
+    <div className="py-14 bg-gradient-to-b from-gray-200 to-gray-white ">
+      <Navbar />
       <div ref={ref} className="container mx-auto px-4 md:px-14">
-        <div className="h-screen mt-4 flex flex-col justify-center relative">
-
+        <div className="py-8 mt-4 flex flex-col justify-center relative">
           <div className="flex flex-row flex-wrap align-center relative z-20">
             <div className="w-5/12 flex flex-col justify-center relative z-20">
-              
-            <motion.p
-            initial={{
-              opacity: 0
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                ease: [0, -0.55, 0.45, 1],
-                duration: 3,
-                delay: 3.5
-              }
-            }}
-            className="mb-6 text-blue-600">Zdobądź siłę przebicia.</motion.p>
-            
-            <motion.div variants={banner} initial="initial" animate="animate">
-              <Atext text={"Zadbamy o widoczność Twoich produktów na platformie Amazon"} />
-            </motion.div>
-            
-            <motion.p
-             initial={{
-              opacity: 0
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                ease: [0, -0.55, 0.45, 1],
-                duration: 3,
-                delay: 3.5
-              }
-            }}
-            className="mt-8 text-lg"
-            >
-              Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów, pomożemy Twojej firmie wyjść na arenę międzynarodową.
-            </motion.p>
-          
-
+              <div className="pr-8">
+                <Hero_leftSide /> 
+              </div>
             </div>
-            <div className="w-4/12 flex flex-col justify-center">
-              <motion.div
-                initial={{
-                  opacity: 0
-                }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    delay: 1,
-                    duration: 2,
-                    ease: [0, -0.55, 0.45, 1],
-                  }
-                }}
-              >
-                <div className="relative z-10">
-                  
-                  <div className="rounded-2xl overflow-hidden relative">
-                    <img style={{
-                      height: "650px"
-                    }} src={undraw_visual_data_re_mxxo} alt="Unsplash - Blake_Wisz_Pic" />
-                    </div>
-                  
-                  {/* <motion.div variants={fIcons} initial="initial" animate="animate">
-                    <FlyingIcons />
-                  </motion.div> */}
-
-                </div>   
-              </motion.div>
+            <div className="w-4/12 flex flex-col justify-center relative">
+              <Hero_MiddleSide/>
             </div>
             <div className="w-3/12 flex flex-col justify-center">
-              <motion.div
-                initial={{
-                  opacity: 0
-                }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    delay: 3.5,
-                    duration: 3,
-                    ease: [0, -0.55, 0.45, 1],
-                  }
-                }}
-              >
-              <div className="px-6">
-                <ul className="list-none">
-                  <li className="h-full py-16 border-b border-gray-200">
-                    <div className="text-lg font-bold">Oferta Amazon</div>
-                    
-                    <div className="flex flex-row flex-nowrap align-center text-gray-400 hover:no-underline">
-                      <a className="hover:text-gray-700 text-gray-400 hover:no-underline" href="#">Poznaj szczegóły</a>
-                      <span className="ml-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="fill-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </span>
-                    </div>
-
-                  </li>
-                  <li className="h-full py-16">
-                    <div className="text-lg font-bold">Copywriting</div>
-                    <div className="flex flex-row flex-nowrap align-center text-gray-400 hover:no-underline">
-                      <a className="hover:text-gray-700 text-gray-400 hover:no-underline" href="#">Poznaj szczegóły</a>
-                      <span className="ml-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="fill-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              </motion.div>
+              <Hero_RightSide/>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
+      <div className="container mx-auto px-4 md:px-14">
+        {/* <div className="w-8/12 mx-auto mb-32">
+          <h1 className="text-4xl text-center">
+            Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów.
+          </h1>
+        </div> */}
+
+        <div className="flex flex-row flex-wrap">
+          <div className="w-6/12 border-r-2 border-b-2 border-white">
+            <div className="flex flex-col align-center p-16 text-center bg-gray-100 h-full">
+              <div className="mx-auto mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <p className="px-40 text-lg">Obsługujemy Twoje konta na wybranych marketplace, a Ty śledzisz rezultaty.</p>
+            </div>
+          </div>
+          <div className="w-6/12 border-b-2 border-white">
+            <div className="flex flex-col align-center p-16 text-center bg-gray-100 h-full">
+              <div className="mx-auto mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <p className="px-40 text-lg">Pomożemy Twojej firmie wyjść na arenę międzynarodową.</p>
+            </div>
+          </div>
+          <div className="w-6/12 border-r-2 border-b-2 border-white">
+            <div className="flex flex-col align-center p-16 text-center bg-gray-100 h-full">
+              <div className="mx-auto mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <p className="px-40 text-lg">Maksymalizujemy sprzedaż bez wydawania fortuny na reklamy.</p>
+            </div>
+          </div>
+          <div className="w-6/12 border-b-2 border-white">
+            <div className="flex flex-col align-center p-16 text-center bg-gray-100 h-full">
+              <div className="mx-auto mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                </svg>
+              </div>
+              <p className="px-40 text-lg">Sprawimy, że Twoi klienci zostaną z Tobą na dłużej.</p>
+            </div>
+          </div>
+          <div className="w-6/12">
+            <div className="overflow-hidden">
+              <Img fluid={data.unsplash_blake_wisz.childImageSharp.fluid} className="object-fit" />
+            </div>
+          </div>
+          <div className="w-6/12 flex items-center border-2 border-gray-200">
+            <div className="flex flex-col justify-center px-32">
+              <h1 className="text-6xl font-bold mb-10">
+                Pomożemy Ci przygotować ofertę.
+              </h1>
+              <p className="text-lg">Spełni oczekiwania nawet najbardziej wymagających klientów.</p>
+            </div>
+          </div>
+          
+
+        </div>
+
+
+        <div className="flex flex-row flex-wrap align-center justify-center">
 
         </div>
       </div>

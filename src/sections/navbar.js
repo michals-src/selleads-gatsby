@@ -1,7 +1,11 @@
-import React , { useState, useEffect } from "react";
+import React , { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import Img from "gatsby-image"
+import {AnimatePresence, motion} from 'framer-motion';
+
+import courtainContext from "../context/CourtainContext";
+
+import Button from '@components/Button';
 
 import selleads from '@images/selleads.svg';
 
@@ -9,7 +13,15 @@ const Selleads = styled.div`
     font-size: 28px;
 `
 
+const Content_Button_Icon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>
+)
+
 function Navbar() {
+
+    const { setCourtainVisible } = useContext(courtainContext);
 
     const data = useStaticQuery(graphql`
     query MyQuery {
@@ -40,7 +52,8 @@ function Navbar() {
     useEffect(() => {
 
         let bodyClass = document.body.classList;
-        const bodyClassTag = 'sc-mobile-globalnav';
+        // const bodyClassTag = 'sc-mobile-globalnav';
+        const bodyClassTag = 'a';
 
         return Object.values(bodyClass).indexOf(bodyClassTag) != -1
                 ? bodyClass.remove( bodyClassTag )
@@ -52,71 +65,91 @@ function Navbar() {
         document.body.classList.remove('sc-mobile-globalnav');
     }, []);
 
+
+    const [cVis, setCVis] = useState(true);
+
     return (
         <>
-        
-        <nav id="sc-globalnav" data-aria={navAria}>
-
-            <div className="sc-gn-header">
-                <div className="sc-gn-tapmenu" onClick={() => setNavAria(!navAria)}>
-                    <div className="sc-gn-tapmenu-item"><span></span></div>
-                    <div className="sc-gn-tapmenu-item"><span></span></div>
+            <nav id="sc-globalnav" data-aria={navAria}>
+                <div className="sc-gn-header">
+                    <div className="sc-gn-tapmenu" onClick={() => setNavAria(!navAria)}>
+                        <div className="sc-gn-tapmenu-item"><span></span></div>
+                        <div className="sc-gn-tapmenu-item"><span></span></div>
+                    </div>
+                    <div className="sc-gn-selleads">
+                        <Selleads>
+                            <Link href="/">
+                                <img src={selleads} alt="selleads - wings for your business" />
+                            </Link>
+                        </Selleads>
+                    </div>
                 </div>
-                <div className="sc-gn-selleads">
-                    <Selleads>
-                        <Link href="/">
-                            <img src={selleads} alt="selleads - wings for your business" />
-                        </Link>
-                    </Selleads>
-                </div>
-            </div>
-            <ul className="sc-gn-list">
-                <li className="sc-gn-list-item sc-gn-selleads">
-                    <Selleads>
-                        <Link href="/">
-                            <img src={selleads} alt="selleads - wings for your business" />
-                        </Link>
-                    </Selleads>
-                </li>
-                <ul className="sc-gn-list-items">
-                    <li className="sc-gn-list-item">
-                        <Link href="/">Strona główna</Link>
-                    </li>
-                    <li className="sc-gn-list-item sc-gn-list-item-sn" onMouseLeave={() => { snAriaHandle(false) } } data-aria={snAria}>
-                        <a href="#" className="sc-gn-sn-main" onMouseEnter={() => { snAriaHandle(true) } } onClick={ () => { snAriaHandle('toggle') } }>Oferta</a>
-                        <ul className="sc-gn-sn-list">
-                            <li className="sc-gn-list-item sc-gn-sn-item">
-                                <Link href="/amazon">
-                                    <p className="sc-gn-sn-item-title">Amazon</p>
-                                    <p className="sc-gn-sn-item-label">Podbij zagraniczne rynki</p>
+                <div className="container mx-auto">
+                    <ul className="sc-gn-list">
+                        <li className="sc-gn-list-item sc-gn-selleads">
+                            <Selleads>
+                                <Link href="/">
+                                    <img src={selleads} alt="selleads - wings for your business" />
                                 </Link>
+                            </Selleads>
+                        </li>
+                        <ul className="sc-gn-list-items">
+                            <li className="sc-gn-list-item" onClick={() =>  setCVis(false)}>
+                                <Link href="/">Strona główna</Link>
                             </li>
-                            <li className="sc-gn-list-item sc-gn-sn-item">
-                                <Link href="/allegro">                                    
-                                   <p className="sc-gn-sn-item-title">Allegro</p>
-                                   <p className="sc-gn-sn-item-label">Pokażmy Twój produkt ludziom, którzy go szukają.</p>
-                                </Link>
+                            <li className="sc-gn-list-item">
+                                <Link href="/amazon">Amazon</Link>
                             </li>
-                            <li className="sc-gn-list-item sc-gn-sn-item">
-                                <Link href="/email">                                    
-                                    <p className="sc-gn-sn-item-title">Email marketing</p>
-                                    <p className="sc-gn-sn-item-label">Emaile szyte na miarę</p>
-                                </Link>
+                            <li className="sc-gn-list-item">
+                                <Link href="/copywriting">Copywriting</Link>
                             </li>
-                            <li className="sc-gn-list-item sc-gn-sn-item"> 
-                                <Link href="/copywriting">
-                                    <p className="sc-gn-sn-item-title">Copywriting</p>
-                                    <p className="sc-gn-sn-item-label">Poczuj siłę słów</p>
+                            {/* <li className="sc-gn-list-item sc-gn-list-item-sn" onMouseLeave={() => { snAriaHandle(false) } } data-aria={snAria}>
+                                <a href="#" className="sc-gn-sn-main" onMouseEnter={() => { snAriaHandle(true) } } onClick={ () => { snAriaHandle('toggle') } }>Oferta</a>
+                                <ul className="sc-gn-sn-list">
+                                    <li className="sc-gn-list-item sc-gn-sn-item">
+                                        <Link href="/amazon">
+                                            <p className="sc-gn-sn-item-title">Amazon</p>
+                                            <p className="sc-gn-sn-item-label">Podbij zagraniczne rynki</p>
+                                        </Link>
+                                    </li>
+                                    <li className="sc-gn-list-item sc-gn-sn-item">
+                                        <Link href="/allegro">                                    
+                                        <p className="sc-gn-sn-item-title">Allegro</p>
+                                        <p className="sc-gn-sn-item-label">Pokażmy Twój produkt ludziom, którzy go szukają.</p>
+                                        </Link>
+                                    </li>
+                                    <li className="sc-gn-list-item sc-gn-sn-item">
+                                        <Link href="/email">                                    
+                                            <p className="sc-gn-sn-item-title">Email marketing</p>
+                                            <p className="sc-gn-sn-item-label">Emaile szyte na miarę</p>
+                                        </Link>
+                                    </li>
+                                    <li className="sc-gn-list-item sc-gn-sn-item"> 
+                                        <Link href="/copywriting">
+                                            <p className="sc-gn-sn-item-title">Copywriting</p>
+                                            <p className="sc-gn-sn-item-label">Poczuj siłę słów</p>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li> */}
+                            <li className="sc-gn-list-item"><Link href="/about">O nas</Link></li>
+                            <li className="sc-gn-list-item">
+                                <Link href="/contact">
+                                    <Button
+                                        lIcon={<Content_Button_Icon/>}
+                                        bg={['bg-gray-900', 'hover:bg-gray-700']}
+                                        color={['text-white', 'hover:text-gray-100']}
+                                    >
+                                        Kontakt
+                                    </Button>
                                 </Link>
                             </li>
                         </ul>
-                    </li>
-                    <li className="sc-gn-list-item"><Link href="/about">O nas</Link></li>
-                    <li className="sc-gn-list-item"> <Link href="/contact">Kontakt</Link></li>
-                </ul>
-            </ul>
-        </nav>
-{/* 
+                    </ul>
+                </div>
+                </nav>
+        
+ {/* 
         <div className="navigation">
             <Container>
                 <div className="g-x">

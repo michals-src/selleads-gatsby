@@ -1,6 +1,6 @@
 import React from 'react';
-import {AnimatePresence} from 'framer-motion';
+import ThemeContext from './src/context/ThemeContext';
 
-export const wrapPageElement = ({element}) => (
-  <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
-);
+export const wrapPageElement = ({ element }) => (
+  <ThemeContext>{element}</ThemeContext>
+)

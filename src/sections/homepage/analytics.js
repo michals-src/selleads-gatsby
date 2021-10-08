@@ -66,17 +66,17 @@ const Icon_Prime = () => {
 const Series_Col = ({ tytul, opis, ikona, color }) => {
   return (
     <div className="p-4 h-full">
-      <div className={`flex content-center h-full p-8 bg-${color}-100 rounded-md`}>
+      <div className={`flex content-center h-full p-8 border-2 border-green-100 rounded-md`}>
         <div className="flex flex-row flex-nowrap items-center">
           <div className="w-7/12">
             <div className="my-4">
-              <h1 className="text-3xl font-bold">
+              <h1 className="text-3xl font-bold text-green-800">
                 {tytul}
               </h1>
             </div>
             <p className="text-lg">{opis}</p>
           </div>
-          <div className={`w-4/12 ml-auto text-${color}-500`}>
+          <div className={`w-4/12 ml-auto text-green-800`}>
             { ikona }
           </div>
         </div>
@@ -91,7 +91,10 @@ export default function Analytics() {
     
       <div className="container px-4 md:px-14">
 
-        <div className="flex flex-wrap my-48">
+        <div className="flex flex-wrap my-64">
+          <div className="w-full">
+            <h6 className="text-xl text-green-700 mb-6">Pokaż się innym.</h6>
+          </div>
           <div className="w-full md:w-6/12 md:pr-16">
             <h1 className="text-6xl font-bold"><span>Wyświetlaj się częściej,</span> więcej i trafniej.</h1>
           </div>
@@ -120,9 +123,9 @@ export default function Analytics() {
           </div>
           <div className="w-full md:w-6/12 -ml-4 md:-ml-0">
             <div className="h-full p-4 h-full">
-              <div className="flex flex-col justify-center h-full p-14 border border-indigo-300 rounded-md">
-                <div className="px-4 md:px-16 text-center text-indigo-800">
-                  <div className="my-14">
+              <div className="flex flex-col justify-center h-full p-14 bg-green-100 rounded-md">
+                <div className="px-4 md:px-16 text-center">
+                  <div className="my-14 text-green-800">
                     <svg xmlns="http://www.w3.org/2000/svg" className="fill-current m-auto h-28 w-28" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C12.279 4.784 11.232 4 10 4s-2.279.784-2.979 1.95c-.285.475-.507 1-.67 1.55H6a1 1 0 000 2h.013a9.358 9.358 0 000 1H6a1 1 0 100 2h.351c.163.55.385 1.075.67 1.55C7.721 15.216 8.768 16 10 16s2.279-.784 2.979-1.95a1 1 0 10-1.715-1.029c-.472.786-.96.979-1.264.979-.304 0-.792-.193-1.264-.979a4.265 4.265 0 01-.264-.521H10a1 1 0 100-2H8.017a7.36 7.36 0 010-1H10a1 1 0 100-2H8.472c.08-.185.167-.36.264-.521z" clipRule="evenodd" />
                     </svg>
