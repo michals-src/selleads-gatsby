@@ -5,6 +5,7 @@ import undraw_lightbulb_moment from '@images/undraw_lightbulb_moment_evxr.svg';
 import undraw_Process_re from '@images/undraw_Process_re_gws7.svg';
 import undraw_Working_oh83 from '@images/undraw_Working_oh83.svg';
 
+import Navbar from '@sections/navbar'
 
 const SVGWrapper = styled.div`
     width: 100%;
@@ -148,12 +149,16 @@ function Section1() {
     return (
         <>
         
+        <div className="py-14 bg-gradient-to-b from-gray-200 to-gray-white ">
+        
+        <Navbar />
+
         <div className="container mx-auto px-4 md:px-14">
-            <div className="my-32 flex flex-row">
+            <div className="my-32 flex flex-row flex-nowrap items-center">
                 <div className="w-4/12">
                     <img src={undraw_Process_re} />
                 </div>
-                <div className="w-8/12 flex flex-col justify-center px-32">
+                <div className="w-8/12 flex flex-col justify-center pl-10 md:pl-16 lg:pl-32">
                     <h1 className="text-6xl font-bold flex px-16">Oferta Amazon.</h1>
 
                     <div className="flex flex-col mt-10">
@@ -174,6 +179,8 @@ function Section1() {
 
                 </div>
             </div>
+        </div>
+
         </div>
             
         <div className="container mx-auto px-4 md:px-14">
@@ -238,8 +245,37 @@ function Section1() {
         </div>
 
 
+        <div className="container mx-auto px-4 md:px-14">
+            <div className="my-32 flex flex-wrap flex-row items-center">
+                <div className="w-6/12 pr-16">
+                    <p className="text-lg mb-14">
+                        Ponad 100 milionów ludzi na <span className="text-sm py-1 px-2 bg-gray-200">świecie</span> posiada konto Prime, jest ich więcej niż osób bez Prime. Statystycznie jeden użytkownik ze statusem Prime wydaje ponad 1000$ rocznie.
+                    </p>
+                    <div className="my-20">
+                        <h6 className="text-md text-green-800">Rdźeń skuteczności</h6>
+                        <h3 className="text-3xl font-bold my-3">
+                            Amazon, doskonałe miejsce.
+                        </h3>
+                        <h6 className="text-xl">Buduj swoją markę produktową w odpowiedniem miejscu.</h6>
+                    </div>
+                    <div className="my-20">
+                        <h6 className="text-md text-green-800">Rdzeń wydajności</h6>
+                        <h3 className="text-3xl font-bold my-3">
+                            W modelu FBA cała logistyka jest prowadzona z komputera.
+                        </h3>
+                        <h6 className="text-xl">Tobie pozostaje się cieszyć z wyników.</h6>
+                    </div>
+                </div>
+                <div className="w-6/12">
+                    <div className="overflow-hidden">
+                        <img src={undraw_Working_oh83} />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div className="container px-4 md:px-14 mx-auto mt3 mb6">
+
+            {/* <div className="container px-4 md:px-14 mx-auto mt3 mb6">
                 <div className="pt2 mt1">
                     <div className="g-x fx icenter">
                         <div className="medium-6 small-8 text-center">
@@ -315,7 +351,7 @@ function Section1() {
 
 
             </div>
-        
+         */}
         </>
     )
 }

@@ -22,11 +22,11 @@ export default function Home() {
           <title>Selleads - Oferta Amazon</title>
       </Helmet>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Section1 />
-      <Section2 />
-      <Section3 />
+      {/* <Section2 />
+      <Section3 /> */}
 
       <Footer />
    
