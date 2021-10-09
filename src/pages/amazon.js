@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from "react-helmet"
 
 import '@styles/global.css';
-//import '@styles/globals.css';
 import '@styles/navigation.css';
-//import '@styles/cards.css';
 
 import Navbar from '@sections/navbar'
 import Footer from '@sections/footer';
