@@ -12,9 +12,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  /* font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-family: 'Fraunces', 'Bentham', serif;
+  font-family: 'Fraunces', 'Bentham', serif; */
 }
 
 body{
@@ -227,7 +227,7 @@ p.xlead{
   }
 }
 
-.container{
+/* .container{
   width: 100%;
   padding: 15px;
   margin: 0 auto;
@@ -235,9 +235,9 @@ p.xlead{
   ._container{
     width: 100%;
     margin: 0 auto;
-  }
+  } */
 
-@media (min-width: 568px){
+/* @media (min-width: 568px){
   .container{
     max-width: 530px;
   }
@@ -279,7 +279,7 @@ p.xlead{
     padding-left: 50px;
     padding-right: 50px;
   }
-}
+} */
 
 .f, .fy, .fx{
   display: flex;
