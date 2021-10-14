@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
+import { CookiesProvider } from 'react-cookie';
 
 import courtainContext from './CourtainContext';
 
@@ -31,12 +32,12 @@ function ThemeContext({children, ...props}) {
     }
 
     return (
-    
-        <courtainContext.Provider value={courtainVal}>
-            {children}
-            {/* <Courtain /> */}
-        </courtainContext.Provider>
-    
+        <CookiesProvider>
+            <courtainContext.Provider value={courtainVal}>
+                {children}
+                {/* <Courtain /> */}
+            </courtainContext.Provider>
+        </CookiesProvider>
     )
 }
 

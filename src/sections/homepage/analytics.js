@@ -89,7 +89,7 @@ export default function Analytics() {
   return (
     <>
     
-      <div className="container px-4 md:px-14">
+      <div className="container px-4 md:px-14 mx-auto">
 
         <div className="flex flex-wrap my-64">
           <div className="w-full">
