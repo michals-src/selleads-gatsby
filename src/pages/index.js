@@ -23,9 +23,9 @@ export default function Home() {
       </Helmet>
 
       <Hero />
-      {/* <Services />
-      <Rekomendacje /> */}
+      {/* <Services />*/}
       <Analytics />
+      <Rekomendacje /> 
       {/* <Optimalization /> */}
 
       <Footer />
