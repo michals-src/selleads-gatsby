@@ -28,16 +28,16 @@ function Footer() {
                     <div className="container mx-auto px-4 md:px-14">
                         <div className="p-16 rounded-lg bg-green-900 text-white flex flex-row flex-wrap">
                             <div className="w-6/12">
+                                <h6 className="text-6xl leading-tight font-bold">
+                                    Zdefiniuj swoje produkty na nowo.
+                                </h6>
                                 <h1 className="text-6xl leading-tight font-bold">
-                                    <div>Jesteśmy</div>
-                                    <div>dostępni przez</div>
-                                    <div>
-                                        <span className="w-auto underline pr-2 inline-flex hover:no-underline">
-                                            <div><Link to="/contact">formularz</Link></div>
+                                    <div className="mt-3">
+                                        <span className="w-auto pr-6 inline-flex">
+                                            <div><Link className="underline hover:no-underline" to="/contact">Kontakt</Link></div>
                                         </span>
-                                        lub
+                                        albo
                                     </div>
-                                    <div>nasz adres.</div>
                                 </h1>
                                 <p className="text-2xl py-10 text-gray-100">selleads.office@gmail.com</p>
                             </div>

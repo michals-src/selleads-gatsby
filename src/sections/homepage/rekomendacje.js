@@ -171,8 +171,8 @@ export default function Rekomendacje() {
         <div className="mt-64 mb-32">
             <div className="flex flex-row flex-nowrap">
                 <div className="w-9/12">
-                    <div className="mb-20">
-                        <h3 className="text-lg">
+                    <div className="mb-20 max-w-2xl">
+                        <h3 className="text-lg font-bold">
                             Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.
                         </h3>
                         <div className="mt-8">
@@ -180,8 +180,8 @@ export default function Rekomendacje() {
                             <p>Sales Manager w SlowDeco</p>
                         </div>
                     </div>
-                    <div className="mb-20">
-                        <h3 className="text-lg">
+                    <div className="mb-20 max-w-2xl">
+                        <h3 className="text-lg font-bold">
                         Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)
                         </h3>
                         <div className="mt-8">
@@ -189,8 +189,8 @@ export default function Rekomendacje() {
                             <p>CEO w Adamell</p>
                         </div>
                     </div>
-                    <div>
-                        <h3 className="text-lg">
+                    <div className="max-w-2xl">
+                        <h3 className="text-lg font-bold">
                         Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.
                         </h3>
                         <div className="mt-8">

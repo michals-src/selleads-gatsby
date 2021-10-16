@@ -1,6 +1,11 @@
 
 // https://www.sketch.com/s/dd9e72f3-b0e2-4543-bbea-266a65c79ca4/a/GPw9PE
 
+//https://garoaskincare.com/about
+//https://isabelmoranta.com/
+//https://yarogolyev.com/about
+//https://www.awwwards.com/awwwards/collections/about-page/
+
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { Helmet } from "react-helmet"
