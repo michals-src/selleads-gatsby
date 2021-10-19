@@ -27,30 +27,32 @@ export default function Home() {
           <Navbar />
 
         <div className="container mx-auto px-4">
-          <div className="py-16 rounded-3xl" style={{ backgroundImage: `url(${aboutBG})`, backgroundRepeat: "no-repeat", backgroundPosition: "center center", backgroundColor: "#0c0c14", backgroundSize: "100% auto" }}>
-          
-            <div className="mx-auto my-32 px-16 text-white text-center">
-              <p className="text-2xl">Poznaj nas</p>
-              <h1 className="mb-0 text-6xl font-bold">Jesteśmy, aby pomóc w rozwoju</h1>
-              <h1 className="mt-3 my-10 text-6xl font-bold">Twojego biznesu w sieci.</h1>
-            </div>
-
-            <div className="flex flex-row flex-wrap text-white py-32">
-              <div className="w-5/12">
-                <div className="px-16 py-10">
-                  <p className="text-2xl">Nic nadzwyczajnego, kilku młodych chłopaków, którzy przez parę lat doświadczeń, rozwijania własnych linii produktowych i dziesiątek godzin spędzonych na nauce systemów E-commerce chcą pomagać rozwijać się innym.</p>
-                </div>
-                <div className="mt-2 px-16 py-10">
-                  <h3 className="text-4xl font-bold">Łatwo, naturalnie i z ludzkim podejściem do innych.</h3>
-                </div>
+          <div className="rounded-3xl" style={{ backgroundImage: `url(${aboutBG})`, backgroundRepeat: "no-repeat", backgroundPosition: "bottom right", backgroundColor: "#0c0c14", backgroundSize: "100% auto" }}>
+            <div className="py-16">
+              
+              <div className="mx-auto my-32 px-16 text-white text-center">
+                <p className="text-2xl">Poznaj nas</p>
+                <h1 className="mb-0 text-6xl font-bold">Jesteśmy, aby pomóc w rozwoju</h1>
+                <h1 className="mt-3 my-10 text-6xl font-bold">Twojego biznesu w sieci.</h1>
               </div>
-              <div className="w-2/12"></div>
-              <div className="w-4/12">
-                  <img src={`${plane}`} width="100%" />
-              </div>
-              <div className="w-1/12"></div>
-            </div>
 
+              <div className="flex flex-row flex-wrap text-white py-32">
+                <div className="w-5/12">
+                  <div className="pl-16 py-10">
+                    <p className="text-2xl">Nic nadzwyczajnego, kilku młodych chłopaków, którzy przez parę lat doświadczeń, rozwijania własnych linii produktowych i dziesiątek godzin spędzonych na nauce systemów E-commerce chcą pomagać rozwijać się innym.</p>
+                  </div>
+                  <div className="mt-2 pl-16 py-10">
+                    <h3 className="text-4xl font-bold">Łatwo, naturalnie i z ludzkim podejściem do innych.</h3>
+                  </div>
+                </div>
+                <div className="w-2/12"></div>
+                <div className="w-4/12">
+                    <img src={`${plane}`} width="100%" />
+                </div>
+                <div className="w-1/12"></div>
+              </div>
+
+            </div>
           </div>
         </div>
 
