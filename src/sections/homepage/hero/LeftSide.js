@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
-import { motion} from "framer-motion"
+import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 const Atext = ({ text }) => {
 
@@ -58,7 +58,6 @@ const Atext = ({ text }) => {
 
 
 function Hero_leftSide() {
-
     const banner = {
         animate: {
             transition: {
@@ -68,17 +67,44 @@ function Hero_leftSide() {
         },
     };
 
+    const ref = useRef();
+    const { scrollYProgress } = useViewportScroll()
+
+    const [scrollPercentageStart, setScrollPercentageStart] = useState();
+    const [scrollPercentageEnd, setScrollPercentageEnd] = useState();
+
+    const scale = useTransform(scrollYProgress, [scrollPercentageStart, scrollPercentageEnd], [0.5, 1])
+
+    useEffect(() => {
+
+        const rect = ref.current.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        const offsetStart = rect.top + scrollTop;
+        const offsetEnd = (offsetStart + rect.height);
+
+        const elementScrollStart = offsetStart / document.body.clientHeight;
+        const elementScrollEnd = offsetEnd / document.body.clientHeight;
+
+        setScrollPercentageStart(elementScrollStart);
+        setScrollPercentageEnd(elementScrollEnd);
+
+    }, []);
+
     return (
         <>    
-            <motion.p
-                initial={{ opacity: 0 }}
-                animate={{  opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 4.5}}}
-                className="mb-6 text-xl text-green-700"
-            >
-                Zdobądź siłę przebicia.
-            </motion.p>
+            <div>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 4.5}}}
+                    className="mb-6 text-xl text-green-700"
+                    
+                >
+                    Zdobądź siłę przebicia.
+                </motion.p>
+            </div>
             
-            <motion.div variants={banner} initial="initial" animate="animate">
+            <motion.div ref={ref} variants={banner} initial="initial" animate="animate" style={{scale}}>
                 <Atext text={"Zadbamy o widoczność Twoich produktów"} />
             </motion.div>
             

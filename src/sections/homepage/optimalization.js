@@ -276,7 +276,6 @@ export default function Optimalization() {
     
     <Container>
 
-
       <Element my2>
         <div className="g-x">
           <div className="small-12">

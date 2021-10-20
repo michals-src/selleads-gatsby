@@ -140,6 +140,7 @@ export default function Hero() {
     'Zajmiemy się budowaniem bazy lojalnych klientów.'
   ];
 
+  
   return (
     <>   
     <div className="py-14 bg-gradient-to-b from-gray-200 to-gray-white ">
