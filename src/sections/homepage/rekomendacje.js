@@ -117,6 +117,7 @@ const Pin = ({ el, duration, children }) => {
     
     const ref = useRef(null);
 
+    const [scrollYProgress, setScrollYProgress] = useState(0);
     const [heightEl, setHeightEl] = useState(0);
 
     // Style rodzica
@@ -143,7 +144,7 @@ const Pin = ({ el, duration, children }) => {
             const offsetStart = rect.top + scrollTop;
             const offsetEnd = (offsetStart + duration);
 
-            console.log(scrollTop, offsetStart, offsetEnd);
+            //console.log(scrollTop, offsetStart, offsetEnd);
 
             if (scrollTop < offsetStart) {
 
@@ -151,7 +152,7 @@ const Pin = ({ el, duration, children }) => {
                 setPaddingBottom(`${duration}px`);
                 setPosition("static");
                 setIsPadding(false);
-                //setScrollYProgress(0);
+                setScrollYProgress(0);
             }
 
             if (scrollTop >= offsetStart && scrollTop <= offsetEnd) {
@@ -161,8 +162,8 @@ const Pin = ({ el, duration, children }) => {
                 //     setIsPadding(true);
                 // }
                 setPosition("fixed");
-                //let progressY = (scrollTop - offsetStart) / rect.height;
-                //setScrollYProgress(progressY);
+                let progressY = (scrollTop - offsetStart) / duration;
+                setScrollYProgress(progressY);
             }
 
             if (scrollTop > offsetEnd) {
@@ -170,7 +171,7 @@ const Pin = ({ el, duration, children }) => {
                 setPaddingBottom(0);
                 setPosition("static");
                 setIsPadding(false);
-                //setScrollYProgress(1);
+                setScrollYProgress(1);
             }
             
         }
@@ -189,7 +190,7 @@ const Pin = ({ el, duration, children }) => {
         <>
             <div className="relative" style={{ height: heightEl, paddingTop, paddingBottom, boxSizing }} ref={ref}>
                 <div className="w-full h-auto" style={{ position, top, left }}>
-                    {children}
+                    {children(scrollYProgress)}
                 </div>
             </div>
             {/* <div style={{ height: heightEl }}></div> */}
@@ -247,103 +248,111 @@ export default function Rekomendacje() {
 
     const pinDuration = window.innerHeight;
     const ref = useRef(null);
-    const PinRef = useRef(null);
+    // const PinRef = useRef(null);
     
-    const [scrollYProgress, setScrollYProgress] = useState(0);
+    // const [scrollYProgress, setScrollYProgress] = useState(0);
     
-    useEffect(() => {
+    // useEffect(() => {
 
-        // const rect = ref.current.getBoundingClientRect();
-        // const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     // const rect = ref.current.getBoundingClientRect();
+    //     // const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // const offsetStart = rect.top + scrollTop;
-        // const offsetEnd = (offsetStart + rect.height);
+    //     // const offsetStart = rect.top + scrollTop;
+    //     // const offsetEnd = (offsetStart + rect.height);
 
-        // const elementScrollStart = offsetStart / document.body.clientHeight;
-        // const elementScrollEnd = offsetEnd / document.body.clientHeightt;
+    //     // const elementScrollStart = offsetStart / document.body.clientHeight;
+    //     // const elementScrollEnd = offsetEnd / document.body.clientHeightt;
 
-        // setScrollPercentageStart(elementScrollStart);
-        // setScrollPercentageEnd(elementScrollEnd);
+    //     // setScrollPercentageStart(elementScrollStart);
+    //     // setScrollPercentageEnd(elementScrollEnd);
 
-        const onScroll = () => {
-            const rect = PinRef.current.getBoundingClientRect();
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     const onScroll = () => {
+    //         const rect = PinRef.current.getBoundingClientRect();
+    //         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            const offsetStart = rect.top + scrollTop;
-            const offsetEnd = (offsetStart + pinDuration);
+    //         const offsetStart = rect.top + scrollTop;
+    //         const offsetEnd = (offsetStart + pinDuration);
 
-            if ( scrollTop < offsetStart ) {
-                setScrollYProgress(0);
-            }
+    //         if ( scrollTop < offsetStart ) {
+    //             setScrollYProgress(0);
+    //         }
 
-            if ( scrollTop >= offsetStart && scrollTop <=  offsetEnd ) {
-                let progressY = (scrollTop - offsetStart) / pinDuration;
-                setScrollYProgress(progressY);
-            }
+    //         if ( scrollTop >= offsetStart && scrollTop <=  offsetEnd ) {
+    //             let progressY = (scrollTop - offsetStart) / pinDuration;
+    //             setScrollYProgress(progressY);
+    //         }
 
-            if ( scrollTop >  offsetEnd ) {
-                setScrollYProgress(1);
-            }
+    //         if ( scrollTop >  offsetEnd ) {
+    //             setScrollYProgress(1);
+    //         }
             
-        }
+    //     }
 
-        window.addEventListener('scroll', onScroll);
-        window.addEventListener('resize', onScroll);
+    //     window.addEventListener('scroll', onScroll);
+    //     window.addEventListener('resize', onScroll);
 
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onScroll);
-        }
+    //     return () => {
+    //         window.removeEventListener('scroll', onScroll);
+    //         window.removeEventListener('resize', onScroll);
+    //     }
 
-    }, []);
+    // }, []);
 
-    let x = `-${scrollYProgress * 50}vw`;
+    
 
   return (
     <>
 
-        <div className="mt-32" ref={ PinRef }>
+        <div className="mt-32">
             {/* <div style={{ height: "400vh" }} ref={ref}> */}
               <Pin el={ref} duration={ pinDuration }>
-                  <div className="overflow-x-hidden">
-                    <div ref={ref} className="container mx-auto h-screen flex flex-col flex-nowrap justify-center">
-                            <motion.div className="h-auto flex flex-row flex-nowrap" style={{ width: '180vw', x }}>
-                                <div style={{ width: "50vw" }} >
-                                    <div className="max-w-3xl px-16">
+                  {(scrollYProgress) => {
+                      let x = `-${scrollYProgress * 50}vw`;
+
+                      console.log(scrollYProgress);
+
+                      return (
+                        <div className="overflow-x-hidden">
+                        <div ref={ref} className="container mx-auto h-screen flex flex-col flex-nowrap justify-center">
+                                <motion.div className="h-auto flex flex-row flex-nowrap" style={{ width: '180vw', x }}>
+                                    <div style={{ width: "50vw" }} >
+                                        <div className="max-w-3xl px-16">
+                                                <h3 className="text-4xl font-bold">
+                                                Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.
+                                            </h3>
+                                            <div className="mt-8">
+                                                <p className="text-lg font-bold">Klaudia Korzeniecka</p>
+                                                <p>Sales Manager w SlowDeco</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style={{ width: "50vw" }}>
+                                        <div className="max-w-3xl px-16">
                                             <h3 className="text-4xl font-bold">
-                                            Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.
-                                        </h3>
-                                        <div className="mt-8">
-                                            <p className="text-lg font-bold">Klaudia Korzeniecka</p>
-                                            <p>Sales Manager w SlowDeco</p>
+                                                Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)
+                                            </h3>
+                                            <div className="mt-8">
+                                                <p className="text-lg font-bold">Aleks</p>
+                                                <p>CEO w Adamell</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div style={{ width: "50vw" }}>
-                                    <div className="max-w-3xl px-16">
-                                        <h3 className="text-4xl font-bold">
-                                            Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)
-                                        </h3>
-                                        <div className="mt-8">
-                                            <p className="text-lg font-bold">Aleks</p>
-                                            <p>CEO w Adamell</p>
+                                    <div style={{ width: "50vw" }}>
+                                        <div className="max-w-3xl px-16">
+                                            <h3 className="text-4xl font-bold">
+                                                Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.
+                                            </h3>
+                                            <div className="mt-8">
+                                                <p className="text-lg font-bold">Kacper Konopko</p>
+                                                <p>Owner w Katana Clan</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div style={{ width: "50vw" }}>
-                                    <div className="max-w-3xl px-16">
-                                        <h3 className="text-4xl font-bold">
-                                            Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.
-                                        </h3>
-                                        <div className="mt-8">
-                                            <p className="text-lg font-bold">Kacper Konopko</p>
-                                            <p>Owner w Katana Clan</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.div>
-                    </div>
-                  </div>
+                                </motion.div>
+                        </div>
+                      </div>
+                      )
+                  }}
                 </Pin>
             {/* </div> */}
         </div>
