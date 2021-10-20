@@ -104,7 +104,7 @@ function Hero_leftSide() {
                 </motion.p>
             </div>
             
-            <motion.div ref={ref} variants={banner} initial="initial" animate="animate" style={{scale}}>
+            <motion.div ref={ref} variants={banner} initial="initial" animate="animate">
                 <Atext text={"Zadbamy o widoczność Twoich produktów"} />
             </motion.div>
             
