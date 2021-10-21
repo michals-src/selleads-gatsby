@@ -6,6 +6,7 @@ import {AnimatePresence, motion} from "framer-motion"
 import Button from '@components/Button';
 
 import undraw_online_ad_re_ol62 from '@images/undraw_online_ad_re_ol62.svg';
+import boxBG from '@images/mediensturmer-aWf7mjwwJJo-unsplash.jpg';
 
 const Oferta_Naglowek = ({ naglowek }) => {
     return (
@@ -42,17 +43,18 @@ function Hero_RightSide() {
               >
               <div className="">
                 <ul className="list-none text-center">
-                  <li className="h-full pt-16 px-10 mb-5 rounded-2xl" style={{ background: "#c9ecdc" }}>
+                  <motion.li whileHover={{ y: -15, transition: { duration: .3, ease: [0.15, 0.35, .8, 1]} }} className="h-full py-64 text-white px-10 mb-5 rounded-2xl" style={{ background: `#c9ecdc url(${boxBG}) center center no-repeat`, backgroundSize: "100% 100%" }}>
                     <Oferta_Naglowek naglowek="Oferta Amazon." />
-                    <Hyper_Button to="/" />
-                    <div className="mt-16">
-                      <img className="max-w-xs mx-auto" src={undraw_online_ad_re_ol62} alt="undraw_online_ad_re_ol62" />
+                    <div className="mt-3 mb-8">
+                    <p className="text-lg">Zanurkuj z nami po sukces.</p>
                     </div>
-                  </li>
-                  <li className="h-full py-16 px-10 rounded-2xl" style={{ background: "#c9ecdc" }}>
+                    <Hyper_Button to="/" />
+
+                  </motion.li>
+                  <motion.li className="h-full py-16 px-10 rounded-2xl" style={{ background: "#c9ecdc" }}>
                     <Oferta_Naglowek naglowek="Copywriting." />
                     <Hyper_Button to="/" />
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
               </motion.div>
