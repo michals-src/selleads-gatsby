@@ -39,8 +39,8 @@ const Atext = ({ text }) => {
                         vWords[index].flat().map((letter, ind) => {
                             return (
                             <span className="inline-block">
-                                <motion.span  className="inline-block" key={ind} variants={item} >
-                                {letter}
+                                <motion.span className="inline-block" key={ind} variants={item}>
+                                    {letter}
                                 </motion.span>
                             </span>
                             )
@@ -96,7 +96,7 @@ function Hero_leftSide() {
             <div>
                 <motion.p
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 4.5}}}
+                    animate={{ opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 2.5}}}
                     className="mb-6 text-xl text-green-700"
                     
                 >

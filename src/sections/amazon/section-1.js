@@ -185,15 +185,15 @@ function Section1() {
             
         <div className="container mx-auto px-4 md:px-14">
             <div className="flex flex-row">
-                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100">
+                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100 rounded-l-2xl">
                     <h3 className="text-4xl font-bold mr-8">1</h3>
                     <h1 className="text-xl">Konwersja na Amazonie jest prawie 10x wyższa niż w zwykłym sklepie internetowym.</h1>    
                 </div>
-                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100 border-l-2 border-r-2 border-white">
+                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100  mx-2">
                     <h3 className="text-4xl font-bold mr-8">2</h3>
                     <h1 className="text-xl">Co sekundę sprzedaje się 306 produktów.</h1>    
                 </div>
-                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100">
+                <div className="w-4/12 flex flex-row flex-nowrap p-14 bg-gray-100 rounded-r-2xl">
                     <h3 className="text-4xl font-bold mr-8">3</h3>
                     <h1 className="text-xl">89% kupujących wybiera Amazon ponad inne platformy sprzedażowe.</h1>    
                 </div>
@@ -252,15 +252,15 @@ function Section1() {
                         Ponad 100 milionów ludzi na <span className="text-sm py-1 px-2 bg-gray-200">świecie</span> posiada konto Prime, jest ich więcej niż osób bez Prime. Statystycznie jeden użytkownik ze statusem Prime wydaje ponad 1000$ rocznie.
                     </p>
                     <div className="my-20">
-                        <h6 className="text-md text-green-800">Rdźeń skuteczności</h6>
-                        <h3 className="text-3xl font-bold my-3">
+                        <h6 className="text-lg text-green-800">Rdźeń skuteczności</h6>
+                        <h3 className="text-4xl font-bold my-3 leading-tight">
                             Amazon, doskonałe miejsce.
                         </h3>
                         <h6 className="text-xl">Buduj swoją markę produktową w odpowiedniem miejscu.</h6>
                     </div>
                     <div className="my-20">
-                        <h6 className="text-md text-green-800">Rdzeń wydajności</h6>
-                        <h3 className="text-3xl font-bold my-3">
+                        <h6 className="text-lg text-green-800">Rdzeń wydajności</h6>
+                        <h3 className="text-4xl font-bold my-3 leading-tight">
                             W modelu FBA cała logistyka jest prowadzona z komputera.
                         </h3>
                         <h6 className="text-xl">Tobie pozostaje się cieszyć z wyników.</h6>
