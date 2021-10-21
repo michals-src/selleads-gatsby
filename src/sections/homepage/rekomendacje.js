@@ -248,8 +248,12 @@ export default function Rekomendacje() {
         }
     `);
 
-    const pinDuration = window.innerHeight;
+    const [pinDuration, setPinDuration] = useState(0);
     const ref = useRef(null);
+
+    useEffect(() => {
+        if (window !== "undefined") setPinDuration(window.innerHeight);
+    }, []);
     // const PinRef = useRef(null);
     
     // const [scrollYProgress, setScrollYProgress] = useState(0);
