@@ -30,11 +30,11 @@ const Atext = ({ text }) => {
 
     return (
         <>
-            <h1 className="text-6xl font-bold">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight">
             {
                 vWords.map((words, index) => {
                     return (
-                    <span key={index} className="inline-block whitespace-nowrap mb-5">
+                    <span key={index} className="inline-block whitespace-nowrap mb-2 md:mb-5">
                         {
                         vWords[index].flat().map((letter, ind) => {
                             return (
@@ -97,7 +97,7 @@ function Hero_leftSide() {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 2.5}}}
-                    className="mb-6 text-xl text-green-700"
+                    className="mb-6 text-lg sm:text-xl text-green-700"
                     
                 >
                     Zdobądź siłę przebicia.

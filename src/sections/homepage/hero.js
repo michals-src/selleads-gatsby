@@ -145,8 +145,8 @@ export default function Hero() {
     <>   
     <div className="py-14">
       <Navbar />
-      <div ref={ref} className="container mx-auto px-4 md:px-14">
-        <div className="bg-gray-100 bg-gradient-to-t from-green-100 to-green-50 rounded-2xl py-10 px-20">
+      <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-6 2xl:px-14">
+        <div className="bg-gray-100 bg-gradient-to-t from-green-100 to-green-50 rounded-2xl py-10 px-10 md:px-20">
           <div className="py-8 mt-4 flex flex-col justify-center relative">
             <div className="flex flex-row flex-wrap align-center relative z-20">
               <div className="w-full flex flex-col justify-center relative z-20">
@@ -156,10 +156,10 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="w-7/12 flex flex-col justify-center relative">
+              <div className="w-full hidden md:block invisible md:visible lg:w-7/12 flex flex-col justify-center relative">
                 <Hero_MiddleSide/>
               </div>
-              <div className="w-5/12 flex flex-col justify-center h-full">
+              <div className="w-full lg:w-5/12 flex flex-col justify-center h-full">
                 <Hero_RightSide/>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function Hero() {
       </div>
     </div>
 
-      <div className="container mx-auto px-4 md:px-14">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
         {/* <div className="w-8/12 mx-auto mb-32">
           <h1 className="text-4xl text-center">
             Pomożemy Ci przygotować ofertę, która spełni oczekiwania nawet najbardziej wymagających klientów.

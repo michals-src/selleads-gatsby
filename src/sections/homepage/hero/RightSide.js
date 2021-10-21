@@ -43,7 +43,7 @@ function Hero_RightSide() {
               >
               <div className="">
                 <ul className="list-none text-center">
-                  <motion.li whileHover={{ y: -15, transition: { duration: .3, ease: [0.15, 0.35, .8, 1]} }} className="h-full py-64 text-white px-10 mb-5 rounded-2xl" style={{ background: `#c9ecdc url(${boxBG}) center center no-repeat`, backgroundSize: "100% 100%" }}>
+                  <motion.li whileHover={{ y: -15, transition: { duration: .3, ease: [0.15, 0.35, .8, 1]} }} className="h-full py-16 md:py-32 xl:py-64 text-white px-10 mb-5 rounded-2xl" style={{ background: `#c9ecdc url(${boxBG}) center center no-repeat`, backgroundSize: "100% 100%" }}>
                     <Oferta_Naglowek naglowek="Oferta Amazon." />
                     <div className="mt-3 mb-8">
                     <p className="text-lg">Zanurkuj z nami po sukces.</p>
