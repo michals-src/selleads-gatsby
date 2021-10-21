@@ -133,12 +133,11 @@ const Pin = ({ el, duration, children }) => {
 
     useEffect(() => {
 
-        if (window === "undefined") return;
-
         setHeightEl(el.current.getBoundingClientRect().height);
         setPaddingBottom(`${duration}px`);
         
         const scrollDocument = () => {
+
             let refEl = el.current.getBoundingClientRect();
             const rect = ref.current.getBoundingClientRect();
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -252,7 +251,7 @@ export default function Rekomendacje() {
     const ref = useRef(null);
 
     useEffect(() => {
-        if (window !== "undefined") setPinDuration(window.innerHeight);
+        setPinDuration(window.innerHeight);
     }, []);
     // const PinRef = useRef(null);
     
@@ -314,8 +313,6 @@ export default function Rekomendacje() {
               <Pin el={ref} duration={ pinDuration }>
                   {(scrollYProgress) => {
                       let x = `-${scrollYProgress * 50}vw`;
-
-                      console.log(scrollYProgress);
 
                       return (
                         <div className="overflow-x-hidden">
