@@ -113,7 +113,7 @@ const Tabs = () => {
   );
 }
 
-const Pin = ({ el, duration, children }) => {
+const Pin = ({ el, duration, children, ...props }) => {
     
     const ref = useRef(null);
 
@@ -185,7 +185,7 @@ const Pin = ({ el, duration, children }) => {
             window.removeEventListener('resize', scrollDocument);
         }
 
-    }, [ref]);
+    }, [el, duration, ref]);
 
     return (
         <>
