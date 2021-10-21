@@ -133,6 +133,8 @@ const Pin = ({ el, duration, children }) => {
 
     useEffect(() => {
 
+        if (window === "undefined") return;
+
         setHeightEl(el.current.getBoundingClientRect().height);
         setPaddingBottom(`${duration}px`);
         
