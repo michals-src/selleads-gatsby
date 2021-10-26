@@ -276,10 +276,11 @@ export default function Contact() {
             FieldsValues[fName] = value;
         }
 
+        console.log(FieldsValues);
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode(encode({ "form-name": "contact", ...FieldsValues }))
+            body: encode({ "form-name": "contact", ...FieldsValues })
         }).then(() => {
             emptyField = {};
             for (const [fName, fProps] of Object.entries(FormFieldsValues)) {
