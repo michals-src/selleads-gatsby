@@ -1,10 +1,9 @@
 import React from "react"
 
+// import Container from '../../components/Container'
+// import Element from '../../components/Element'
 
-import Container from '../../components/Container'
-import Element from '../../components/Element'
-
-import map_image from '../../assets/images/undraw_connected_world_wuay.svg';
+// import map_image from '../../assets/images/undraw_connected_world_wuay.svg';
 
 const tabs = () => {
   return [
@@ -27,25 +26,25 @@ const tabs = () => {
   ];
 }
 
-const Tabs = () => {
-  return (
-    tabs().map((tab) => {
+// const Tabs = () => {
+//   return (
+//     tabs().map((tab) => {
 
-      return (
+//       return (
         
         
-        <div className={`${tab.size ? tab.size : `medium-3`} _px8 mb2`}>
-          <div className="_mb6">
-            <h6>{tab.title}</h6>
-          </div>
-          <p>{tab.content}</p>
-        </div>
+//         <div className={`${tab.size ? tab.size : `medium-3`} _px8 mb2`}>
+//           <div className="_mb6">
+//             <h6>{tab.title}</h6>
+//           </div>
+//           <p>{tab.content}</p>
+//         </div>
 
-      );
+//       );
 
-    })
-  );
-}
+//     })
+//   );
+// }
 
 const Icon_Worldwide = () => {
   return (
@@ -66,17 +65,17 @@ const Icon_Prime = () => {
 const Series_Col = ({ tytul, opis, ikona, color }) => {
   return (
     <div className="p-4 h-full">
-      <div className={`flex content-center h-full border-green-100 rounded-md`}>
+      <div className={`flex content-center h-full rounded-md`}>
         <div className="flex flex-row flex-nowrap items-center">
           <div className="w-7/12">
             <div className="my-4">
-              <h1 className="text-3xl font-bold text-green-800">
+              <h1 className="text-4xl font-bold text-pastelGreen-700">
                 {tytul}
               </h1>
             </div>
             <p className="text-lg">{opis}</p>
           </div>
-          <div className={`w-4/12 ml-auto text-green-800`}>
+          <div className={`w-4/12 ml-auto text-pastelGreen-700`}>
             { ikona }
           </div>
         </div>
@@ -90,18 +89,6 @@ export default function Analytics() {
     <>
     
       <div className="container px-4 md:px-14 mx-auto">
-
-        <div className="flex flex-wrap my-64">
-          <div className="w-full">
-            <h6 className="text-xl text-green-700 mb-6">Pokaż się innym.</h6>
-          </div>
-          <div className="w-full md:w-6/12 md:pr-16">
-            <h1 className="text-6xl font-bold"><span>Wyświetlaj się częściej,</span> więcej i trafniej.</h1>
-          </div>
-          <div className="w-full md:w-5/12 md:pl-10 md:pr-10 ml-auto">
-            <p className="text-lg">Uszyjmy Twoje reklamy, na miarę Twoich klientów. Przygotujmy lejek sprzedażowy, który zbierze najbardziej lojalnych i zainteresowanych Twoim produktem kupujących.</p>
-          </div>
-        </div>
 
         <div className="flex flex-wrap">
           <div className="w-full md:w-6/12 -ml-4 flex flex-col justify-between">
@@ -122,15 +109,15 @@ export default function Analytics() {
           
           </div>
           <div className="w-full md:w-6/12 md:-ml-0">
-            <div className="h-full p-4 h-full">
-              <div className="flex flex-col justify-left h-full p-14 bg-green-900 text-white rounded-md">
+            <div className="h-full p-4">
+              <div className="flex flex-col justify-left h-full p-14 bg-pastelGreen-450 text-white rounded-md">
                 <div className="">
-                  <div className="my-14 text-green-100">
+                  <div className="my-14 text-pastelGreen-100">
                     <svg xmlns="http://www.w3.org/2000/svg" className="fill-current h-28 w-28" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C12.279 4.784 11.232 4 10 4s-2.279.784-2.979 1.95c-.285.475-.507 1-.67 1.55H6a1 1 0 000 2h.013a9.358 9.358 0 000 1H6a1 1 0 100 2h.351c.163.55.385 1.075.67 1.55C7.721 15.216 8.768 16 10 16s2.279-.784 2.979-1.95a1 1 0 10-1.715-1.029c-.472.786-.96.979-1.264.979-.304 0-.792-.193-1.264-.979a4.265 4.265 0 01-.264-.521H10a1 1 0 100-2H8.017a7.36 7.36 0 010-1H10a1 1 0 100-2H8.472c.08-.185.167-.36.264-.521z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <div className="my-4"><h1 className="text-2xl font-bold">Cała Europa na wyciągnięcie ręki.</h1></div>
+                  <div className="mt-4 mb-8"><h1 className="text-4xl font-bold">Cała Europa na wyciągnięcie ręki.</h1></div>
                   <p className="text-lg">Amazon otworzył rynki w 6 europejskich krajach Niemczech, Wielkiej Brytanii, Francji, Włoszech, Hiszpanii oraz Holandii. Dzięki takiej infrastrukturze, sprzedając na platformie jesteśmy w stanie dotrzeć, aż do 28 krajów leżących w Europie.</p>
                 </div>
               </div>

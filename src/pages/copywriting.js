@@ -1,18 +1,22 @@
 /* eslint-disable react/react-in-jsx-scope */
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
+
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-import {Link} from "gatsby";
 
-import '@styles/globals.css';
-import '@styles/navigation.css';
-import '@styles/cards.css';
+// import '@styles/globals.css';
+// import '@styles/navigation.css';
+// import '@styles/cards.css';
 
 import Navbar from '@sections/navbar'
 import Footer from '@sections/footer'
 
-import { Section1 } from '@sections/email';
+import { Hero, Section1, Section2, Section3 } from '@sections/copywriting';
+
+// import Image1 from '@images/curology-DGH1u80sZik-unsplash.jpg';
+
 
 const HeadText = styled.h3`
   width: auto;
@@ -35,19 +39,40 @@ const BlockIcon = styled.div`
   text-align: center;
 `
 
+const HeroVariants = {
+  'loading': {opacity: 0},
+  'finished': {opacity: 1, transition: { delay: 1, duration: 1.5, ease: [0, 0.3, 0.6, 0.8] }}
+}
+
 export default function Home() {
 
+  const [HeroMotionComplete, setHeroMotionComplete] = useState(false);
+
   return (
-    <div>
+    <>
 
       <Helmet>
           <meta charSet="utf-8" />
           <title>Selleads - Oferta copywriting</title>
       </Helmet>
       
-      <Navbar />
+        <motion.div
+          initial="loading"
+          animate={HeroMotionComplete ? 'finished' : 'loading'}
+          variants={HeroVariants}
+          className="pt-14"
+        >
+            <Navbar />
+        </motion.div>
+       
+      <Hero setHeroMotionComplete={setHeroMotionComplete} />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Footer />
 
-        <div className="container mt3 mb1">
+
+ {/* <div className="container mt3 mb1">
           <div className="mt3 mb4:medium mb3">
           <div className="text-center">
                 <HeadText>Twoje produkty lubią o sobie mówić.</HeadText>
@@ -90,7 +115,7 @@ export default function Home() {
 </svg>
                   </BlockIcon>
                 </div>
-              </div>{/*g-x*/}
+              </div>
             </div>
             <div className="large-3 medium-12 mt1">
             <BlockWrapper1>
@@ -98,12 +123,9 @@ export default function Home() {
               <div className="button primary text-center"><Link to="/contact">Sprawdźmy, jak możemy udoskonalić Twoje oferty.</Link></div>
               </BlockWrapper1>
             </div>
-          </div>{/*g-x*/}
+          </div>
 
-        </div>
-
-      <Footer />
-   
-    </div>
+          </div> */}
+    </>
   )
 }

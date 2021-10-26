@@ -7,17 +7,26 @@
 //https://www.awwwards.com/awwwards/collections/about-page/
 
 /* eslint-disable react/react-in-jsx-scope */
-import React from 'react';
+import React, {useState} from 'react';
 import { Helmet } from "react-helmet"
 
 import '@styles/global.css';
 import '@styles/navigation.css';
 import '@styles/cards.css';
 
-import { Hero, Services, Analytics, Optimalization, Rekomendacje } from '@sections/homepage';
+import { Hero, Section_1, Section_2, Section_3, Section_4, Analytics, Optimalization, Rekomendacje } from '@sections/homepage';
+import Navbar from '@sections/navbar'
 import Footer from '@sections/footer';
+import { motion } from 'framer-motion';
+
+const navbarVariants = {
+  'while-hero-motion': { height: '0' },
+  'complete-hero-motion': { height: '100%' }
+};
 
 export default function Home() {
+
+  const [HeroMotionComplete, setHeroMotionComplete] = useState(false);
 
   return (
     <div>
@@ -27,13 +36,35 @@ export default function Home() {
           <title>Selleads</title>
       </Helmet>
 
-      <Hero />
-      {/* <Services />*/}
-      <Analytics />
-      <Rekomendacje /> 
-      {/* <Optimalization /> */}
+      <motion.div
+        initial={{ height: '0' }}
+        animate={ HeroMotionComplete ? 'complete-hero-motion' : 'while-hero-motion' }
+        transition={{ duration: .5 }}
+        variants={navbarVariants}
+        className="overflow-hidden">
+        <div className="pt-14"> <Navbar /> </div>
+      </motion.div>
 
-      <Footer />
+      <Hero setHeroMotionComplete={ setHeroMotionComplete } />
+
+      <motion.div
+        initial={{ height: '0' }}
+        animate={ HeroMotionComplete ? 'complete-hero-motion' : 'while-hero-motion' }
+        transition={{ duration: .5 }}
+        variants={navbarVariants}
+        className="overflow-hidden">
+
+        <Section_1 /> {/* Features */}
+        <Section_2 />  
+        <Section_3 /> {/* Oferty */}
+        {/* <Services />*/}
+        <Analytics />
+        <Rekomendacje /> 
+        {/* <Optimalization /> */}
+
+        <Footer />
+
+      </motion.div>
 
     </div>
   )

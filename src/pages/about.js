@@ -1,6 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-image"
+
+import { motion } from 'framer-motion';
 
 import '@styles/globals.css';
 import '@styles/navigation.css';
@@ -15,6 +19,35 @@ import plane from '@images/planeNEW.svg';
 
 export default function Home() {
 
+  const data = useStaticQuery(graphql`
+  query {
+    hero_image1_selleads: file(relativePath: {eq: "hero-image1-selleads.png"}) {
+        childImageSharp {
+          fluid(maxWidth: 2560) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }, 
+    mediensturmer_aWf7mjwwJJo_unsplash: 
+        file(relativePath: {eq: "mediensturmer-aWf7mjwwJJo-unsplash.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 2560) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+    unsplash_blake_wisz: 
+        file(relativePath: {eq: "blake-wisz-Xn5FbEM9564.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }    
+  }
+`);
+
+
   return (
     <div>
 
@@ -27,30 +60,58 @@ export default function Home() {
           <Navbar />
 
         <div className="container mx-auto px-4">
-          <div className="rounded-3xl" style={{ backgroundImage: `url(${aboutBG})`, backgroundRepeat: "no-repeat", backgroundPosition: "bottom right", backgroundColor: "#0c0c14", backgroundSize: "100% auto" }}>
-            <div className="py-16">
+          <div className="rounded-3xl relative overflow-hidden">
+            <div className="absolute w-full h-full z-0" style={{ top: 0, left: 0 }}>
+              <Img className="w-full h-full" fluid={ data["hero_image1_selleads"].childImageSharp.fluid } />
+            </div>
+            <motion.div
+              initial={{ x: "calc(100vw + 100%)", y: "50vh", rotate: "0" }}
+              animate={{ x: "-100%", y: "0", rotate: "15deg", transition: { delay: .15, duration: 4 } }}
+              className="absolute w-full h-full z-0" style={{ top: 0, left: 0 }}>
+              <div className="max-w-2xl w-3/12">
+                <img src={`${plane}`} width="100%" />
+              </div>
+            </motion.div>
+            <div className="relative z-10">
               
-              <div className="mx-auto my-32 px-16 text-white text-center">
-                <p className="text-2xl">Poznaj nas</p>
-                <h1 className="mb-0 text-6xl font-bold">Jesteśmy, aby pomóc w rozwoju</h1>
-                <h1 className="mt-3 my-10 text-6xl font-bold">Twojego biznesu w sieci.</h1>
-              </div>
 
-              <div className="flex flex-row flex-wrap text-white py-32">
-                <div className="w-5/12">
-                  <div className="pl-16 py-10">
-                    <p className="text-2xl">Nic nadzwyczajnego, kilku młodych chłopaków, którzy przez parę lat doświadczeń, rozwijania własnych linii produktowych i dziesiątek godzin spędzonych na nauce systemów E-commerce chcą pomagać rozwijać się innym.</p>
-                  </div>
-                  <div className="mt-2 pl-16 py-10">
-                    <h3 className="text-4xl font-bold">Łatwo, naturalnie i z ludzkim podejściem do innych.</h3>
+
+                <div className="h-screen mx-auto p-16 text-white text-center">
+                  <div className="h-full flex flex-col flex-nowrap justify-center items-center">
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, transition: { delay: 4, duration: 0.5 } }}
+                      className="text-3xl text-pastelGreen-250">Poznaj nas</motion.p>
+                      <motion.h1
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0, transition: { delay: 3, duration: 1 } }}
+                        className="mb-0 text-7xl font-bold leading-tight">
+                        Jesteśmy, aby pomóc w rozwoju Twojego biznesu w sieci.
+                      </motion.h1>
                   </div>
                 </div>
-                <div className="w-2/12"></div>
-                <div className="w-4/12">
-                    <img src={`${plane}`} width="100%" />
-                </div>
-                <div className="w-1/12"></div>
-              </div>
+
+                <motion.div
+                  initial={{ opacity: 0, height: '0px' }}
+                  animate={{ opacity: 1, height: '100%', transition: { delay: 4.5, duration: 0.5 } }}
+                  className="text-white overflow-hidden">
+                  
+                  <div className="flex flex-row flex-wrap py-16">
+                      <div className="w-5/12">
+                        <div className="pl-16 py-10">
+                          <p className="text-2xl">Nic nadzwyczajnego, kilku młodych chłopaków, którzy przez parę lat doświadczeń, rozwijania własnych linii produktowych i dziesiątek godzin spędzonych na nauce systemów E-commerce chcą pomagać rozwijać się innym.</p>
+                        </div>
+                        <div className="mt-2 pl-16 py-10">
+                          <h3 className="text-4xl font-bold">Łatwo, naturalnie i z ludzkim podejściem do innych.</h3>
+                        </div>
+                      </div>
+                      <div className="w-2/12"></div>
+                      <div className="w-4/12">
+                          <img src={`${plane}`} width="100%" />
+                      </div>
+                      <div className="hidden lg:visible w-1/12"></div>
+                  </div>
+                </motion.div>
 
             </div>
           </div>

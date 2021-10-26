@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
-const Atext = ({ text }) => {
+const Atext = ({ text, setHeroLoaded, ...props }) => {
 
     let vText = text.split(" ");
     let vWords = [];
@@ -30,7 +30,7 @@ const Atext = ({ text }) => {
 
     return (
         <>
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-8xl font-bold leading-tight">
             {
                 vWords.map((words, index) => {
                     return (
@@ -39,7 +39,14 @@ const Atext = ({ text }) => {
                         vWords[index].flat().map((letter, ind) => {
                             return (
                             <span className="inline-block">
-                                <motion.span className="inline-block" key={ind} variants={item}>
+                                <motion.span
+                                    onAnimationComplete={v => {
+                                    if (index == (vWords.length - 1) &&
+                                        ind == (vWords[index].length - 1)) {
+                                            setHeroLoaded(true)
+                                        }    
+                                    }}
+                                    className="inline-block" key={ind} variants={item}>
                                     {letter}
                                 </motion.span>
                             </span>
@@ -57,11 +64,11 @@ const Atext = ({ text }) => {
 }
 
 
-function Hero_leftSide() {
+function Hero_leftSide({ setHeroLoaded }) {
     const banner = {
         animate: {
             transition: {
-            delayChildren: 0.5,
+            delayChildren: 1.5,
             staggerChildren: 0.045,
             },
         },
@@ -97,7 +104,7 @@ function Hero_leftSide() {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { ease: [0, -0.55, 0.45, 1], duration: 2, delay: 2.5}}}
-                    className="mb-6 text-lg sm:text-xl text-green-700"
+                    className="mb-6 text-lg sm:text-xl text-pastelGreen-250"
                     
                 >
                     Zdobądź siłę przebicia.
@@ -105,7 +112,7 @@ function Hero_leftSide() {
             </div>
             
             <motion.div ref={ref} variants={banner} initial="initial" animate="animate">
-                <Atext text={"Zadbamy o widoczność Twoich produktów"} />
+                <Atext setHeroLoaded={setHeroLoaded} text={"Zadbamy o widoczność Twoich produktów"} />
             </motion.div>
             
             {/* <motion.p
