@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import { Helmet } from "react-helmet"
 import { motion } from 'framer-motion';
 
-// import '@styles/global.css';
-// import '@styles/navigation.css';
+import '@styles/global.css';
+import '@styles/navigation.css';
 
 import Navbar from '@sections/navbar'
 import Footer from '@sections/footer';

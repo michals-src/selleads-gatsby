@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 
-// import '@styles/globals.css';
-// import '@styles/navigation.css';
-// import '@styles/cards.css';
+import '@styles/globals.css';
+import '@styles/navigation.css';
+import '@styles/cards.css';
 
 import Navbar from '@sections/navbar'
 import Footer from '@sections/footer'
