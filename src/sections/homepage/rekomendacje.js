@@ -312,47 +312,54 @@ export default function Rekomendacje() {
             {/* <div style={{ height: "400vh" }} ref={ref}> */}
               <Pin el={ref} duration={ pinDuration }>
                   {(scrollYProgress) => {
-                      let x = `-${scrollYProgress * 50}vw`;
+                      let x = `-${scrollYProgress * 200}vw`;
 
                       return (
                         <div className="overflow-x-hidden">
-                        <div ref={ref} className="container mx-auto h-screen flex flex-col flex-nowrap justify-center">
-                                <motion.div className="h-auto flex flex-row flex-nowrap" style={{ width: '180vw', x }}>
-                                    <div style={{ width: "50vw" }} >
-                                        <div className="max-w-3xl px-16">
-                                                <h3 className="text-4xl font-bold">
-                                                Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.
-                                            </h3>
-                                            <div className="mt-8">
-                                                <p className="text-lg font-bold">Klaudia Korzeniecka</p>
-                                                <p>Sales Manager w SlowDeco</p>
+                            <div ref={ref} className="container mx-auto h-screen flex flex-col flex-nowrap justify-center">
+                                <div>
+                                    <div className="px-16 mb-14 text-pastelGreen-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-32 h-32" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                                        </svg>
+                                    </div>
+                                    <motion.div className="h-auto flex flex-row flex-nowrap" style={{ width: '300vw', x }}>
+                                        <div style={{ width: "100vw" }} >
+                                            <div className="md-full 2xl:max-w-6xl px-16">
+                                                    <h3 className="text-4xl font-bold tracking-normal leading-tight">
+                                                        Mieliśmy straszny problem z wyróżnieniem nowego produktu. Kreatywne podejście do tematu chłopaków z Selleads sprawiło, że teraz naszego zestawu nie da się pomylić z żadnym z innym. A to wszystko za sprawą niewielkiego dodatku.
+                                                    </h3>
+                                                <div className="mt-8">
+                                                    <p className="text-2xl font-bold">Klaudia Korzeniecka</p>
+                                                    <p>Sales Manager w SlowDeco</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div style={{ width: "50vw" }}>
-                                        <div className="max-w-3xl px-16">
-                                            <h3 className="text-4xl font-bold">
-                                                Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)
-                                            </h3>
-                                            <div className="mt-8">
-                                                <p className="text-lg font-bold">Aleks</p>
-                                                <p>CEO w Adamell</p>
+                                        <div style={{ width: "100vw" }}>
+                                            <div className="md-full 2xl:max-w-6xl px-16">
+                                                <h3 className="text-4xl font-bold tracking-normal leading-tight">
+                                                    Świetnie przygotowane opisy sprawiły, że nasza oferta zaczęła sprzedawać się znacznie lepiej niż wcześniej. Zanotowaliśmy kilkuprocentowy wzrost konwersji. Przyjacielski kontakt i trafne wskazówki wpłynęły na to, że zdecydowaliśmy się na dłuższą współpracę - i działamy tak od 7 miesięcy :)
+                                                </h3>
+                                                <div className="mt-8">
+                                                    <p className="text-lg font-bold">Aleks</p>
+                                                    <p>CEO w Adamell</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div style={{ width: "50vw" }}>
-                                        <div className="max-w-3xl px-16">
-                                            <h3 className="text-4xl font-bold">
-                                                Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.
-                                            </h3>
-                                            <div className="mt-8">
-                                                <p className="text-lg font-bold">Kacper Konopko</p>
-                                                <p>Owner w Katana Clan</p>
+                                        <div style={{ width: "100vw" }}>
+                                            <div className="md-full 2xl:max-w-6xl px-16">
+                                                <h3 className="text-4xl font-bold tracking-normal leading-tight">
+                                                    Do tej pory oferowaliśmy produkty tylko w Polsce, ale chcieliśmy spróbować naszych sił za granicą. Padło na Amazon w Niemczech, który okazał się strzałem w dziesiątkę. Powierzyliśmy ekipie z Selleads opiekę nad platformą, a zaoszczędzony czas możemy poświęcić na dalsze skalowanie naszej firmy.
+                                                </h3>
+                                                <div className="mt-8">
+                                                    <p className="text-lg font-bold">Kacper Konopko</p>
+                                                    <p>Owner w Katana Clan</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </motion.div>
-                        </div>
+                                    </motion.div>
+                                </div>
+                            </div>
                       </div>
                       )
                   }}
