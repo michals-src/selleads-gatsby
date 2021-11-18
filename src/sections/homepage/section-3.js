@@ -63,10 +63,13 @@ function Section_3() {
     <>
       <div className="my-32 text-white">
         <div className="container px-10 mx-auto pl-4 sm:pl-6 lg:pl-6 2xl:pl-14">
-          <div className="bg-pastelGreen-400 rounded-3xl py-8 pl-32">
-            <div className="flex flex-row flex-wrap items-center py-16">
-              <div className="w-full lg:w-5/12 lg:pr-10">
-                <div className="max-w-3xl ml-auto pl-4 sm:pl-6 lg:pl-6 2xl:pl-14">
+          <div
+            className="rounded-3xl overflow-hidden"
+            style={{ backgroundColor: "#0a131c" }}
+          >
+            <div className="flex flex-row flex-wrap items-center">
+              <div className="w-full py-20 rounded-t-3xl">
+                <div className="max-w-3xl mx-auto text-center">
                   <div className="h-full flex flex-col flex-nowrap justify-center">
                     <h2 className="text-6xl font-bold">Oferta Amazon.</h2>
                     <h3 className="text-2xl leading-10 tracking-normal mt-4 mb-10">
@@ -76,7 +79,7 @@ function Section_3() {
                   </div>
                 </div>
               </div>
-              <div className="w-6/12 ml-auto overflow-hidden rounded-l-3xl">
+              <div className="w-full overflow-hidden rounded-b-3xl">
                 <Img
                   className="w-full h-screen"
                   fluid={
